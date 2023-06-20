@@ -25,6 +25,7 @@ args = parser.parse_args()
 source_path = os.path.join(args.ue_path, "Engine", "Source")
 plugins_path = os.path.join(args.ue_path, "Engine", "Plugins")
 platforms_path = os.path.join(args.ue_path, "Engine", "Platforms")
+path_depth = source_path.count(os.path.sep)
 
 consider_all_dependencies = args.consider_all_dependencies
 
@@ -84,14 +85,14 @@ def process_build_file(build_file, super_name):
 
 for build_file in build_files:
     path_parts = build_file.split(os.sep)
-    super_name = path_parts[6]
-    super_modules_info[super_name] = {"Dir": os.sep.join(path_parts[:7])}
+    super_name = path_parts[path_depth+2]
+    super_modules_info[super_name] = {"Dir": os.sep.join(path_parts[:path_depth+3])}
     process_build_file(build_file, super_name)
 
 for build_file in platforms_build_files:
     path_parts = build_file.split(os.sep)
-    super_name = '_'.join([path_parts[5], path_parts[8]])
-    super_modules_info[super_name] = {"Dir": os.sep.join(path_parts[:9])}
+    super_name = '_'.join([path_parts[path_depth+1], path_parts[path_depth+4]])
+    super_modules_info[super_name] = {"Dir": os.sep.join(path_parts[:path_depth+5])}
     process_build_file(build_file, super_name)
 
 for plugin_file in plugin_files:
