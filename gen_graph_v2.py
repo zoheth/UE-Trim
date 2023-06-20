@@ -77,9 +77,6 @@ def process_build_file(build_file, super_name):
     class_inheritance_pattern = r'class\s+\w+\s*:\s*(\w+)'
     inheritance_matches = re.findall(class_inheritance_pattern, content)
     dependencies.extend(inheritance_matches)
-    if inheritance_matches:
-        print(inheritance_matches)
-    
     module_dependencies[super_name] = list(
         set(module_dependencies[super_name] + dependencies)
     )
