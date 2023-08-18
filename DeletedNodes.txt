@@ -341,7 +341,6 @@ ElectraSubtitles
 GameFeatures
 GameplayBehaviors
 GameplayCameras
-GameplayInsights
 GeometryCollectionPlugin
 GizmoEdMode
 GoogleARCore
@@ -382,3 +381,5 @@ WmfMedia
 coremod
 libPhonon
 zstd
+UnrealMultiUserServer
+UnrealMultiUserSlateServer
