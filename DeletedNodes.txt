@@ -69,8 +69,6 @@ CodeView
 CommonConversation
 CompositePlane
 ConcertSyncTest
-ContentBrowserAliasDataSoure
-ContentBrowserClassDataSource
 ControlRigSpline
 CryptoKeys
 CurveEditorTools
@@ -328,7 +326,6 @@ ChaosCloth
 ChaosUserDataPT
 CommonUI
 ConsoleVariablesEditor
-ContentBrowserAssetDataSource
 DMXEngine
 DataInterfaceGraph
 DataValidation

@@ -3,3 +3,9 @@
 2023-08-18 10:18:38,246 - ERROR - Target directory already exists: E:\UnrealEngine-5.1.0-release\Engine\Source\Programs\UnrealFrontend. Restoration skipped for node: UnrealFrontend
 2023-08-18 10:19:21,317 - ERROR - Target directory already exists: E:\UnrealEngine-5.1.0-release\Engine\Source\Programs\SwitchboardListener. Restoration skipped for node: SwitchboardListener
 2023-08-18 13:05:08,817 - ERROR - Target directory already exists: E:\UnrealEngine-5.1.0-release\Engine\Source\Programs\SwitchboardListener. Restoration skipped for node: SwitchboardListener
+2023-08-18 20:07:03,525 - ERROR - Target directory already exists: F:\UnrealEngine-5.1.0-release\Engine\Plugins\Animation\GameplayInsights. Restoration skipped for node: GameplayInsights
+2023-08-21 14:28:30,996 - ERROR - No directory info found for node: InterchangeEditor
+2023-08-21 14:29:00,851 - ERROR - Target directory already exists: F:\UnrealEngine-5.1.0-release\Engine\Plugins\Interchange\Editor. Restoration skipped for node: Editor
+2023-08-21 15:35:11,256 - ERROR - Target directory already exists: F:\UnrealEngine-5.1.0-release\Engine\Plugins\Enterprise\DatasmithGLTFImporter. Restoration skipped for node: DatasmithGLTFImporter
+2023-08-22 14:39:49,875 - ERROR - Target directory already exists: F:\UnrealEngine-5.1.0-release\Engine\Plugins\Editor\ContentBrowser\ContentBrowserClassDataSource. Restoration skipped for node: ContentBrowserClassDataSource
+2023-08-22 14:41:13,828 - ERROR - Target directory already exists: F:\UnrealEngine-5.1.0-release\Engine\Plugins\Editor\ContentBrowser\ContentBrowserAssetDataSource. Restoration skipped for node: ContentBrowserAssetDataSource
