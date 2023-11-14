@@ -25,7 +25,7 @@ python gen_graph_v2.py --ue_path "D:\UE\UnrealEngine-5.1.0-release"
 ---
 ## 二、运行 jupyter note
 
-在命令行中，输入以下命令：
+在命令行中，输入以下命令开启不同的notebook，**不同的notebook之间没有依赖关系**：
 
 ```bash
 jupyter notebook analysis.ipynb
@@ -38,5 +38,9 @@ jupyter notebook analysis.ipynb
 
 - 恢复操作使用栈来实现。当执行恢复操作时，总是恢复最后一次删除的目录集合，所有恢复操作不需要任何参数。
 
+```bash
+jupyter notebook visualization.ipynb
+```
+- 可视化现有模块之间的依赖
 
 
