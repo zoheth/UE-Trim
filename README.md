@@ -38,9 +38,51 @@ jupyter notebook analysis.ipynb
 
 - 恢复操作使用栈来实现。当执行恢复操作时，总是恢复最后一次删除的目录集合，所有恢复操作不需要任何参数。
 
-```bash
-jupyter notebook visualization.ipynb
+## 三、UBT模块可视化
+
+**step1**
+
+修改UBT源码，修改文件`Engine\Source\Programs\UnrealBuildTool\Configuration\UEBuildModule.cs`中的`public HashSet<UEBuildModule> GetDependencies(bool bWithIncludePathModules, bool bWithDynamicallyLoadedModules)`函数。在返回Modules之前添加以下内容。
+```csharp
+// Writing module dependencies to a file
+string filePath = "C:\\ModuleDependencies.txt";
+using (StreamWriter writer = new StreamWriter(filePath, true)) // true to append data to the file
+{
+	writer.WriteLine("[" + this.Name + "]");
+
+	writer.WriteLine("Directory: " + ModuleDirectory);
+
+	writer.WriteLine("Dependencies:");
+	foreach (UEBuildModule module in Modules)
+	{
+		writer.WriteLine("- " + module.Name);
+	}
+	writer.WriteLine();
+}
 ```
-- 可视化现有模块之间的依赖
+
+**step2**
+
+运行引擎根目录下的`GenerateProjectFiles.bat`。运行脚本后信息将写入`C:\\ModuleDependencies.txt`，即修改源码时指定的位置，可以更换成任意路径。 <br>
+注意！！！不要反复运行！获取到`ModuleDependencies.txt`之后及时注释掉更改的内容。
+
+**step3**
+
+将`ModuleDependencies.txt`文件置于`ubt_data`目录下，然后运行
+```bash
+python gen_ubt_data.py
+```
+
+**step4**
+
+可视化模块之间的依赖
+
+```bash
+# 用图的形式可视化 重要模块 之间的依赖：
+jupyter notebook visualization.ipynb
+
+# 用文本的形式可视化 所有模块 之间的依赖：
+jupyter notebook visualization2.ipynb
+```
 
 

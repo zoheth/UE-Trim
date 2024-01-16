@@ -1,0 +1,1038 @@
+Core: Unreal Engine的基础模块，提供了一系列底层工具，包括日志记录、错误处理、内存管理、字符串和数学运算函数等。所有其他模块都依赖于此模块。| 核心系统
+CoreUObject: Unreal Engine的核心对象模块，实现了引擎的对象系统。包括类、对象、接口、枚举、结构等的创建和管理，以及垃圾回收、反射系统、对象序列化等功能。| 核心系统 | 内存分配
+Engine: 游戏引擎的主模块，提供了一系列与游戏相关的功能，包括渲染、物理模拟、音频处理、动画、AI、输入等。此外，还包含了一些通用的游戏类，如玩家、角色、场景管理等。| 核心系统
+SlateCore: Unreal Engine的GUI框架Slate的核心模块，提供了一系列底层的用户界面元素，如窗口、按钮、文本框、滑动条等，以及事件处理和渲染的基础设施。| 核心系统 | 引擎前端
+Slate: 基于SlateCore的更高级的GUI模块，提供了一些更复杂的用户界面元素，如复杂的控件和布局，以及与之相关的功能。| 核心系统 | 引擎前端
+UnrealEd: Unreal Engine的编辑器模块，提供了一系列用于编辑游戏内容的工具，如关卡编辑、静态网格编辑、材质编辑等。此模块也包含了构建游戏的编译和打包工具。 | 资源 | 编辑器
+InputCore: 负责处理各种输入设备的输入，包括键盘、鼠标、触屏、游戏手柄等。这个模块为处理输入事件提供了一套通用的框架。| 人体学接口设备 | 物理设备I/O
+EditorFramework: 提供了Unreal Engine编辑器的框架部分，包括各种工具、视图、窗口和控件，以及编辑器的事件处理和状态管理。 | 资源 | 编辑器
+RenderCore: Unreal Engine的渲染核心模块，提供了一套通用的、低级的渲染框架，包括渲染管线、着色器管理、渲染命令的封装等。| 低阶渲染器
+Projects: 负责处理Unreal Engine项目的设置和配置，包括项目文件的管理、项目设置的读取和保存，以及项目的创建和加载。| 核心系统 | 文件I/O
+RHI: Render Hardware Interface，Unreal Engine的硬件渲染接口模块，提供了一套抽象的硬件渲染接口，使得引擎可以在不同的硬件和API（如DirectX、OpenGL、Vulkan等）上进行渲染。| 低阶渲染器 | 图形设备接口
+PropertyEditor: 提供了Unreal Engine编辑器的属性编辑功能，允许开发者在编辑器中直观地修改对象的属性。 | 资源 | 编辑器
+ApplicationCore: 提供了应用程序级别的基础设施，如窗口管理、事件处理、定时器等。所有的Unreal Engine应用程序都需要这个模块。| 核心系统
+ToolMenus: 提供了Unreal Engine编辑器的工具菜单功能，允许开发者创建和管理编辑器的工具菜单，并为此提供了一套框架。 | 资源 | 编辑器
+AssetTools: 提供了Unreal Engine编辑器的资源工具，允许开发者在编辑器中创建和管理游戏资源，如静态网格、贴图、材质、声音等。| 资源 | 资源管理器
+Json: 提供了对JSON数据的解析和序列化功能，用于读写JSON格式的数据。| 核心系统 | 特定格式支持
+DesktopPlatform: 提供了对桌面平台的支持，包括文件对话框、消息框、系统设置等功能。| 平台独立层 | 文件系统
+AssetRegistry: 提供了对游戏资源的管理功能，包括资源的查询、索引和依赖关系的跟踪等。这个模块对于资源的加载和卸载，以及编辑器的资源视图都非常重要。| 资源 | 资源管理器
+WorkspaceMenuStructure: 提供了Unreal Engine编辑器的工作区菜单结构，定义了编辑器的主菜单和上下文菜单的结构，以及相应的命令和操作。 | 资源 | 编辑器
+EditorWidgets: 提供了一系列用于Unreal Engine编辑器的特殊控件，如颜色选择器、曲线编辑器等。 | 资源 | 编辑器
+LevelEditor: 提供Unreal Editor中用于关卡编辑的所有工具和功能，包括布置对象，更改环境设置等  | 资源 | 编辑器
+ToolWidgets: 提供用于创建编辑器工具的小部件，这些工具可以用于自定义编辑器的工具面板  | 资源 | 编辑器
+TargetPlatform: 提供了对不同目标平台的支持，包括编译、链接和包装游戏的功能 | 平台独立层 | 跨平台支持
+EditorStyle: 提供了编辑器界面的默认样式和主题 | 核心系统 | 引擎前端
+DeveloperSettings: 提供了开发者设置的功能，允许开发者自定义和保存编辑器的设置  | 核心系统 | 引擎配置
+MainFrame: 提供了编辑器的主窗口框架，包括菜单栏、工具栏和状态栏等  | 资源 | 编辑器
+ContentBrowser: 提供了编辑器的内容浏览器，允许开发者在编辑器中查看和管理游戏资源 | 资源 | 编辑器
+BlueprintGraph: 提供了蓝图编辑器的功能，允许开发者在编辑器中创建和编辑蓝图 | 游戏性基础 | 蓝图
+Settings: 提供了引擎的设置管理功能，允许读取、修改和保存引擎的设置 | 核心系统 | 引擎配置
+MessageLog: 提供了一个消息日志系统，用于显示警告、错误和其他信息 | 性能剖析调试 | 调试用日志
+Kismet: 提供了蓝图可视化编程的核心功能，包括创建和执行蓝图 | 游戏性基础 | 蓝图
+Sockets: 提供了网络编程的功能，包括TCP和UDP套接字 | 平台独立层 | 网络传输层
+GraphEditor: 提供了一套通用的图形编辑框架，可用于创建和编辑各种图形，如蓝图和动画状态机 | 核心系统 | 曲线与曲面库
+MeshDescription: 提供了一套描述网格数据的接口，可以用于编辑和处理网格数据 | 资源 | 三维模型资源
+SourceControl: 提供了对源代码控制系统的接口，如Git和Perforce | 核心系统 | 版本控制
+StaticMeshDescription: 提供了对静态网格数据的高级描述，使得可以更方便地处理静态网格数据 | 资源 | 三维模型资源
+MovieScene: 提供了电影场景编辑和播放的功能，用于制作游戏中的电影或者动画 | 视频
+Analytics: 提供了分析功能，可以用于收集和处理游戏的运行数据，如玩家行为等 | 性能剖析调试 |性能数据收集与分析
+TimeManagement: 提供了时间管理的功能，如帧率控制、时间缩放等 | 平台独立层 | 高分辨率时钟
+AppFramework: 提供了应用程序级别的框架，包括窗口管理、事件处理等 | 核心系统 | 内部通信
+Renderer: Unreal Engine的渲染模块，用于将游戏世界的可视化表现出来。包括了各种图形特效和优化技术。| 低阶渲染器
+ImageWrapper: 提供了对各种图像格式的支持，包括图像的加载和保存。| 核心系统 | 特定格式支持
+DerivedDataCache: 提供了一种缓存机制，用于存储那些可以从其他数据导出的数据，以提高数据处理的效率。| 核心系统 | 内存分配
+EditorSubsystem: 提供了一个框架，用于创建编辑器的子系统。 | 资源 | 编辑器
+LevelSequence: 提供了关卡序列编辑和播放的功能，用于制作游戏中的电影或者动画。 | 游戏专用子系统 | 游戏摄像机 | 脚本/动画摄像机
+JsonUtilities: 提供了一些实用工具，用于处理JSON数据。| 核心系统 | 语法分析器
+Sequencer: Unreal Engine的序列编辑器，用于创建和编辑游戏中的动画和电影序列。 | 游戏专用子系统 | 游戏摄像机 | 脚本/动画摄像机
+AudioMixer: Unreal Engine的音频混音器，用于处理游戏中的音频播放和混音。| 音频 | 音频播放/管理
+HeadMountedDisplay: 提供了对头戴式显示设备（如VR头盔）的支持。| 人体学接口设备 | 物理设备I/O
+MovieSceneTracks: 提供了电影场景的轨道功能，用于在电影场景中创建和编辑各种类型的轨道，如音频轨道、动画轨道等。| 视频
+KismetCompiler: 提供了蓝图编译器，用于将蓝图转换为可以执行的代码。| 游戏性基础 | 蓝图
+KismetWidgets: 提供了一系列用于蓝图编辑器的特殊控件 | 游戏性基础 | 蓝图
+Mac: 提供了对Mac平台的支持。| 操作系统
+MediaAssets: 提供了对媒体资产的支持，包括视频和音频文件。| 资源 | 媒体资源
+UMG: Unreal Motion Graphics，这是Unreal Engine的用户界面系统，用于创建游戏的用户界面。| 前端 | 游戏内置GUI
+ClassViewer: 提供了类查看器，用于在编辑器中查看和选择类。| 资源 | 编辑器
+GameProjectGeneration: 提供了游戏项目生成的功能，用于创建新的游戏项目。| 资源 | 资源管理器
+GameplayTags: 提供了游戏标签系统，用于分类和查找游戏对象。| 资源 | 游戏世界/地图
+TraceLog: 提供了日志追踪功能，用于收集和查看游戏运行时的日志信息。| 性能剖析调试 | 调试用日志
+EngineSettings: 提供了引擎的设置功能，允许读取、修改和保存引擎的设置。| 核心系统 | 引擎配置
+Landscape: 提供了创建和编辑大型开放世界地形的工具。| 资源 | 游戏世界/地图
+Messaging: 提供了一个消息传递系统，可以用于在不同的系统和模块之间发送和接收消息。| 核心系统 | 内部通信
+SignalProcessing: 提供了一些信号处理的功能，如傅里叶变换、滤波等。| 音频 | DSP/效果
+ImageCore: 提供了一些基础的图像处理功能，如图像的加载、保存、缩放等。| 核心系统
+Networking: 提供了网络编程的基础功能，如创建和管理网络连接等。| 平台独立层 | 网络传输层
+Unix: 提供了对Unix平台的支持。| 操作系统
+MovieSceneTools: 提供了电影场景的编辑工具，如轨道编辑、关键帧编辑等。| 视频
+SceneOutliner: 提供了一个场景大纲查看器，可以用于查看和选择场景中的对象。| 资源 | 资源管理器
+GeometryCore: 提供了一些基础的几何处理功能，如向量运算、矩阵运算等。| 核心系统 | 数学库
+Launch: 提供了游戏的启动功能，包括处理命令行参数、初始化引擎等。| 核心系统 | 模块启动及终止
+Media: 提供了媒体播放功能，包括音频和视频。| 音频
+PhysicsCore: 提供了物理模拟的基础功能，如碰撞检测、刚体动力学等。| 碰撞与物理
+AIModule: 提供了人工智能功能，包括寻路、决策树、行为树等。| 游戏专用子系统 | 人工智能 | 目标与决策
+SourceCodeAccess: 提供了对源代码的访问功能，可以用于在编辑器中打开和编辑源代码。| 资源 | 编辑器
+AnimGraph: 提供了动画图表功能，用于创建和编辑角色动画。| 骨骼动画 | 动画状态树与层
+CinematicCamera: 提供了电影摄影机功能，用于在游戏中创建电影式的摄影机效果。| 游戏专用子系统 | 游戏摄像机 | 脚本/动画摄像机
+InteractiveToolsFramework: 提供了一套框架，用于创建和管理交互式工具。| 前端 | 游戏内置GUI
+MediaUtils: 提供了一些媒体相关的实用工具，如视频转换、音频转换等。| 音频
+ContentBrowserData: 提供了内容浏览器的数据管理功能，用于管理和显示游戏资产。| 资源 | 资源管理器
+MeshUtilitiesCommon: 提供了一些共享的网格处理工具，如网格优化、LOD生成等。| 资源 | 三维模型资源
+RawMesh: 提供了用于存储和操作原始网格数据的工具和功能，包括顶点数据、索引数据等。| 资源 | 三维模型资源
+MeshUtilities: 提供了一套全面的网格处理工具，包括优化、LOD生成、动态阴影等。| 资源 | 三维模型资源
+DetailCustomizations: 包含一些特殊的细节自定义，可以对编辑器中某些特定类型的资产进行特殊处理。| 资源 | 编辑器
+Persona: Unreal Engine中的一个模块，它主要用于骨骼动画和人物模型的编辑和管理。| 骨骼动画 | 骨骼编辑
+AudioExtensions: 扩展了音频功能，提供一些更高级的音频处理功能，如混音、特效等。| 音频 | DSP/效果
+LiveLinkInterface: 提供了对Live Link的接口，Live Link是一种实时数据流链接，主要用于动画和动作捕捉。| 第三方软件开发包与中间件 | LiveLink
+AdvancedPreviewScene: 提供了一个更高级的预览场景，可以在编辑器中预览复杂的场景和效果。| 资源 | 编辑器
+zlib: 一个第三方压缩库的模块，用于数据的压缩和解压缩。| 第三方软件开发包与中间件
+PlacementMode: 提供了游戏物体的放置模式，可以在编辑器中放置和移动游戏物体。| 资源 | 编辑器
+MessagingCommon: 提供了一些公共的消息处理功能，如消息的发送和接收。| 核心系统 | 内部通信
+Serialization: 提供了序列化和反序列化功能，主要用于游戏数据的保存和加载。| 核心系统 | 文件I/O
+SharedSettingsWidgets: 提供了一些共享的设置窗口部件，可以在多个地方复用。| 前端 | 游戏内置GUI
+AnimationCore: 提供了动画的核心功能，如动画计算、动画混合等。| 骨骼动画 | 动画播放
+AnimGraphRuntime: 提供了动画图表的运行时支持，可以在游戏运行时计算和执行动画图表。| 骨骼动画 | 动画状态树与层
+CurveEditor: 提供了曲线编辑器，主要用于编辑关键帧动画的曲线。| 资源 | 编辑器
+AudioMixerCore: 提供了音频混音器的核心功能，如声音混合、声音处理等。| 音频 | DSP/效果
+Android: 提供了对Android平台的支持，包括编译、打包等功能。| 操作系统
+MaterialUtilities: 提供了材质的实用工具，如材质编译、材质预览等。| 低阶渲染器 | 材质与着色器
+AudioEditor: 提供了音频编辑器，可以在编辑器中编辑和预览音频资源。| 音频 | 音频播放/管理
+OpenSSL: 一个第三方的加密库的模块，用于数据的加密和解密。| 第三方软件开发包与中间件
+MaterialEditor: Unreal Engine中用于编辑和预览材质的模块。用户可以通过这个模块创建和修改各种复杂的材质和着色器。| 资源 | 编辑器
+InputDevice: 用于处理不同的输入设备，如键盘、鼠标、触控屏、游戏手柄等。| 人体学接口设备 | 物理设备I/O
+NavigationSystem: 提供了游戏角色的导航系统，包括寻路、避障等功能。| 游戏专用子系统 | 人工智能 | 路径搜寻
+XmlParser: 提供了XML解析功能，可以读取和写入XML数据。| 核心系统 | 语法分析器
+DesktopWidgets: 提供了一些桌面级的界面组件，如窗口、对话框、工具栏等。| 前端 | 游戏内置GUI
+DirectoryWatcher: 可以监视文件系统的目录，并在文件发生变化时产生通知。| 平台独立层 | 文件系统
+MovieSceneCapture: 用于捕获游戏中的动画场景，可以输出为视频或图片序列。| 游戏专用子系统 | 游戏摄像机 | 脚本/动画摄像机
+PakFile: 提供了对PAK文件格式的支持，PAK文件是Unreal Engine使用的一种资源打包格式。| 核心系统 | 特定格式支持
+TextureCompressor: 用于纹理压缩，可以将纹理数据压缩为GPU友好的格式以节省内存和提高性能。| 资源 | 纹理资源
+StatusBar: 提供了状态栏的功能，可以在编辑器或游戏中显示一些状态信息。| 前端 | 游戏内置GUI
+CoreOnline: 提供了在线功能的核心部分，包括网络连接、会话管理等。| 在线多人 | 游戏状态复制
+Foliage: 用于处理游戏中的植被，如树、草等。| 游戏专用子系统 | 游戏专用渲染 | 植被渲染
+MeshConversion: 提供了网格数据的转换功能，可以将网格数据从一种格式转换为另一种格式。| 资源 | 三维模型资源
+Vorbis: 一个第三方的音频编码库的模块，用于处理Vorbis格式的音频数据。| 第三方软件开发包与中间件
+Linux: 提供了对Linux平台的支持，包括编译、打包等功能。| 操作系统
+StandaloneRenderer: 提供了一个独立的渲染器，可以在没有完整游戏环境的情况下进行渲染。| 低阶渲染器
+TraceInsights: 提供了性能追踪和分析的功能，可以帮助开发者找出性能瓶颈。| 性能剖析调试|性能数据收集与分析
+AugmentedReality: 提供了增强现实(AR)的功能，包括图像追踪、面部追踪、平面检测等。| 人体学接口设备 | 物理设备I/O
+D3D12RHI: 提供了对Direct3D 12的支持，Direct3D 12是微软的一个3D图形API。| 低阶渲染器 | 图形设备接口
+PropertyPath: 提供了属性路径的功能，可以用于在运行时获取和修改对象的属性。| 核心系统 | 文件I/O
+SessionServices:SessionServices是虚幻引擎中的一个模块，它提供了与会话相关的功能。它包含了处理会话状态、连接管理、会话信息交换等功能。它在多人游戏、联网游戏和在线功能中扮演着重要的角色。 | 在线多人 | 安排比赛与游戏管理
+SDL2:SDL2是Simple DirectMedia Layer的简称，是一个跨平台的多媒体开发库。在虚幻引擎中，SDL2模块提供了对音频、输入、窗口管理和图形渲染等底层功能的访问。它对于处理游戏输入、音频播放和窗口管理等任务至关重要。 | 平台独立层 | 跨平台支持
+AutomationController:AutomationController是虚幻引擎中的一个模块，它负责自动化测试和批处理任务的控制。该模块提供了执行自动化测试脚本、生成测试报告和管理测试任务的功能。它对于游戏开发团队在持续集成和自动化测试方面起到了关键作用。 | 性能剖析调试 | 性能数据收集与分析
+MeshReductionInterface:MeshReductionInterface模块是虚幻引擎中的一个模块，用于网格减面（Mesh Reduction）操作。它提供了处理网格减面算法、简化复杂模型和优化性能的功能。该模块在游戏开发中用于减少模型的复杂度，以提高渲染效率和节省资源。 | 资源 | 三维模型资源
+TraceAnalysis:TraceAnalysis是虚幻引擎中的一个模块，它用于性能分析和调试。该模块提供了追踪和分析游戏运行时的各种性能数据，包括CPU使用情况、内存占用、渲染时间等。它对于优化游戏性能和解决性能问题非常有帮助。 | 性能剖析调试 | 性能数据收集与分析
+AnimationBlueprintLibrary:AnimationBlueprintLibrary是虚幻引擎中的一个模块，它提供了与动画蓝图（Animation Blueprint）相关的功能。该模块包含了处理动画蓝图的创建、编辑和播放等操作的函数和工具。它对于实现角色动画和游戏中的动画逻辑非常重要。 | 游戏性基础 | 蓝图
+Documentation:Documentation是虚幻引擎中的一个模块，它提供了文档和帮助系统相关的功能。该模块包含了引擎的文档、教程、API参考和示例等资源，帮助开发者了解和使用虚幻引擎的各个方面。 | 核心系统 | 引擎配置
+UMGEditor:UMGEditor是虚幻引擎中的一个模块，它负责用户界面（UI）的创建和编辑。UMG代表虚幻电影级游戏界面（Unreal Motion Graphics），它是一种可视化的UI设计系统。UMGEditor模块提供了在编辑器中创建、布局和设计UI元素的工具，包括按钮、文本、图像等。该模块还支持绑定数据和动画效果，使开发者能够轻松地创建交互式和美观的游戏界面。 | 前端 | 游戏内置GUI
+ClothingSystemRuntimeInterface:ClothingSystemRuntimeInterface是虚幻引擎中的一个模块，它与虚拟服装系统（Clothing System）相关。该模块提供了运行时处理虚拟服装的功能，包括模拟布料、碰撞检测和动画效果等。虚拟服装系统允许开发者为游戏角色添加逼真的布料效果，增强游戏中角色的真实感和动态表现力。 | 骨骼动画 | 衣物系统
+ImageWriteQueue:ImageWriteQueue是虚幻引擎中的一个模块，它用于处理图像的异步写入操作。该模块提供了一种队列机制，允许开发者将图像写入操作放入队列中，然后在后台异步处理。这在游戏开发中特别有用，例如在截图、渲染纹理或图像保存时，可以通过异步写入操作提高性能和流畅度。 | 核心系统 | 文件I/O
+MoviePlayer:MoviePlayer是虚幻引擎中的一个模块，它负责电影和视频的播放功能。该模块提供了在游戏中播放预先制作的电影和视频的能力。它可以用于创建游戏中的过场动画、片头片尾、故事剧情等。 | 视频
+TypedElementFramework:TypedElementFramework是虚幻引擎中的一个模块，它为虚幻编辑器中的Typed元素提供了框架和支持。Typed元素是一种可扩展的编辑器数据类型，用于定义和配置虚幻编辑器中的对象和行为。该模块为开发者提供了创建自定义Typed元素以及与其交互的能力。 | 平台独立层 | 原子数据类型
+Vulkan:Vulkan是虚幻引擎中的一个模块，它提供了对Vulkan图形API的支持。Vulkan是一个跨平台的高性能图形API，可用于实现游戏中的图形渲染和计算任务。该模块允许开发者在虚幻引擎中使用Vulkan作为图形后端，以提供更高效和更强大的图形渲染能力。 | 第三方软件开发包与中间件 | Vulkan
+CollectionManager:CollectionManager是虚幻引擎中的一个模块，它提供了对场景中物体集合（Collection）的管理功能。物体集合用于组织场景中的对象，例如将相关物体分组、设置可见性、应用操作等。该模块允许开发者创建、编辑和管理物体集合，以便更有效地处理场景中的对象。 | 资源 | 资源管理器
+DeveloperToolSettings:DeveloperToolSettings是虚幻引擎中的一个模块，它提供了开发者工具的设置和配置功能。该模块允许开发者自定义虚幻编辑器和开发工具的行为、外观和功能。它提供了一些高级设置选项，使开发者能够根据自己的需求和偏好来调整开发环境。 | 核心系统 | 引擎配置
+OutputLog:OutputLog是虚幻引擎中的一个模块，它负责管理和显示输出日志信息。该模块记录和显示虚幻引擎的运行时日志、调试信息和错误消息。它对于开发者在调试和排查问题时非常重要，提供了对游戏运行时信息的可视化和记录。 | 性能剖析调试 | 调试用日志
+SlateReflector:SlateReflector是虚幻引擎中的一个模块，它提供了用于Slate UI系统的反射和元数据功能。Slate是虚幻引擎的用户界面框架，用于创建和呈现UI元素。SlateReflector模块为开发者提供了访问和操作Slate UI元素的反射和元数据接口。 | 核心系统 | 引擎前端
+SequenceRecorder:SequenceRecorder是虚幻引擎中的一个模块，它提供了录制和回放游戏序列的功能。该模块允许开发者在游戏运行时记录和捕获游戏中的事件序列，以便后续进行回放和分析。它在实现游戏中的剧情、重现bug和创建教学演示等方面非常有用。 | 性能剖析调试 | 录影与回放
+ClothingSystemRuntimeCommon:ClothingSystemRuntimeCommon是虚幻引擎中的一个模块，它提供了虚拟服装系统（Clothing System）的运行时公共功能。虚拟服装系统用于模拟和渲染角色的虚拟服装效果。该模块包含了在运行时处理虚拟服装的基本功能和算法。 | 骨骼动画 | 衣物系统
+GameplayTasks:GameplayTasks是虚幻引擎中的一个模块，它提供了游戏任务（Gameplay Tasks）系统的支持。游戏任务用于管理角色行为和行动序列，例如角色的动作、AI行为等。该模块提供了创建、管理和调度游戏任务的功能，使开发者能够更轻松地实现角色的行为逻辑。 | 游戏专用子系统 | 任务系统
+MaterialShaderQualitySettings:MaterialShaderQualitySettings是虚幻引擎中的一个模块，它用于管理和配置材质着色器的质量设置。材质着色器是用于渲染和呈现游戏中物体表面的程序。该模块允许开发者定义和调整不同质量级别下的材质着色器设置，以优化游戏性能和视觉效果。 | 低阶渲染器 | 材质与着色器
+Imath:Imath是虚幻引擎中的一个模块，它是一套用于数学计算的库。该模块提供了矩阵、向量、平面、旋转等数学对象和算法。Imath模块用于处理游戏中的几何计算、坐标转换和物理模拟等任务。 | 核心系统 | 数学库
+AITestSuite:AITestSuite是虚幻引擎中的一个模块，它提供了用于测试和评估人工智能（AI）系统的工具和功能。该模块允许开发者创建和运行AI测试用例，并分析和评估AI系统的性能和行为。它对于开发和优化游戏中的AI角色和行为非常有帮助。 | 游戏专用子系统 | 人工智能
+IOS:IOS是虚幻引擎中的一个模块，它提供了在iOS平台上开发和部署游戏的支持。该模块包含了处理iOS设备和功能的接口和工具，例如处理触摸输入、推送通知、应用生命周期等。它使开发者能够在虚幻引擎中轻松构建和发布iOS游戏。 | 操作系统
+MeshMergeUtilities:MeshMergeUtilities是虚幻引擎中的一个模块，它提供了用于网格合并和优化的工具。该模块允许开发者将多个网格合并成一个，以减少绘制调用和提高渲染性能。它在场景优化和资源管理方面非常有用。 | 资源 | 三维模型资源
+TraceServices:TraceServices是虚幻引擎中的一个模块，它提供了性能追踪和分析的服务。该模块包含了对游戏运行时数据进行追踪、收集和分析的功能。它对于优化游戏性能、检测性能瓶颈和进行性能优化非常有帮助。 | 性能剖析调试 |性能数据收集与分析
+ComponentVisualizers:ComponentVisualizers是虚幻引擎中的一个模块，它用于自定义和扩展编辑器中组件（Component）的可视化效果。组件是游戏对象的一部分，负责定义其功能和行为。该模块允许开发者创建自定义的组件可视化效果，以在编辑器中更直观地展示组件的属性和状态。 | 资源 | 编辑器
+SkeletonEditor:SkeletonEditor是虚幻引擎中的一个模块，它提供了骨骼（Skeleton）编辑器的功能。骨骼是用于角色动画的基础，它定义了角色的骨架结构和骨骼动画的层级关系。该模块允许开发者在编辑器中创建、编辑和调整角色的骨骼结构和动画序列。 | 骨骼动画 | 骨骼编辑
+TypedElementRuntime:TypedElementRuntime是虚幻引擎中的一个模块，它提供了运行时的Typed元素支持。Typed元素是可扩展的编辑器数据类型，用于定义和配置虚幻编辑器中的对象和行为。该模块允许在游戏运行时使用Typed元素，并与其交互。 | 平台独立层 | 原子数据类型
+Eigen:Eigen是虚幻引擎中的一个模块，它是一个用于线性代数计算的C++库。该模块提供了矩阵、向量、四元数等数学对象和算法，用于处理游戏中的几何计算和物理模拟等任务。Eigen库被广泛应用于虚幻引擎中的数学计算和仿真模块。 | 核心系统 | 数学库
+FBX:FBX是虚幻引擎中的一个模块，它提供了对FBX文件格式的支持。FBX是一种常用的三维模型和动画交换格式，用于在不同软件之间共享和传输模型和动画数据。该模块允许开发者导入和导出FBX文件，以便在虚幻引擎中使用外部创建的内容。 | 核心系统 | 特定格式支持
+OpenGL:OpenGL是虚幻引擎中的一个模块，它提供了对OpenGL图形API的支持。OpenGL是一个跨平台的图形API，用于实现游戏中的图形渲染和计算任务。该模块允许开发者在虚幻引擎中使用OpenGL作为图形后端，以提供更高效和更强大的图形渲染能力。 | 第三方软件开发包与中间件 | OpenGL
+HotReload:HotReload是虚幻引擎中的一个模块，它提供了热重载（Hot Reload）功能。热重载是一种开发工具，允许开发者在不重启游戏的情况下实时修改和加载代码、蓝图和资源。该模块使开发者能够更快地进行迭代开发和调试，提高开发效率。 | 核心系统 | 模块启动及终止
+LauncherServices:LauncherServices是虚幻引擎中的一个模块，它提供了与Epic Games Launcher相关的服务和功能。Epic Games Launcher是用于管理和更新虚幻引擎以及其他Epic Games产品的官方客户端。该模块允许开发者与Launcher进行交互，例如获取最新版本的引擎、安装插件等。 | 核心系统 | 引擎配置
+SettingsEditor:SettingsEditor是虚幻引擎中的一个模块，它提供了设置编辑器的功能。设置编辑器用于管理和配置虚幻引擎和项目的各种设置和选项。该模块允许开发者创建和编辑设置文件，并提供了用户界面来方便地调整和保存设置。 | 核心系统 | 引擎配置
+SkeletalMeshUtilitiesCommon:SkeletalMeshUtilitiesCommon是虚幻引擎中的一个模块，它提供了用于骨骼网格（Skeletal Mesh）的实用工具和功能。骨骼网格是由骨架和关联的顶点权重组成的角色模型。该模块提供了一些常用的骨骼网格操作和处理工具，例如网格融合、骨骼动画优化等。 | 骨骼动画 | 骨骼编辑
+TargetDeviceServices:TargetDeviceServices是虚幻引擎中的一个模块，它提供了与目标设备相关的服务和功能。目标设备通常指的是用于游戏部署和测试的特定平台，例如PC、主机、移动设备等。该模块允许开发者与目标设备进行交互，例如安装和调试游戏、收集性能数据等。 | 平台独立层 | 跨平台支持
+TaskGraph:TaskGraph是虚幻引擎中的一个模块，它提供了任务图（Task Graph）系统的支持。任务图系统是一种并行计算模型，用于在多线程环境下执行任务和调度任务之间的依赖关系。该模块允许开发者将任务划分为可并行执行的小块，并自动管理任务之间的依赖关系和调度。 | 平台独立层 | 线程库
+SourceControlWindows:SourceControlWindows是虚幻引擎中的一个模块，它提供了对Windows平台上源代码控制系统的支持。源代码控制系统用于管理和跟踪代码的版本历史和变更。该模块允许开发者与Windows上的源代码控制系统集成，并提供了一些源代码管理和协作的功能。 | 核心系统 | 版本控制
+StaticMeshEditor:StaticMeshEditor是虚幻引擎中的一个模块，它提供了静态网格（Static Mesh）编辑器的功能。静态网格是由顶点和面构成的静态模型，用于场景中的静态几何体。该模块允许开发者在编辑器中创建、编辑和优化静态网格，以实现更精确的模型外观和性能。 | 资源 | 三维模型资源
+AudioPlatformConfiguration:AudioPlatformConfiguration是虚幻引擎中的一个模块，它用于配置音频平台的相关设置和参数。该模块允许开发者根据目标平台的要求和限制，调整音频编解码器、音频质量、音频格式等设置，以获得最佳的音频性能和质量。 | 音频 | 音频播放/管理
+MRMesh:MRMesh是虚幻引擎中的一个模块，它提供了混合现实（Mixed Reality）网格的功能。混合现实网格用于在现实世界和虚拟世界之间进行交互和对齐。该模块允许开发者在混合现实应用中创建、编辑和渲染MR网格，以实现虚实融合的交互体验。 | 游戏专用子系统 | 游戏专用渲染 | 混合现实
+RigVM:RigVM是虚幻引擎中的一个模块，它提供了用于骨骼动画的虚拟机（Virtual Machine）系统。虚拟机是一种用于执行脚本和动画逻辑的运行时环境。该模块允许开发者使用RigVM系统创建和执行高性能的骨骼动画逻辑，以实现复杂的角色动画效果。 | 骨骼动画
+VulkanRHI:VulkanRHI是虚幻引擎中的一个模块，它提供了对Vulkan图形API的支持。Vulkan是一种跨平台的低级图形API，用于实现游戏中的图形渲染和计算任务。该模块允许开发者在虚幻引擎中使用Vulkan作为图形后端，以提供更高效和更强大的图形渲染能力。 | 第三方软件开发包与中间件 | Vulkan
+libOpus:libOpus是虚幻引擎中的一个模块，它是一个开源的音频编解码库。该模块使用libOpus库提供了对Opus音频编解码器的支持。Opus是一种高效的音频编解码器，适用于语音通信和流媒体传输。该模块允许开发者在虚幻引擎中使用Opus编解码器进行音频处理和传输。 | 第三方软件开发包与中间件
+PhysicsUtilities:PhysicsUtilities是虚幻引擎中的一个模块，它提供了物理相关的实用工具和功能。该模块包含了一些用于处理物理碰撞、刚体力学、碰撞检测等任务的工具和算法。它对于实现真实的物理模拟和交互效果非常有帮助。 | 碰撞与物理 
+TextureBuild:TextureBuild是虚幻引擎中的一个模块，它提供了纹理构建和处理的功能。该模块允许开发者在编辑器中创建、编辑和优化纹理，以实现更好的视觉效果和性能。它包括纹理压缩、MIP贴图生成、纹理通道混合等工具和算法。 | 资源 | 纹理资源
+ActorPickerMode:ActorPickerMode是虚幻引擎中的一个模块，它提供了用于选择和操作Actors（角色）的模式和工具。Actors是虚幻引擎中的基本单位，代表场景中的可交互对象。该模块允许开发者在编辑器中使用ActorPickerMode模式，以方便地选择、操作和管理场景中的Actors。 |资源 | 编辑器
+AIGraph:AIGraph是虚幻引擎中的一个模块，它提供了用于人工智能（AI）图的功能。AI图是一种图形化工具，用于创建和调整AI行为和决策树。该模块允许开发者在编辑器中创建和编辑AI图，以实现角色的智能行为和决策。 | 游戏专用子系统 | 人工智能 | 目标与决策
+SubobjectDataInterface:SubobjectDataInterface是虚幻引擎中的一个模块，它提供了用于子对象数据的接口和功能。子对象是一个辅助对象，附加在主对象上，并共享主对象的一些属性和行为。该模块允许开发者使用SubobjectDataInterface接口访问和操作子对象数据，以实现更灵活的对象组织和复用。 | 资源 | 编辑器
+VREditor:VREditor是虚幻引擎中的一个模块，它提供了虚拟现实（Virtual Reality）编辑器的功能。虚拟现实编辑器允许开发者在虚拟现实环境中创建、编辑和调整场景和对象。该模块提供了用于虚拟现实交互和编辑的工具和接口，以实现更直观和沉浸的编辑体验。 | 低阶渲染器 | 图形设备接口
+BinkAudioDecoder:BinkAudioDecoder是虚幻引擎中的一个模块，它提供了对Bink音频解码器的支持。Bink是一种常用的音频压缩格式，常用于游戏中的音频数据压缩和解码。该模块允许开发者使用BinkAudioDecoder解码器对Bink格式的音频进行解码和处理。 | 核心系统 | 特定格式支持
+Cbor:Cbor是虚幻引擎中的一个模块，它提供了对CBOR（Concise Binary Object Representation）数据格式的支持。CBOR是一种轻量级的二进制数据序列化格式，用于在不同系统之间传输和存储数据。该模块允许开发者解析和生成CBOR格式的数据，以实现数据的有效传输和存储。 | 核心系统 | 特定格式支持
+CookOnTheFly:CookOnTheFly是虚幻引擎中的一个模块，它提供了即时烹饪（Cook On The Fly）功能。即时烹饪是一种动态生成和加载资源的技术，用于在运行时根据需要加载和处理游戏资源，而不是预先烹饪所有资源。该模块允许开发者在游戏运行时进行资源的即时烹饪和加载，以提高游戏的灵活性和性能。 | 游戏性基础 | 世界载入/串流
+SandboxFile:SandboxFile是虚幻引擎中的一个模块，它提供了沙盒文件系统的支持。沙盒文件系统用于隔离和保护应用程序的文件访问，以确保安全性和稳定性。该模块允许开发者在虚幻引擎中使用沙盒文件系统，以提供更安全和可靠的文件访问和管理。 | 平台独立层 | 文件系统
+SkeletalMeshDescription:SkeletalMeshDescription是虚幻引擎中的一个模块，它提供了骨骼网格描述的功能。骨骼网格描述是用于定义骨骼网格的属性、几何和动画信息的数据结构。该模块允许开发者创建和编辑骨骼网格描述，以实现更精确的角色模型和动画效果。 | 骨骼动画| 骨骼编辑
+BSPUtils:BSPUtils是虚幻引擎中的一个模块，它提供了对BSP（Binary Space Partitioning）几何体的工具和功能。BSP是一种用于表示和渲染场景的几何体数据结构。该模块允许开发者使用BSPUtils工具对BSP几何体进行创建、编辑和渲染，以实现复杂的场景布局和可视化效果。 | 场景图/剔除优化 | 空间剖分
+GeometryProcessingInterfaces:GeometryProcessingInterfaces是虚幻引擎中的一个模块，它提供了几何处理的接口和功能。几何处理用于对模型和几何体进行操作、优化和修改。该模块允许开发者使用几何处理接口对模型进行几何操作，例如修改顶点位置、计算法线、进行曲面细分等。 | 核心系统 | 曲线与曲面库
+HierarchicalLODUtilities:HierarchicalLODUtilities是虚幻引擎中的一个模块，它提供了分层LOD（Level of Detail）的实用工具和功能。分层LOD是一种优化技术，用于在不同距离和视角下呈现不同细节级别的模型。该模块允许开发者使用HierarchicalLODUtilities工具和算法实现分层LOD的管理和渲染。 | 场景图/剔除优化 | 细致程度系统
+Localization:Localization是虚幻引擎中的一个模块，它提供了本地化的支持和工具。本地化是将应用程序的文本、界面和内容适配到不同语言和地区的过程。该模块允许开发者在虚幻引擎中进行本地化的管理、翻译和适配，以实现全球化的应用程序。 | 核心系统 | 本地化服务
+MeshBuilder:MeshBuilder是虚幻引擎中的一个模块，它提供了用于创建和编辑静态网格（Static Mesh）的功能。静态网格是一种由固定几何体构成的不可变网格对象。该模块允许开发者使用MeshBuilder模块创建、编辑和优化静态网格，以实现高性能的渲染和碰撞效果。 | 资源 | 三维模型资源
+ScreenShotComparisonTools:ScreenShotComparisonTools是虚幻引擎中的一个模块，它提供了用于屏幕截图比较的工具和功能。屏幕截图比较是一种用于检测图形渲染变化和问题的技术。该模块允许开发者使用ScreenShotComparisonTools模块进行屏幕截图的生成和比较，以检查渲染质量和一致性。 | 性能剖析调试 | 录影与回放
+Zen:Zen是虚幻引擎中的一个模块，它提供了对Zen编程语言的支持。Zen是一种面向游戏开发的脚本语言，用于实现游戏逻辑和行为。该模块允许开发者使用Zen语言编写和执行游戏逻辑，以实现灵活和可定制的游戏行为。 | 第三方软件开发包与中间件
+AnimationModifiers:AnimationModifiers是虚幻引擎中的一个模块，它提供了动画修改器的功能。动画修改器用于对动画进行实时的修改和变换，例如调整骨骼姿势、变形网格等。该模块允许开发者使用AnimationModifiers模块创建和应用动画修改器，以实现动画的实时变换和调整。 | 骨骼动画
+Blutility:Blutility是虚幻引擎中的一个模块，它提供了用于创建蓝图工具的功能。蓝图工具是一种可视化编程工具，用于创建自定义编辑器功能和工作流程。该模块允许开发者使用Blutility模块创建和定制蓝图工具，以增强编辑器的功能和效率。 | 游戏性基础 | 蓝图
+ClothingSystemEditorInterface:ClothingSystemEditorInterface是虚幻引擎中的一个模块，它提供了衣物系统编辑器的接口和功能。衣物系统用于模拟和渲染角色的布料和衣物效果。该模块允许开发者使用ClothingSystemEditorInterface模块在编辑器中创建、编辑和优化衣物系统，以实现逼真的布料模拟和渲染效果。 | 骨骼动画 | 衣物系统
+SequencerWidgets:SequencerWidgets是虚幻引擎中的一个模块，它提供了Sequencer编辑器的小部件和控件。Sequencer是虚幻引擎中的时间轴编辑器，用于创建和编辑电影、动画和序列。该模块允许开发者使用SequencerWidgets模块添加和定制Sequencer编辑器中的小部件和控件，以满足特定的制作需求。 | 游戏专用子系统 | 游戏摄像机 | 脚本/动画摄像机
+SubobjectEditor:SubobjectEditor是虚幻引擎中的一个模块，它提供了子对象编辑器的功能。子对象是一个附加在主对象上的辅助对象，共享主对象的一些属性和行为。该模块允许开发者使用SubobjectEditor模块创建和编辑子对象，以实现更灵活和复用的对象组织和管理。 | 资源 | 编辑器
+ViewportInteraction:ViewportInteraction是虚幻引擎中的一个模块，它提供了与视口交互的功能。视口是编辑器和游戏中显示图形和场景的窗口。该模块允许开发者使用ViewportInteraction模块与视口进行交互，例如选择对象、移动相机等，以进行编辑和操作。 | 资源 | 编辑器
+InstallBundleManager:InstallBundleManager是虚幻引擎中的一个模块，它提供了安装包管理器的功能。安装包管理器用于管理和安装游戏或应用程序的资源和文件。该模块允许开发者使用InstallBundleManager模块创建、打包和安装游戏资源的安装包，以简化游戏的分发和部署过程。 | 资源 | 安装包
+OpenGLDrv:OpenGLDrv是虚幻引擎中的一个模块，它提供了对OpenGL渲染器的支持。OpenGL是一种跨平台的图形渲染API，用于绘制2D和3D图形。该模块允许开发者使用OpenGLDrv模块实现在支持OpenGL的平台上进行图形渲染和显示。 | 第三方软件开发包与中间件 | OpenGL
+CEF3:CEF3是虚幻引擎中的一个模块，它提供了对CEF3（Chromium Embedded Framework 3）的支持。CEF3是一个集成了Chrome浏览器引擎的开源项目，用于在应用程序中嵌入浏览器功能。该模块允许开发者使用CEF3模块在虚幻引擎中嵌入和使用浏览器功能。 | 第三方软件开发包与中间件 | 应用程序中间件
+EOSSDK:EOSSDK是虚幻引擎中的一个模块，它提供了对EOS（Epic Online Services）SDK的支持。EOS是由Epic Games开发的一套在线服务，用于实现多人游戏、社交功能和云存储等。该模块允许开发者使用EOSSDK模块与EOS服务进行集成和通信。 | 第三方软件开发包与中间件
+MikkTSpace:MikkTSpace是虚幻引擎中的一个模块，它提供了用于生成切线空间（Tangent Space）的工具和功能。切线空间是在渲染过程中用于计算法线、切线和副切线的坐标系。该模块允许开发者使用MikkTSpace模块生成和处理切线空间，以实现正确的法线映射和光照效果。 | 核心系统 | 数学库
+MaterialBaking:MaterialBaking是虚幻引擎中的一个模块，它提供了材质烘焙（Material Baking）的功能。材质烘焙是将复杂的材质效果转化为纹理贴图的过程，用于在渲染时提高性能和效果。该模块允许开发者使用MaterialBaking模块进行材质的烘焙和优化。 | 视觉效果 | 光照贴图与动态阴影
+ShaderCompilerCommon:ShaderCompilerCommon是虚幻引擎中的一个模块，它提供了用于编译着色器的通用功能和工具。着色器是用于在图形渲染中计算像素颜色和光照效果的程序。该模块允许开发者使用ShaderCompilerCommon模块编译和优化着色器代码，以实现高性能的图形渲染效果。 | 低阶渲染器 | 材质与着色器
+ShaderPreprocessor:ShaderPreprocessor是虚幻引擎中的一个模块，它提供了着色器预处理器的功能。着色器预处理器用于在编译着色器之前进行预处理，例如宏展开、条件编译等。该模块允许开发者使用ShaderPreprocessor模块进行着色器代码的预处理和优化。 | 低阶渲染器 | 材质与着色器
+DataLayerEditor:DataLayerEditor是虚幻引擎中的一个模块，它提供了数据层编辑器的功能。数据层用于管理和组织游戏中的实体和属性数据。该模块允许开发者使用DataLayerEditor模块创建、编辑和管理数据层，以实现灵活和可扩展的游戏数据管理。 | 资源 | 编辑器
+EditorConfig:EditorConfig是虚幻引擎中的一个模块，它提供了编辑器配置的功能。编辑器配置用于定义和调整虚幻引擎编辑器的行为和外观。该模块允许开发者使用EditorConfig模块进行编辑器配置的定制和管理。 | 核心系统 | 引擎配置
+AutomationMessages:AutomationMessages是虚幻引擎中的一个模块，它提供了自动化消息的功能。自动化消息用于在虚幻引擎的自动化系统中进行通信和交互。该模块允许开发者使用AutomationMessages模块发送和接收自动化消息，以实现自动化测试和任务的管理和执行。 | 核心系统 | 内部通信
+BuildSettings:BuildSettings是虚幻引擎中的一个模块，它提供了构建设置和配置的功能。构建设置用于定义和调整项目的构建过程和输出。该模块允许开发者使用BuildSettings模块进行项目的构建设置和配置，以满足特定的构建需求。 | 核心系统 | 引擎配置
+NetworkFile:NetworkFile是虚幻引擎中的一个模块，它提供了对网络文件操作的功能。网络文件操作用于在网络上进行文件传输、访问和管理。该模块允许开发者使用NetworkFile模块进行网络文件的读取、写入和处理，以实现与网络文件的交互和操作。 | 核心系统 | 文件I/O
+RHICore:RHICore是虚幻引擎中的一个模块，它提供了渲染硬件接口（RHI）的核心功能和实现。RHI是虚幻引擎的渲染系统的接口，用于与底层图形硬件进行交互。该模块允许开发者使用RHICore模块进行渲染硬件接口的操作和管理，以实现图形渲染的控制和优化。 | 低阶渲染器 | 图形设备接口
+VectorVM:VectorVM是虚幻引擎中的一个模块，它提供了向量虚拟机（Vector Virtual Machine）的功能。向量虚拟机是用于执行向量运算和计算的虚拟机环境。该模块允许开发者使用VectorVM模块进行向量计算的执行和优化，以实现高性能的数学运算。 | 核心系统 | 数学库
+WebBrowser:WebBrowser是虚幻引擎中的一个模块，它提供了内置的Web浏览器功能。内置的Web浏览器用于在虚幻引擎中显示和操作Web内容。该模块允许开发者使用WebBrowser模块在应用程序中嵌入和显示Web页面、内容和交互。 | 核心系统
+FreeImage:FreeImage是虚幻引擎中的一个模块，它提供了对FreeImage图像处理库的支持。FreeImage是一个开源的图像处理库，用于加载、保存和处理各种图像格式。该模块允许开发者使用FreeImage模块进行图像的加载、保存和处理，以实现高质量的图像处理和操作。 | 第三方软件开发包与中间件
+FreeType2:FreeType2是虚幻引擎中的一个模块，它提供了对FreeType字体渲染库的支持。FreeType是一个开源的字体渲染库，用于将字体文件转换为位图或矢量图形。该模块允许开发者使用FreeType2模块进行字体的渲染和处理，以实现高质量的字体显示和渲染。 | 第三方软件开发包与中间件 
+WebRTC:WebRTC是虚幻引擎中的一个模块，它提供了对WebRTC（Web Real-Time Communications）的支持。WebRTC是一个开源项目，用于在Web应用程序中实现实时通信功能，例如音视频通话和数据传输。该模块允许开发者使用WebRTC模块实现WebRTC技术在虚幻引擎中的应用和集成。 | 平台独立层 | 网络传输层
+FunctionalTesting:FunctionalTesting是虚幻引擎中的一个模块，它提供了功能测试的功能。功能测试用于验证软件的功能是否按预期工作，并捕捉潜在的错误和问题。该模块允许开发者使用FunctionalTesting模块创建、执行和管理功能测试，以确保项目的功能和稳定性。 | 核心系统 | 单元测试
+NaniteBuilder:NaniteBuilder是虚幻引擎中的一个模块，它提供了对Nanite构建器的功能。Nanite是虚幻引擎中的一种虚拟化几何技术，用于实现高效的大规模场景渲染和细节呈现。该模块允许开发者使用NaniteBuilder模块构建和优化Nanite几何数据，以实现出色的图形细节和性能。 | 场景图/剔除优化 | 细致程度系统
+SessionFrontend:SessionFrontend是虚幻引擎中的一个模块，它提供了会话前端的功能。会话前端用于管理和控制多人协作会话，例如多人编辑、实时预览和共享资源。该模块允许开发者使用SessionFrontend模块管理和协调会话前端的交互和功能。 | 平台独立层 | 网络传输层
+TextureFormat:TextureFormat是虚幻引擎中的一个模块，它提供了纹理格式的支持和处理功能。纹理格式用于存储和表示图像纹理的数据和压缩方式。该模块允许开发者使用TextureFormat模块进行纹理格式的解析、编码和转换，以实现对纹理的处理和优化。 | 资源 | 纹理资源
+Virtualization:Virtualization是虚幻引擎中的一个模块，它提供了虚拟化技术的支持和功能。虚拟化技术用于在虚拟环境中运行多个操作系统和应用程序。该模块允许开发者使用Virtualization模块实现虚拟化技术在虚幻引擎中的应用和集成。 | 核心系统
+AnimationBlueprintEditor:AnimationBlueprintEditor是虚幻引擎中的一个模块，它提供了动画蓝图编辑器的功能。动画蓝图是用于创建和控制角色动画行为的蓝图系统。该模块允许开发者使用AnimationBlueprintEditor模块创建、编辑和管理动画蓝图，以实现复杂的角色动画逻辑和行为控制。 | 游戏性基础 | 蓝图
+AnimationEditor:AnimationEditor是虚幻引擎中的一个模块，它提供了动画编辑器的功能。动画编辑器用于创建和编辑角色和对象的动画序列。该模块允许开发者使用AnimationEditor模块创建、编辑和调整动画序列，以实现流畅和逼真的角色动画效果。 | 游戏性基础 | 动态游戏对象模型
+DataTableEditor:DataTableEditor是虚幻引擎中的一个模块，它提供了数据表编辑器的功能。数据表用于存储和管理游戏中的数据，例如角色属性、物品信息等。该模块允许开发者使用DataTableEditor模块创建、编辑和管理数据表，以实现灵活和可扩展的数据管理和配置。 | 资源 | 编辑器
+LandscapeEditor:LandscapeEditor是虚幻引擎中的一个模块，它提供了地形编辑器的功能。地形编辑器用于创建、编辑和调整游戏中的地形和地貌。该模块允许开发者使用LandscapeEditor模块创建、编辑和管理地形，以实现自然和多样化的地形环境。| 资源 | 游戏世界/地图
+SkeletalMeshEditor:SkeletalMeshEditor是虚幻引擎中的一个模块，它提供了骨骼网格编辑器的功能。骨骼网格编辑器用于创建、编辑和调整游戏中的骨骼动画网格模型。该模块允许开发者使用SkeletalMeshEditor模块创建、编辑和管理骨骼网格模型，以实现复杂的角色动画和骨骼控制。 | 骨骼动画| 骨骼编辑
+UATHelper:UATHelper是虚幻引擎中的一个模块，它提供了辅助工具和功能来支持Unreal Automation Tool（UAT）的使用。UAT是虚幻引擎的自动化工具，用于执行各种构建、打包和部署任务。该模块允许开发者使用UATHelper模块简化和增强UAT的使用和集成。 | 核心系统
+AutomationWorker:AutomationWorker是虚幻引擎中的一个模块，它提供了自动化工作器的功能。自动化工作器用于执行自动化测试、构建和其他任务。该模块允许开发者使用AutomationWorker模块创建和管理自动化工作器，以实现自动化任务的执行和管理。 | 核心系统 | 模块启动及终止
+AVEncoder:AVEncoder是虚幻引擎中的一个模块，它提供了音视频编码器的功能。该模块允许开发者使用AVEncoder模块进行音视频的编码和解码操作，以实现音视频数据的处理和转换。 | 音频 | 音频解码
+ClothingSystemRuntimeNv:ClothingSystemRuntimeNv是虚幻引擎中的一个模块，它提供了NVIDIA物理服装系统的运行时支持。该模块允许开发者使用ClothingSystemRuntimeNv模块在虚幻引擎中实现基于物理的服装模拟和动画效果。 | 骨骼动画 | 衣物系统
+GeometryFramework:GeometryFramework是虚幻引擎中的一个模块，它提供了几何框架的功能。几何框架用于处理和操作几何体的数据和操作。该模块允许开发者使用GeometryFramework模块进行几何数据的处理、操作和计算。 | 核心系统 | 数学库
+LiveLinkAnimationCore:LiveLinkAnimationCore是虚幻引擎中的一个模块，它提供了LiveLink动画核心的功能。LiveLink是一种用于实时捕捉和应用外部设备或软件生成的动画数据的技术。该模块允许开发者使用LiveLinkAnimationCore模块实现与外部动画设备和软件的连接和交互。 | 第三方软件开发包与中间件 | LiveLink
+MoviePlayerProxy:MoviePlayerProxy是虚幻引擎中的一个模块，它提供了电影播放器代理的功能。电影播放器用于在游戏中播放预先制作的视频或动画序列。该模块允许开发者使用MoviePlayerProxy模块控制和管理游戏中的电影播放功能。 | 视频
+PreLoadScreen:PreLoadScreen是虚幻引擎中的一个模块，它提供了预加载界面的功能。预加载界面用于在游戏加载过程中显示加载进度和提示信息。该模块允许开发者使用PreLoadScreen模块创建和自定义游戏的预加载界面。 | 前端 | 游戏内置GUI
+SlateRHIRenderer:SlateRHIRenderer是虚幻引擎中的一个模块，它提供了Slate UI系统的RHI渲染器的功能。Slate是虚幻引擎中用于创建用户界面的工具和框架。该模块允许开发者使用SlateRHIRenderer模块实现基于RHI（Render Hardware Interface）的Slate UI渲染。 | 前端 | 游戏内置GUI
+SoundFieldRendering:SoundFieldRendering是虚幻引擎中的一个模块，它提供了声场渲染的功能。声场渲染用于模拟和处理三维声音场景，以实现更逼真和沉浸的音频效果。该模块允许开发者使用SoundFieldRendering模块创建和处理声场渲染效果。 | 音频 | 三维音频模型
+StreamingFile:StreamingFile是虚幻引擎中的一个模块，它提供了流式文件读取和处理的功能。流式文件读取用于按需加载和处理大型文件，以减少内存占用和提高加载效率。该模块允许开发者使用StreamingFile模块实现对大型文件的流式读取和处理。 | 核心系统 | 文件I/O
+Boost:Boost是虚幻引擎中使用的第三方库，它提供了各种常用的C++工具和功能。Boost库包含了诸如字符串处理、容器、算法、并发编程等方面的工具和组件，可以扩展和增强C++的功能。该模块允许开发者使用Boost库的功能来提高虚幻引擎的开发效率和功能拓展。 | 第三方软件开发包与中间件
+libcurl:libcurl是虚幻引擎中使用的第三方库，它提供了网络通信和数据传输的功能。libcurl库支持多种网络协议和数据格式，可以用于实现网络通信、文件下载、数据上传等功能。该模块允许开发者使用libcurl库来处理虚幻引擎中的网络通信和数据传输需求。 | 第三方软件开发包与中间件
+VisualStudioSourceCodeAccess:VisualStudioSourceCodeAccess是虚幻引擎中的一个模块，它提供了与Visual Studio集成的源代码访问功能。该模块允许开发者使用VisualStudioSourceCodeAccess模块在虚幻引擎中直接访问和编辑源代码文件，提高开发者的工作效率。 | 核心系统 | 版本控制
+AutomationWindow:AutomationWindow是虚幻引擎中的一个模块，它提供了自动化窗口的功能。自动化窗口用于管理和执行自动化测试和任务。该模块允许开发者使用AutomationWindow模块创建和管理自动化测试和任务的执行。 | 核心系统 | 模块启动及终止
+LocalizationService:LocalizationService是虚幻引擎中的一个模块，它提供了本地化服务的功能。本地化服务用于支持多语言和地区的游戏本地化。该模块允许开发者使用LocalizationService模块管理和实现游戏的本地化需求。 | 核心系统 | 本地化服务
+MeshBuilderCommon:MeshBuilderCommon是虚幻引擎中的一个模块，它提供了网格构建的公共功能和工具。网格构建用于创建、修改和优化游戏中的三维网格模型。该模块允许开发者使用MeshBuilderCommon模块实现网格构建相关的操作和算法。 | 资源 | 三维模型资源
+UncontrolledChangelists:UncontrolledChangelists是虚幻引擎中的一个模块，它提供了未受控制的更改列表的功能。未受控制的更改列表用于跟踪和管理未保存或未提交的更改。该模块允许开发者使用UncontrolledChangelists模块管理和处理未受控制的更改列表。 | 核心系统 | 版本控制
+AddContentDialog:AddContentDialog是虚幻引擎中的一个模块，它提供了添加内容对话框的功能。添加内容对话框用于方便地向项目中添加新的资源和内容。该模块允许开发者使用AddContentDialog模块创建和自定义添加内容对话框。 | 前端 | 游戏内置GUI
+AnimationEditMode:AnimationEditMode是虚幻引擎中的一个模块，它提供了动画编辑模式的功能。动画编辑模式用于在虚幻引擎中编辑和调整动画序列和关键帧。该模块允许开发者使用AnimationEditMode模块实现动画编辑相关的操作和功能。 | 骨骼动画 | 动态游戏对象模型
+FoliageEdit:FoliageEdit是虚幻引擎中的一个模块，它提供了植被编辑的功能。植被编辑用于创建、布置和调整游戏中的植被元素，如草地、树木等。该模块允许开发者使用FoliageEdit模块进行植被编辑相关的操作和功能。 | 资源 | 三维模型资源
+InternationalizationSettings:InternationalizationSettings是虚幻引擎中的一个模块，它提供了国际化设置的功能。国际化设置用于支持多语言和地区的游戏国际化。该模块允许开发者使用InternationalizationSettings模块管理和配置游戏的国际化设置。 | 核心系统 | 本地化服务
+LandscapeEditorUtilities:LandscapeEditorUtilities模块负责为虚幻引擎中的景观编辑提供各种实用功能和工具。它包含一组编辑器工具，允许用户在编辑器中创建、修改和管理景观。LandscapeEditorUtilities模块的一些关键功能包括能够创建和编辑景观层、使用各种笔刷和工具雕刻地形以及在景观上绘制纹理。它还提供了管理景观组件的工具，例如合并或拆分它们，并为景观生成碰撞数据的工具。如果删除LandscapeEditorUtilities模块，将对虚幻引擎中的景观编辑能力产生重大影响。用户将失去该模块提供的各种工具和功能，使得在编辑器中创建和修改景观变得更加困难。| 资源 | 游戏世界/地图
+Layers:Layers是Unreal Engine中用于组织和管理关卡中对象的一种方式。Layers模块提供了创建、管理和操作关卡中Layers的功能。它包括用于创建和编辑Layers的类，以及用于将对象添加到Layers中的函数。该模块还包括支持Layer可见性和碰撞的功能，允许您控制哪些Layers在关卡中可见或可交互。Layers模块是Unreal Engine的重要组成部分，它提供了一个强大的工具，用于组织和管理关卡中的对象。如果删除该模块，您将失去在关卡中使用Layers的能力，这可能会使管理大型或复杂关卡更加困难。| 游戏专用子系统 | 关卡系统
+MovieSceneCaptureDialog:MovieSceneCaptureDialog 模块为从 Sequencer 捕捉电影提供用户界面。它允许用户为捕获的电影配置诸如分辨率、帧率和输出格式等设置。对于希望从项目中创建电影或导出高质量视频的用户非常重要。如果删除，用户将失去从 Sequencer 配置和捕捉电影的能力，限制了他们创建电影和导出视频的选项。|游戏专用子系统|游戏摄像机|脚本/动画摄像机
+PackagesDialog:PackagesDialog 模块为编辑器中的资产包管理提供用户界面。它允许用户创建、保存和加载包，以及管理包依赖关系并执行诸如在包之间迁移资产等操作。对于管理项目中的资产及其依赖关系，确保干净有序的工作流程非常重要。如果删除，用户将失去通过编辑器管理资产包的能力，使得组织和维护项目变得更加困难。| 资源 |资源管理器
+PIEPreviewDeviceProfileSelector:PIEPreviewDeviceProfileSelector（在编辑器中播放预览设备配置文件选择器）模块为在编辑器中测试游戏的设备配置文件选择和配置提供用户界面。它允许用户模拟不同的设备和性能配置文件，以确保他们的游戏在各种平台上顺畅运行。对于开发者在不同设备上测试游戏并优化性能非常重要。如果删除，用户将失去在编辑器内轻松测试和优化不同设备游戏的能力，使得确保跨平台顺畅体验变得更加困难。|资源 | 编辑器
+PIEPreviewDeviceSpecification:此模块用于定义和管理在编辑器中播放（PIE）预览期间使用的设备规格。它包括设备的硬件和性能特性，以便在模拟不同设备时进行性能测试和优化。对于在多种设备上测试和优化游戏性能的开发者非常重要。如果删除，用户将失去在编辑器中模拟不同设备性能的能力，这将使得跨平台优化变得困难。|资源 | 编辑器
+PinnedCommandList:PinnedCommandList模块提供了一个用户界面，用于显示和管理编辑器中的常用命令。用户可以将常用命令固定到列表中，以便快速访问和执行。对于提高编辑器用户的工作效率和便利性非常重要。如果删除，用户将失去快速访问和执行常用命令的能力，可能降低工作效率。| 资源 | 编辑器
+ProjectTargetPlatformEditor:ProjectTargetPlatformEditor模块允许用户在编辑器中配置和管理项目的目标平台。它提供了一个用户界面，用于选择和设置针对不同平台的构建选项和优化设置。对于确保项目能够在多个平台上正确构建和运行的开发者非常重要。如果删除，用户将失去在编辑器中管理目标平台的能力，可能导致跨平台兼容性问题。| 资源 | 编辑器
+SequencerCore:SequencerCore模块是虚幻引擎中的序列器（Sequencer）的核心组件，负责处理时间线、关键帧和轨道等动画和电影制作相关的功能。它为虚幻引擎提供了强大的电影制作和动画工具。对于制作游戏中的动画、电影和交互式序列的开发者非常重要。如果删除，用户将失去使用虚幻引擎内置的电影制作和动画工具的能力，可能导致制作过程变得更加困难和耗时。|游戏专用子系统|游戏摄像机|脚本/动画摄像机
+SerializedRecorderInterface:SerializedRecorderInterface模块定义了一个接口，用于在虚幻引擎中记录和序列化游戏过程中的事件。这对于分析游戏性能、调试和回放游戏过程非常有用。对于分析游戏性能、调试和回放游戏过程的开发者非常重要。如果删除，用户将失去记录和序列化游戏过程中事件的能力，可能导致性能分析和调试变得困难。|性能剖析调试 | 录影与回放
+StatsViewer:StatsViewer模块提供了一个用户界面，用于查看和分析虚幻引擎中的各种性能统计数据。它可以帮助开发者识别性能瓶颈和优化游戏。对于分析游戏性能和优化的开发者非常重要。如果删除，用户将失去查看和分析性能统计数据的能力，可能导致性能优化变得困难。|性能剖析调试 |性能数据收集与分析
+TextureEditor:TextureEditor模块提供了一个用户界面，用于在虚幻引擎编辑器中编辑和管理纹理资源。它允许用户查看、修改和优化纹理，以便在游戏中获得最佳视觉效果和性能。对于处理游戏中的纹理资源和优化视觉效果的开发者非常重要。如果删除，用户将失去在编辑器中编辑和管理纹理资源的能力，可能导致视觉效果和性能受到影响。| 资源 |纹理资源
+UnrealEdMessages:UnrealEdMessages模块负责处理虚幻引擎编辑器中的消息系统，包括错误、警告和通知。它有助于提供清晰的反馈，以便用户了解编辑器中发生的事件和问题。对于提供清晰的反馈和帮助用户解决问题的编辑器用户非常重要。如果删除，用户将失去编辑器中的消息系统，可能导致问题难以识别和解决。|性能剖析调试|调试用日志
+AutomationTest:AutomationTest 模块提供了用于创建和运行自动化测试用例的功能。自动化测试用于检验引擎和游戏中的各种功能是否正常工作，以便在开发过程中提前发现和解决问题。自动化测试包括但不限于单元测试、集成测试、性能测试等。通过自动化测试，您可以确保引擎和游戏的稳定性和可靠性。对于需要进行持续集成和关注项目质量、稳定性的开发者，AutomationTest 模块非常重要。删除此模块可能导致自动化测试功能失效，进而影响到项目的稳定性和可靠性。|核心系统|单元测试
+CUDA:CUDA 模块提供了对 NVIDIA CUDA 平台的支持，以实现遵循 CUDA 编程模型的代码在虚幻引擎中的运行。通过使用 CUDA 模块，开发者可以在虚幻引擎中更好地利用 GPU 的强大计算能力，实现高性能的并行计算。对于需要执行 GPU 加速计算和并行计算的开发者，CUDA 模块非常重要。删除 CUDA 模块可能导致在虚幻引擎中使用 CUDA 功能受限。|第三方软件开发包与中间件
+EyeTracker:EyeTracker模块实现了对眼球追踪设备的支持，用于开发基于眼球追踪的输入控制和交互功能。眼球追踪技术可用于改进用户界面、创新游戏设计和增强游戏中的沉浸感。通过集成 EyeTracker 模块，开发者可以在虚幻引擎项目中实现对各种眼球追踪设备的支持。对于需要使用眼球追踪作为输入或交互方式的项目，EyeTracker模块非常重要。删除此模块可能导致在虚幻引擎中使用眼球追踪功能失效。|人体学接口设备| 物理设备I/O
+RSA:RSA 模块提供了基于 RSA 加密算法的实现，用于在游戏中实现安全的加密功能。RSA 加密算法是一种非对称加密算法，提供了公钥加密和私钥解密的机制，广泛应用于数据保密、数字签名等领域。通过集成 RSA 模块，开发者可以在虚幻引擎项目中使用 RSA 加密算法来保护数据安全，例如保护玩家信息、处理网络通信等。对于需要数据加密和保护的项目，RSA 模块非常重要。删除 RSA 模块可能导致在虚幻引擎中使用 RSA 加密功能受限。| 平台独立层 | 安全性
+SlateNullRenderer:SlateNullRenderer 模块提供了一个空的 Slate 渲染器实现。Slate 是虚幻引擎中的 UI 框架，用于构建游戏和编辑器的用户界面。SlateNullRenderer 在没有图形输出的情况下为 Slate UI 提供一个默认的渲染器实现。这对于在服务器端、命令行模式、无头（headless）等图形环境下运行应用程序非常重要。通过使用 SlateNullRenderer，在没有图形输出的环境中，您可以避免导致应用程序崩溃的潜在问题。对于需要在无图形输出的环境运行的项目，SlateNullRenderer 模块非常重要。删除可能导致在这些情况下运行时出现问题。|前端 | 游戏内置GUI
+ICU:ICU（International Components for Unicode）模块提供了对 ICU 库的支持。ICU 是一个成熟的、广泛使用的 Unicode 库，主要用于处理全球多语言文本、字符集转换、文本比较等国际化和本地化需求。ICU 库为虚幻引擎提供了强大的多语言处理功能。对于需要支持多语言和进行国际化、本地化处理的项目，ICU 模块非常重要。删除可能导致 Unicode 和多语言处理功能受限。|核心系统|本地化服务
+libWebSockets:libWebSockets 模块提供了对 libwebsocket 库的支持。libwebsocket 是一个用于实现 WebSocket 通信的轻量级、高性能的 C 库。WebSocket 是一种基于 TCP 协议的全双工通信协议，它可以实现实时、低延迟的网络通信。通过集成 libWebSockets 模块，开发者可以在虚幻引擎项目中使用 WebSocket 进行实时网络通信，例如 MMO 游戏、实时聊天、实时协作等。对于需要实现基于 WebSocket 的实时网络通信的开发者，libWebSockets 模块非常重要。删除可能导致 WebSocket 通信功能受限。|平台独立层|网络传输层
+Steamworks:Steamworks 模块提供了对 Steam 平台的支持，用于实现与 Steam 服务的集成，包括负责成就、云存档、好友列表、Steam 工作坊等功能。通过集成 Steamworks 模块，开发者可以完全发挥 Steam 平台的优势，提高游戏在 Steam 社区的知名度和收益。对于计划在 Steam 平台发布游戏的开发者，Steamworks 模块非常重要。删除可能导致无法与 Steam 平台相关功能和服务集成。| 第三方软件开发包与中间件
+SequencerScripting:SequencerScripting 模块用于实现时间轴（Sequencer）的脚本功能。Sequencer 是虚幻引擎中的动画编辑工具，让开发者可以在游戏和电影场景中创建复杂的动画和事件。通过使用 SequencerScripting 模块，开发者可以编写脚本来控制和驱动 Sequencer 动画，提高动画制作的灵活性和效率。对于需要使用脚本控制 Sequencer 功能的开发者，SequencerScripting 模块非常重要。删除可能导致无法使用 Sequencer 脚本功能。|游戏专用子系统|游戏摄像机|脚本/动画摄像机
+AnimationWidgets:AnimationWidgets 模块负责实现虚幻引擎中使用的动画编辑器的 UI 组件（例如按钮、滑动条、文本框等）。这些 UI 组件可以让开发者更方便地创建和编辑角色动画、序列动画和各种动画效果。对于需要在虚幻引擎中创建和编辑动画的开发者，AnimationWidgets 模块非常重要。删除可能导致动画编辑功能受限。| 核心系统 | 引擎前端
+AudioSettingsEditor:AudioSettingsEditor 模块负责实现音频设置编辑器，用于在虚幻引擎编辑器中调整全局音频设置、启用或禁用音频插件等。通过使用 AudioSettingsEditor，开发者可以优化项目的音频设置，以满足不同平台和硬件的需求。对于需要在虚幻引擎项目中调整音频设置的开发者，AudioSettingsEditor 模块非常重要。删除可能导致无法直接编辑音频设置。|音频|音频播放/管理
+DeviceManager:DeviceManager 模块用于管理编辑器与设备之间的连接和通信，包括运行时设备（如智能手机、平板电脑等）和开发工具（如调试器）。DeviceManager 提供了设备的枚举、配对、连接和断开等功能。这对于跨平台开发、设备调试和实时预览等任务非常重要。对于需要跨平台开发和设备调试的开发者，DeviceManager 模块非常重要。删除可能导致设备连接和管理功能受限。| 平台独立层 | 跨平台支持
+DistributedBuildInterface:DistributedBuildInterface 模块负责实现虚幻引擎分布式构建功能，允许开发者将构建任务分布在多台设备上以缩短构建时间。分布式构建功能对于大型项目和团队协作非常有帮助，可以在一定程度上提高开发效率。对于需要利用多台设备进行项目构建的开发者，DistributedBuildInterface 模块非常重要。删除可能导致分布式构建功能失效。| 平台独立层 | 文件系统
+MeshBoneReduction:MeshBoneReduction 模块用于实现网格骨骼简化功能。骨骼简化可以在保持视觉效果的同时减少骨骼数量，降低渲染成本和计算开销。这对于需要优化性能和提高运行效率的项目非常重要。对于需要进行网格优化和骨骼简化的开发者，MeshBoneReduction 模块非常重要。删除可能导致骨骼简化功能失效。| 骨骼动画 | 骨骼编辑
+ProfilerClient:ProfilerClient 模块用于实现虚幻引擎性能分析客户端功能。性能分析客户端允许开发者连接到运行中的应用程序（例如游戏）以收集性能数据和统计信息。这对于性能优化和调试非常重要。对于关注性能优化和调试的开发者，ProfilerClient 模块非常重要。删除可能导致性能分析客户端功能失效。|性能剖析调试 |性能数据收集与分析
+ProfilerService:ProfilerService 模块用于实现虚幻引擎性能分析服务功能。性能分析服务在应用程序（例如游戏）运行过程中收集性能数据和统计信息，然后将这些信息发送到性能分析客户端（如 ProfilerClient）进行分析和处理。对于关注性能优化和调试的开发者，ProfilerService 模块非常重要。删除可能导致性能分析服务功能失效。|性能剖析调试 |性能数据收集与分析
+RigVMDeveloper:RigVMDeveloper 模块提供了创建和编辑 Control Rig 虚拟机 (RigVM) 的工具。Control Rig 是虚幻引擎中的动画制作工具，用于创建角色骨骼动画。RigVMDeveloper 允许开发者使用虚拟机在运行时处理动画数据和逻辑，提高动画制作效率和灵活性。对于需要创建复杂数字角色动画的开发者，RigVMDeveloper 模块非常重要。删除可能导致虚拟机动画工具功能受限。|骨骼动画
+TextureBuildUtilities:TextureBuildUtilities 模块提供了纹理构建和处理的工具，用于优化纹理质量和性能。这些工具可以帮助开发者更好地处理纹理 Mipmaps（多分辨率纹理）、纹理压缩和纹理过滤等任务。对于需要处理和优化纹理资源的开发者，TextureBuildUtilities 模块非常重要。删除可能导致纹理构建和处理功能受限。| 资源 |纹理资源
+TextureFormatIntelISPCTexComp:TextureFormatIntelISPCTexComp 模块提供了基于 Intel ISPC Texture Compressor 的纹理压缩实现。纹理压缩可以减少纹理文件大小和显存占用，提高性能。使用 Intel ISPC Texture Compressor，开发者可以利用其高效的纹理压缩算法，以减少运行时占用的资源对于需要优化纹理大小和内存占用的开发者，TextureFormatIntelISPCTexComp 模块非常重要。删除可能导致缺少基于 Intel ISPC 的纹理压缩功能。| 资源 |纹理资源
+UndoHistory:UndoHistory 模块提供了虚幻引擎编辑器中的撤销/重做历史功能。此功能允许开发者在编辑过程中撤销或重做之前的操作，有助于提高编辑效率和避免犯错。对于需要在虚幻引擎中进行复杂编辑操作的开发者，UndoHistory 模块非常重要。删除可能导致撤销/重做功能失效。| 资源 | 编辑器
+Windows:Windows 模块用于实现虚幻引擎在 Windows 平台上的支持，包括 Windows 系统级别的功能和对 DirectX API 的集成。通过使用 Windows 模块，开发者可以确保他们的项目在 Windows 平台上正常工作。对于计划在 Windows 平台上发布游戏的开发者，Windows 模块非常重要。删除可能导致在 Windows 平台上运行时出现兼容性问题。| 操作系统
+AssetTagsEditor:AssetTagsEditor 模块提供了用于编辑 Asset 标签的功能。Asset 标签是虚幻引擎中一个用于帮助组织和分类资源的功能。通过编辑器中的 AssetTagsEditor，开发者可以方便地为 Asset 添加、修改或移除标签，以便更高效地搜索和管理资源。对于需要在虚幻引擎项目中管理大量资源的开发者，AssetTagsEditor 模块非常重要。删除可能导致资源标签编辑功能受限。| 资源 | 资源管理器
+GameplayTasksEditor:GameplayTasksEditor 模块提供了用于编辑 Gameplay Tasks 的功能。Gameplay Tasks 是虚幻引擎中用于处理异步游戏逻辑（例如 AI 行为、动画顺序等）的任务系统。通过使用 GameplayTasksEditor，开发者可以方便地创建和编辑 Gameplay Tasks，便于调试和优化游戏逻辑。对于需要处理复杂游戏逻辑和异步任务的开发者，GameplayTasksEditor 模块非常重要。删除可能导致 Gameplay Tasks 编辑功能受限。|游戏性基础
+LocalizationCommandletExecution:LocalizationCommandletExecution 模块提供了一系列用于执行和管理本地化命令（Commandlets）的功能。使用这些命令，开发者可以轻松地导入、导出、验证和更新多语言文本数据，从而简化本地化工作流程。对于需要对游戏进行本地化的开发者，LocalizationCommandletExecution 模块非常重要。删除可能导致本地化命令功能受限。|核心系统|本地化服务
+LocalizationDashboard:LocalizationDashboard 模块提供了一个集成在虚幻引擎编辑器中的本地化仪表板工具。该工具为开发者提供了本地化工作流程所需的各种功能，包括管理本地化设置、文本资源和翻译等。通过使用 LocalizationDashboard，开发者可以更方便地管理项目的多语言支持。对于需要进行多语言本地化的开发者，LocalizationDashboard 模块非常重要。删除可能导致本地化仪表板功能失效。|核心系统|本地化服务
+MeshPaint:MeshPaint 模块为虚幻引擎编辑器提供了直接在 Static Mesh 上进行纹理贴图绘制的功能。通过使用 MeshPaint 工具，开发者可以在编辑器中直接为资源添加和调整纹理，方便快捷地完成美术任务和纹理修改。对于需要在编辑器中直接进行纹理编辑的开发者，MeshPaint 模块非常重要。删除可能导致 MeshPaint 功能失效。| 资源 |三维模型资源
+NewLevelDialog:NewLevelDialog 模块提供了在虚幻引擎编辑器中创建新关卡时显示的创建新关卡对话框。通过这个对话框，开发者可以选择新关卡的模板、设置环境属性等。创建新关卡对话框简化了关卡创建工作流程，方便开发者快速开始制作新的游戏关卡。对于需要在虚幻引擎中创建和编辑关卡的开发者，NewLevelDialog 模块非常重要。删除可能导致创建新关卡的流程受限。| 游戏专用子系统 | 关卡系统
+StructViewer:StructViewer 模块提供了一个虚幻引擎编辑器中用于查看和编辑结构体数据的工具。结构体是一个用于表示和组织多个相关数据值的数据类型。通过使用 StructViewer 工具，开发者可以更方便地查看和编辑项目中的自定义结构体数据。对于需要在虚幻引擎项目中使用自定义结构体数据的开发者，StructViewer 模块非常重要。删除可能导致在编辑器中查看和编辑结构体数据功能受限。|资源 | 编辑器
+TranslationEditor:TranslationEditor 模块提供了一个虚幻引擎编辑器中用于编辑游戏文本翻译的工具。通过使用 TranslationEditor，开发者可以在编辑器中查看和编辑多语言文本资源，便于管理项目的本地化文本。对于需要进行多语言本地化的开发者，TranslationEditor 模块非常重要。删除可能导致在编辑器中编辑文本翻译功能受限。|核心系统|本地化服务
+TurnkeySupport:TurnkeySupport 模块提供了虚幻引擎的一键部署支持功能。通过使用 TurnkeySupport 模块，开发者可以优化项目的构建、打包和部署流程，实现更快捷、高效的产品发布。对于需要优化构建和部署流程的开发者，TurnkeySupport 模块非常重要。删除可能导致一键部署功能受限。|核心系统
+AdvancedWidgets:AdvancedWidgets 模块提供了一套高级 UI 组件，用于扩展虚幻引擎 Slate UI 框架的功能。这些高级 UI 组件包括弹出菜单、滚动条、选项卡等，可以帮助开发者更快速地创建复杂的用户界面。对于需要创建复杂 UI 的开发者，AdvancedWidgets 模块非常重要。删除可能导致高级 UI 组件功能受限。|前端 | 游戏内置GUI
+Advertising:Advertising 模块为虚幻引擎项目提供了广告功能支持，允许开发者在移动游戏中插入广告以实现盈利。通过使用 Advertising 模块，开发者可以方便地集成广告平台 SDK，并在游戏中展示广告。对于计划在移动游戏中投放广告的开发者，Advertising 模块非常重要。删除可能导致广告功能受限。| 核心系统
+AudioCaptureCore:AudioCaptureCore 模块提供了虚幻引擎捕获和处理实时音频输入的功能，例如麦克风输入。通过使用 AudioCaptureCore，开发者可以实现在游戏中使用实时音频输入的功能。对于需要处理实时音频输入的开发者，AudioCaptureCore 模块非常重要。删除可能导致实时音频输入功能受限。|音频
+IESFile:IESFile 模块提供了对 IES 文件格式的支持。IES 文件是一种光学测量文件格式，用于描述光源在各个方向的发光性能。在虚幻引擎中，开发者可以使用 IES 文件为场景中的光源提供逼真的光照效果，增强渲染的真实感。对于需要精确控制光照效果和提高渲染真实感的开发者，IESFile 模块非常重要。删除可能导致 IES 文件支持和光照效果受限。| 核心系统 | 特定格式支持
+MessagingRpc:MessagingRpc 模块提供了虚幻引擎中的远程过程调用（RPC）功能。通过使用 MessagingRpc，开发者可以实现跨进程、跨设备的通信和命令执行，从而简化分布式系统和网络应用的开发。对于需要实现远程过程调用和跨进程通信的开发者，MessagingRpc 模块非常重要。删除可能导致远程过程调用和跨进程通信功能受限。|平台独立层|网络传输层
+Navmesh:Navmesh 模块为虚幻引擎提供了导航网格（Navmesh）功能，用于实现游戏中的寻路和动态避障。通过使用 Navmesh 模块，开发者可以让游戏角色自动沿最优路径移动，实现高效的 AI 行为。对于需要实现角色寻路和高效 AI 行为的开发者，Navmesh 模块非常重要。删除可能导致导航网格功能受限。|游戏专用子系统|人工智能| 路径搜寻
+NetworkReplayStreaming:NetworkReplayStreaming 模块为虚幻引擎提供了网络游戏录像功能，允许开发者在游戏中记录和回放游戏过程中的网络状态和事件。通过使用 NetworkReplayStreaming 模块，开发者可以实现游戏录像回放、游戏分析和调试等功能。对于需要实现网络游戏录像回放的开发者，NetworkReplayStreaming 模块非常重要。删除可能导致网络游戏录像功能受限。|性能剖析调试 | 录影与回放
+TextureUtilitiesCommon:TextureUtilitiesCommon 模块提供了用于纹理处理和操作的通用工具集。这些工具可以帮助开发者实现纹理资源的导入、导出、压缩、优化等功能。通过使用 TextureUtilitiesCommon 模块，开发者可以更好地管理和优化游戏中的纹理资源。对于需要处理和优化纹理资源的开发者，TextureUtilitiesCommon 模块非常重要。删除可能导致纹理处理和操作功能受限。| 资源 |纹理资源
+GoogleTest:GoogleTest 模块提供了对 Google Test 框架的支持，用于虚幻引擎项目中的单元测试和功能测试。Google Test 是一个广泛使用的 C++ 测试框架，它可以帮助开发者编写可重用和可扩展的测试用例。通过集成 GoogleTest 模块，开发者可以确保项目的质量和稳定性。对于需要进行单元测试和功能测试的开发者，GoogleTest 模块非常重要。删除可能导致测试功能受限。|核心系统|单元测试
+HarfBuzz:HarfBuzz 模块提供了对 HarfBuzz 库的支持。HarfBuzz 是一个用于处理 Unicode 文字形状的开源库，可以帮助开发者实现复杂的文本布局和渲染效果。通过使用 HarfBuzz 模块，开发者可以确保游戏中的文本在不同语言和地区的正确显示。对于需要支持多语言文本渲染的开发者，HarfBuzz 模块非常重要。删除可能导致文本渲染和处理功能受限。|核心系统|本地化服务
+MaterialX:MaterialX 模块提供了对 MaterialX 文件格式的支持。MaterialX 是一种用于描述材质和着色的开源文件格式，可以帮助开发者在虚幻引擎中更方便地分享和复用材质资源。通过集成 MaterialX 模块，开发者可以导入和导出 MaterialX 文件，简化材质资源的管理和交换。对于需要使用 MaterialX 文件格式的开发者，MaterialX 模块非常重要。删除可能导致 MaterialX 文件支持功能受限。| 核心系统 | 特定格式支持
+nvTextureTools:nvTextureTools 模块提供了对 NVIDIA Texture Tools（NVIDIA 纹理工具）的支持。NVIDIA Texture Tools 是一套用于纹理压缩和处理的工具集，可以帮助开发者优化纹理资源，提高游戏性能。通过使用 nvTextureTools 模块，开发者可以利用 NVIDIA 的纹理压缩和处理算法，提高纹理资源的质量和性能。对于需要优化纹理资源的开发者，nvTextureTools 模块非常重要。删除可能导致基于 NVIDIA 的纹理压缩和处理功能受限。| 资源 |纹理资源
+PLCrashReporter:PLCrashReporter 模块为虚幻引擎提供对 PLCrashReporter 库的支持。PLCrashReporter 是一个用于在 iOS 和 macOS 平台上收集崩溃报告的开源库，可以帮助开发者识别和解决游戏的性能问题和错误。通过集成 PLCrashReporter 模块，开发者可以在 iOS 和 macOS 平台上发布更稳定、高质量的游戏。对于计划在 iOS 和 macOS 平台上发布游戏的开发者，PLCrashReporter 模块非常重要。删除可能导致崩溃报告功能受限。| 第三方软件开发包与中间件
+Python3:Python3 模块为虚幻引擎提供了对 Python 3.x 的支持。Python 是一种通用的、解释型的脚本语言，可以帮助开发者实现自动化任务，编写插件和工具。通过集成 Python3 模块，开发者可以使用 Python 3.x 脚本和库来扩展虚幻引擎的功能和开发效率。对于需要使用 Python 3.x 进行开发的开发者，Python3 模块非常重要。删除可能导致 Python 3.x 支持功能受限。|第三方软件开发包与中间件
+ShaderConductor:ShaderConductor 模块提供了对 ShaderConductor 库的支持。ShaderConductor 是一个用于跨平台着色器转换的开源库，可以帮助开发者在不同图形 API（如 Direct3D, Vulkan, OpenGL 等）之间统一管理和调整着色器代码。通过使用 ShaderConductor 模块，开发者可以更方便地使游戏适应不同图形平台的需求。对于需要跨平台兼容的开发者，ShaderConductor 模块非常重要。删除可能导致跨平台着色器转换功能受限。| 第三方软件开发包与中间件
+WinHttp:WinHttp 模块为虚幻引擎提供了对 Windows HTTP 服务的支持。通过使用 WinHttp 模块，开发者可以实现与 HTTP 服务器的通信和数据传输，例如下载文件、请求网页等。这对于需要在游戏中实现联网功能的开发者来说非常重要。对于计划实现 Windows 平台上的网络功能的开发者，WinHttp 模块非常重要。删除可能导致 Windows HTTP 服务功能受限。|平台独立层|网络传输层
+ZoneGraphAnnotations:ZoneGraphAnnotations 模块提供了虚幻引擎编辑器中用于展示和编辑性能分析图表注释的功能。这些注释可以帮助开发者在性能分析图表中更清晰地了解系统的实时状态，提高优化和调试的效率。对于需要进行性能分析和优化的开发者，ZoneGraphAnnotations 模块非常重要。删除可能导致性能分析图表注释功能受限。|性能剖析调试 |性能数据收集与分析
+CookOnTheFlyNetServer:CookOnTheFlyNetServer 模块提供了虚幻引擎中一种名为“边运行边烹饪”（Cook on the Fly）的功能，它可以即时生成和转换资源，而无需预先烹饪。通过使用 CookOnTheFlyNetServer，开发者可以在开发过程中更快速地测试和预览游戏资源，降低构建和迭代时间。对于需要即时预览和测试游戏资源的开发者，CookOnTheFlyNetServer 模块非常重要。删除可能导致边运行边烹饪功能受限。| 游戏性基础 | 世界载入/串流
+EditorAnalyticsSession:EditorAnalyticsSession 模块提供了虚幻引擎编辑器的分析会话功能。通过收集编辑器的使用数据，开发者可以更好地了解和优化编辑器的工作流程，从而提高项目开发效率。对于需要分析虚幻引擎编辑器使用情况的开发者，EditorAnalyticsSession 模块非常重要。删除可能导致编辑器分析会话功能受限。|核心系统
+ExternalImagePicker:ExternalImagePicker 模块提供了一个虚幻引擎编辑器中用于选择和导入外部图片资源的功能。通过使用 ExternalImagePicker，开发者可以简化图像资源导入流程，提高工作效率。对于需要导入外部图像资源的开发者，ExternalImagePicker 模块非常重要。删除可能导致外部图像选择和导入功能受限。|资源 | 媒体资源
+IoStoreUtilities:IoStoreUtilities 模块提供了一组虚幻引擎 I/O 存储工具，用于优化游戏资源的读取和存储。这些工具可以帮助开发者提高游戏加载速度和内存使用效率，从而改善游戏性能。对于需要优化资源加载和内存使用的开发者，IoStoreUtilities 模块非常重要。删除可能导致虚幻引擎 I/O 存储工具功能受限。|核心系统|文件I/O
+LogVisualizer:LogVisualizer 模块为虚幻引擎提供了一个实时日志可视化工具，帮助开发者在编辑器中查看和分析游戏过程中产生的日志数据。通过使用 LogVisualizer，开发者可以更直观地识别和解决游戏中的问题和错误。对于需要查看和分析日志数据的开发者，LogVisualizer 模块非常重要。删除可能导致日志可视化功能受限。|性能剖析调试|调试用日志
+Merge:Merge 模块提供了用于合并虚幻引擎中的多个资源（如 Static Mesh, Skeletal Mesh 等）的功能。通过使用 Merge 模块，开发者可以将多个资源合并为一个新的资源，从而优化资源管理，提高性能和效率。对于需要实现资源合并的开发者，Merge 模块非常重要。删除可能导致资源合并功能受限。|资源 | 三维模型资源
+MeshUtilitiesEngine:MeshUtilitiesEngine 模块提供了虚拟引擎中基于网格的各种实用程序，包括网格优化、LOD（细节层次变化）生成、网格碰撞生成等。通过使用 MeshUtilitiesEngine 模块，开发者可以对游戏内的网格模型进行优化，提高渲染性能和资源管理效率。对于需要优化和管理网格资源的开发者，MeshUtilitiesEngine 模块非常重要。删除可能导致网格优化功能受限。| 资源 |三维模型资源
+NaniteUtilities:NaniteUtilities 模块为虚幻引擎提供了对 Nanite 虚拟几何技术的支持。Nanite 是一种高效的渲染技术，允许虚幻引擎渲染具有高解析度细节的网格模型。通过使用 NaniteUtilities，开发者可以充分利用 Nanite 技术提高游戏的视觉质量。对于需要实现高解析度细节渲染的开发者，NaniteUtilities 模块非常重要。删除可能导致 Nanite 渲染功能受限。| 场景图/剔除优化 | 细致程度系统
+PakFileUtilities:PakFileUtilities 模块提供了用于处理虚幻引擎中的 pak（包文件）的实用工具。Pak 文件是一种用于将项目资源打包和压缩的文件格式，有助于提高游戏加载速度和资源管理效率。通过使用 PakFileUtilities 模块，开发者可以简化项目资源的打包和读取流程。对于需要优化项目资源加载和管理的开发者，PakFileUtilities 模块非常重要。删除可能导致 pak 文件处理功能受限。| 资源 |资源管理器
+Profiler:Profiler 模块为虚幻引擎提供了一个性能分析工具，用于收集和分析游戏运行时的性能数据。通过使用 Profiler 模块，开发者可以识别游戏中的性能瓶颈，提高系统的运行效率和优化性能。对于需要进行性能分析和优化的开发者，Profiler 模块非常重要。删除可能导致性能分析功能受限。|性能剖析调试 |性能数据收集与分析
+ProfilerMessages:ProfilerMessages 模块为虚幻引擎的性能分析（Profiler）提供了消息传递功能。通过使用 ProfilerMessages，开发者可以在运行时通过虚幻引擎的消息系统收集并发送性能数据，以记录并分析系统性能。对于需要进行性能分析和优化的开发者，ProfilerMessages 模块非常重要。删除可能导致性能分析消息功能受限。|性能剖析调试 |性能数据收集与分析
+ProjectLauncher:ProjectLauncher 模块为虚幻引擎提供了项目启动和部署功能。通过使用 ProjectLauncher，开发者可以方便地构建、打包和部署虚幻引擎项目，从而实现更快捷、高效的产品发布。对于需要优化构建和部署流程的开发者，ProjectLauncher 模块非常重要。删除可能导致项目启动和部署功能受限。|核心系统
+ScriptDisassembler:ScriptDisassembler 模块为虚幻引擎提供了脚本字节码反汇编功能，用于分析和调试虚幻引擎的脚本代码（例如蓝图）。通过使用 ScriptDisassembler，开发者可以更深入地了解和优化项目中的脚本逻辑。对于需要调试和优化项目脚本的开发者，ScriptDisassembler 模块非常重要。删除可能导致脚本反汇编功能受限。|核心系统
+ShaderFormatVectorVM:ShaderFormatVectorVM 模块提供了针对虚幻引擎的 VectorVM 着色器格式的支持。VectorVM 是一个用于处理大量并行数据操作（例如粒子系统计算）的虚拟机。通过使用 ShaderFormatVectorVM，开发者可以在虚幻引擎中实现更高效的粒子系统和类似功能。对于需要优化粒子系统和并行计算的开发者，ShaderFormatVectorVM 模块非常重要。删除可能导致 VectorVM 着色器格式的功能受限。|视觉效果|粒子与贴花系统
+SlateFileDialogs:SlateFileDialogs 模块为虚幻引擎中的 Slate UI 系统提供了文件对话框组件，包括文件打开、文件保存等功能。通过使用 SlateFileDialogs，开发者可以在虚幻引擎编辑器和游戏中方便地实现文件选择和操作。对于需要在项目中使用文件选择与操作功能的开发者，SlateFileDialogs 模块非常重要。删除可能导致文件对话框功能受限。|前端 | 游戏内置GUI
+TextureFormatDXT:TextureFormatDXT 模块为虚幻引擎提供了对 DXT 纹理压缩格式的支持。DXT 是一种广泛使用的纹理压缩格式，可以减少纹理资源的内存占用，提高渲染性能。通过集成 TextureFormatDXT 模块，开发者可以使用 DXT 格式来压缩游戏中的纹理资源。对于需要进行纹理压缩和优化的开发者，TextureFormatDXT 模块非常重要。删除可能导致 DXT 纹理压缩功能受限。| 资源 |纹理资源
+TextureFormatUncompressed:TextureFormatUncompressed 模块为虚幻引擎提供了对未压缩纹理格式的支持。未压缩纹理可以保留更高的图像质量，但可能会导致较高的内存使用。通过使用 TextureFormatUncompressed 模块，开发者可以根据项目需求灵活选择纹理格式以平衡性能与画质。对于需要选择未压缩纹理格式的开发者，TextureFormatUncompressed 模块非常重要。删除可能导致未压缩纹理格式支持功能受限。| 资源 |纹理资源
+TurnkeyIO:TurnkeyIO 模块提供了虚幻引擎的一键部署 I/O 操作支持功能。TurnkeyIO 为开发者提供了用于文件和目录操作的工具集，简化了项目的构建、打包和部署流程，实现更快捷、高效的产品发布。对于需要优化构建和部署流程的开发者，TurnkeyIO 模块非常重要。删除可能导致一键部署 I/O 功能受限。|核心系统|文件I/O
+VisualGraphUtils:VisualGraphUtils 模块为虚幻引擎提供了用于生成和编辑可视化图（例如蓝图、材质编辑器等）的实用工具。通过使用 VisualGraphUtils，开发者可以更方便地创建和管理复杂的可视化节点网络，提高编辑器的工作效率。对于需要处理可视化节点网络的开发者，VisualGraphUtils 模块非常重要。删除可能导致可视化图实用工具功能受限。| 资源 | 编辑器
+BehaviorTreeEditor:BehaviorTreeEditor 模块提供了一个虚幻引擎编辑器中用于编辑和管理行为树的工具。行为树是 AI 编程中用于管理决策和行为逻辑的结构。通过使用 BehaviorTreeEditor，开发者可以更方便地设计和调试游戏中的 AI 行为。对于需要构建复杂 AI 逻辑的开发者，BehaviorTreeEditor 模块非常重要。删除可能导致行为树编辑功能受限。|游戏专用子系统|人工智能 | 目标与决策
+Cascade:Cascade 模块提供了虚幻引擎中的一个内容编辑器，用于创建和编辑粒子系统。通过使用 Cascade，开发者可以制作各种粒子效果，如烟雾、火焰、雨等，以增强游戏的视觉效果和氛围。对于需要制作粒子效果的开发者，Cascade 模块非常重要。删除可能导致粒子系统编辑功能受限。|视觉效果|粒子与贴花系统
+ClothingSystemEditor:ClothingSystemEditor 模块提供了虚幻引擎中对衣物系统的编辑功能，用于为角色创建和编辑可动态模拟的衣物。通过使用 ClothingSystemEditor，开发者可以实现引入现实衣物流动和碰撞等效果，提升游戏的真实感。对于需要制作动态衣物效果的开发者，ClothingSystemEditor 模块非常重要。删除可能导致衣物系统编辑功能受限。| 骨骼动画 | 衣物系统
+CommonMenuExtensions:CommonMenuExtensions 模块为虚幻引擎编辑器提供了一些常用的菜单扩展功能。这些功能包括对图形界面中右键菜单、工具栏等的添加和修改。通过集成 CommonMenuExtensions 模块，开发者可以定制并扩展编辑器界面，提高工作效率。对于需要定制编辑器菜单的开发者，CommonMenuExtensions 模块非常重要。删除可能导致编辑器菜单扩展功能受限。| 核心系统 | 引擎前端
+ConfigEditor:ConfigEditor 模块提供了虚幻引擎中针对项目配置文件的编辑功能。通过使用 ConfigEditor，开发者可以更方便地管理和修改项目设置，包括图形、音频、输入等选项，实现更好的项目定制和优化。对于需要编辑和管理项目配置的开发者，ConfigEditor 模块非常重要。删除可能导致配置编辑功能受限。| 资源 | 编辑器
+CurveTableEditor:CurveTableEditor 模块提供了虚幻引擎中用于编辑曲线表（Curve Table）的功能。曲线表是一种用于存储和管理数值数据（例如动画曲线、属性曲线等）的数据结构。通过使用 CurveTableEditor，开发者可以更容易地编辑和调整曲线表数据，提高项目编辑效率。对于需要编辑和管理曲线表数据的开发者，CurveTableEditor 模块非常重要。删除可能导致曲线表编辑功能受限。| 资源 | 编辑器
+DeviceProfileEditor:DeviceProfileEditor 模块提供了虚幻引擎中用于编辑设备配置文件（Device Profiles）的功能。设备配置文件旨在为不同性能的硬件配置项目的性能设置。通过使用 DeviceProfileEditor，开发者可以根据目标设备的硬件特性调整项目设置，实现更好的性能优化和跨平台兼容性。对于需要根据目标设备硬件优化项目设置的开发者，DeviceProfileEditor 模块非常重要。删除可能导致设备配置文件编辑功能受限。|硬件
+FontEditor:FontEditor 模块提供了虚幻引擎中用于编辑字体资源的功能。通过使用 FontEditor，开发者可以更方便地管理和使用字体资源，设定字体样式、大小等属性，以实现项目中的文本显示和排版需求。对于需要编辑和管理字体资源的开发者，FontEditor 模块非常重要。删除可能导致字体编辑功能受限。| 资源 |字体资源
+HardwareTargeting:HardwareTargeting 模块提供了虚幻引擎中针对不同硬件目标的优化支持。通过使用 HardwareTargeting，开发者可以根据设备的性能特点来设置和优化项目参数，以获得更好的性能表现和跨平台兼容性。对于需要针对不同硬件进行优化的开发者，HardwareTargeting 模块非常重要。删除可能导致硬件目标优化功能受限。|硬件
+HierarchicalLODOutliner:HierarchicalLODOutliner 模块为虚幻引擎提供分层细节层次变化（Hierarchical Level of Detail，HLOD）的管理功能。通过使用 HierarchicalLODOutliner，开发者可以针对各种性能需求创建不同精度的模型，并自动切换它们以实现更高效的渲染表现。对于需要进行模型性能优化与细节层次变化的开发者，HierarchicalLODOutliner 模块非常重要。删除可能导致 HLOD 管理功能受限。| 场景图/剔除优化 | 细致程度系统
+InputBindingEditor:InputBindingEditor 模块提供了虚幻引擎中用于编辑输入绑定（游戏控制按键设置）的功能。通过使用 InputBindingEditor，开发者可以为游戏提供更灵活的控制方式，并根据玩家需求和不同平台特点进行调整。对于需要编辑和管理输入绑定的开发者，InputBindingEditor 模块非常重要。删除可能导致输入绑定编辑功能受限。|游戏专用子系统|玩家机制
+MergeActors:MergeActors 模块为虚幻引擎提供了一种将多个游戏物体（如 Static Mesh, Skeletal Mesh 等）合并为单个游戏物体的功能。通过使用 MergeActors，开发者可以优化游戏场景中的资源管理，减少绘制调用，从而提高性能。对于需要执行场景优化和资源管理的开发者，MergeActors 模块非常重要。删除可能导致合并游戏物体功能受限。| 资源 | 三维模型资源
+PhysicsAssetEditor:PhysicsAssetEditor 模块提供了虚幻引擎中用于编辑物理资源（如碰撞体、关节约束等）的功能。通过使用 PhysicsAssetEditor，开发者可以为游戏物体创建和编辑物理属性，实现物体间的碰撞和模拟等物理行为。对于需要编辑和管理物理资源的开发者，PhysicsAssetEditor 模块非常重要。删除可能导致物理资源编辑功能受限。| 碰撞与物理
+RewindDebuggerInterface:RewindDebuggerInterface 模块为虚幻引擎提供了一种时光倒流调试功能，允许开发者在游戏运行时回顾和分析先前的游戏状态。通过使用 RewindDebuggerInterface，开发者可以更容易地识别和修复游戏中的问题和错误。对于需要进行详细调试和分析的开发者，RewindDebuggerInterface 模块非常重要。删除可能导致时光倒流调试功能受限。| 性能剖析调试 | 录影与回放
+SceneDepthPickerMode:SceneDepthPickerMode 模块为虚幻引擎编辑器提供了一种基于深度选择场景物体的功能。通过使用 SceneDepthPickerMode，开发者可以更方便地在复杂场景中选择和操作物体，提高编辑器的工作效率。对于需要在编辑器中高效选择和操作物体的开发者，SceneDepthPickerMode 模块非常重要。删除可能导致深度选择功能受限。|场景图/剔除优化|空间剖分
+SwarmInterface:SwarmInterface 模块提供了虚幻引擎的 Swarm 分布式渲染系统接口。Swarm 可以将多个计算资源集群在一起进行复杂的渲染计算，如烘焙全局光照、创建光照探针等。通过使用 SwarmInterface，开发者可以在计算资源充足的环境中获得更快速的渲染和烘焙结果。对于需要进行分布式计算和高效渲染的开发者，SwarmInterface 模块非常重要。删除可能导致 Swarm 渲染功能受限。|视觉效果
+ViewportSnapping:ViewportSnapping 模块为虚幻引擎编辑器提供了视窗中物体操作的吸附功能。通过使用 ViewportSnapping，开发者可以在移动、旋转或缩放物体时实现面、边和顶点等几何元素的吸附对齐，以便更精确地操作和布置场景中的物体。对于需要在虚幻引擎编辑器中进行精确物体操作的开发者，ViewportSnapping 模块非常重要。删除可能导致视窗吸附功能受限。| 资源 | 编辑器
+VirtualTexturingEditor:VirtualTexturingEditor 模块为虚幻引擎提供了虚拟纹理（Virtual Texturing）技术的编辑功能。虚拟纹理是一种高效的纹理流技术，可以动态加载和渲染大量纹理，降低内存占用。通过使用 VirtualTexturingEditor，开发者可以更方便地为场景创建和设置虚拟纹理，提高游戏的视觉质量与性能。对于需要优化纹理资源和实现高质量渲染的开发者，VirtualTexturingEditor 模块非常重要。删除可能导致虚拟纹理编辑功能受限。| 资源 |纹理资源
+WorldBrowser:WorldBrowser 模块为虚幻引擎编辑器提供了一个用于浏览和管理游戏世界（如关卡、子关卡等）的工具。通过使用 WorldBrowser，开发者可以方便地组织和维护项目中的游戏世界，提高开发效率。对于需要方便地管理游戏世界的开发者，WorldBrowser 模块非常重要。删除可能导致世界浏览功能受限。| 游戏专用子系统 | 关卡系统
+WorldPartitionEditor:WorldPartitionEditor 模块提供了虚幻引擎中基于世界划分（World Partition）技术的编辑功能。世界划分是一种用于优化大型游戏场景加载和流的技术，可以动态地加载和卸载场景部分以提高性能。通过使用 WorldPartitionEditor，开发者可以根据项目需求设置和管理世界划分，实现更大规模和高效的游戏场景开发。对于需要构建大型游戏世界并优化场景流的开发者，WorldPartitionEditor 模块非常重要。删除可能导致世界划分编辑功能受限。|场景图/剔除优化 | 空间剖分
+AudioAnalyzer:AudioAnalyzer 模块为虚幻引擎提供了实时音频分析功能，帮助开发者获取声音信号的特性和参数。通过使用 AudioAnalyzer，开发者可以为游戏实现基于音频分析的动态效果和交互，增强游戏体验。对于需要实现音频驱动的游戏效果和交互的开发者，AudioAnalyzer 模块非常重要。删除可能导致实时音频分析功能受限。|音频
+CEF3Utils:CEF3Utils（Chromium Embedded Framework 3 Utilities）模块为虚幻引擎提供了内嵌 Chromium 浏览器的支持。通过使用 CEF3Utils，开发者可以在游戏中实现 HTML5/JavaScript 的 Web 内容，例如用户界面、实时视频流等。对于需要在游戏中集成 Web 内容的开发者，CEF3Utils 模块非常重要。删除可能导致内嵌 Chromium 浏览器支持功能受限。| 第三方软件开发包与中间件
+ColorManagement:ColorManagement 模块为虚幻引擎提供了颜色管理功能。通过使用 ColorManagement，开发者可以根据不同设备、显示器和输出需求调整渲染的颜色空间和配置，以确保游戏在各种平台上的色彩表现准确和一致。对于需要根据不同硬件调整色彩输出的开发者，ColorManagement 模块非常重要。删除可能导致颜色管理功能受限。|平台独立层 | 跨平台支持
+EngineMessages:EngineMessages 模块为虚幻引擎的各个子系统提供了内部消息传递功能。通过使用 EngineMessages，开发者可以在运行时监控和记录游戏引擎的各项操作，以进行诊断和优化。对于需要进行引擎监控和优化的开发者，EngineMessages 模块非常重要。删除可能导致内部消息功能受限。|核心系统 | 内部通信
+GameplayMediaEncoder:GameplayMediaEncoder 模块为虚幻引擎提供了实时游戏视频编码功能。通过使用 GameplayMediaEncoder，开发者可以在游戏中实现如视频回放、游戏流、截图等功能，并根据需要对游戏画面进行实时编码和输出。对于需要进行游戏视频编码和输出的开发者，GameplayMediaEncoder 模块非常重要。删除可能导致实时游戏视频编码功能受限。|游戏专用子系统|游戏摄像机
+MeshConversionEngineTypes:MeshConversionEngineTypes 模块为虚幻引擎提供了网格资源转换功能，支持将各种网格资源格式（如 FBX、OBJ 等）转换为虚幻引擎支持的格式。通过使用 MeshConversionEngineTypes，开发者可以轻松导入和管理游戏中的三维模型资源。对于需要处理各类三维模型资源的开发者，MeshConversionEngineTypes 模块非常重要。删除可能导致网格资源转换功能受限。| 资源 |三维模型资源
+NonRealtimeAudioRenderer:NonRealtimeAudioRenderer 模块为虚幻引擎提供了非实时音频渲染支持。通过使用 NonRealtimeAudioRenderer，开发者可以进行离线音频处理和渲染，例如混音、预加载音效等。这对于需要进行音频预处理或在游戏中实现动态音效生成的开发者非常有用。对于需要进行非实时音频渲染的开发者，NonRealtimeAudioRenderer 模块非常重要。删除可能导致离线音频处理功能受限。|音频
+OodleDataCompression:OodleDataCompression 模块为虚幻引擎提供了对 Oodle 数据压缩库的集成。Oodle 是一种专门针对游戏开发的高效数据压缩库，可用于降低场景、纹理和声音等资源的存储和传输大小。集成 OodleDataCompression 可帮助开发者优化游戏性能和加载速度。对于需要进行数据压缩优化的开发者，OodleDataCompression 模块非常重要。删除可能导致 Oodle 数据压缩功能受限。|核心系统
+Overlay:Overlay 模块为虚幻引擎提供了一个基于 Slate 引擎的可嵌入到游戏场景中的 UI 组件。通过使用 Overlay，开发者可以将 HUD、血条、提示等 UI 元素轻松添加到游戏中，实现丰富的界面功能。对于需要实现游戏界面设计的开发者，Overlay 模块非常重要。删除可能导致 UI 组件功能受限。|前端 | 游戏内置GUI
+PerfCounters:PerfCounters 模块为虚幻引擎提供了性能计数器功能支持。使用 PerfCounters，开发者可以测量和监视游戏运行时的各种性能参数，例如帧率、内存使用等，并根据测量结果进行优化或诊断问题。对于需要监控和优化游戏性能的开发者，PerfCounters 模块非常重要。删除可能导致性能计数器功能受限。|性能剖析调试 |性能数据收集与分析
+SessionMessages:SessionMessages 模块为虚幻引擎提供会话消息传递功能。通过使用 SessionMessages，开发者可以在游戏会话中实现实时消息通信，处理多用户的联机游戏场景。对于需要处理多用户联机会话的开发者，SessionMessages 模块非常重要。删除可能导致会话消息功能受限。| 在线多人 | 协同作业
+SymsLib:SymsLib 模块为虚幻引擎提供了一种处理和解析运行时堆栈符号的功能。通过使用 SymsLib，开发者可以在捕获崩溃或性能问题时查看详细的堆栈符号信息，从而更容易地定位和诊断问题。对于需要进行详细调试和错误处理的开发者，SymsLib 模块非常重要。删除可能导致运行时堆栈符号处理功能受限。| 性能剖析调试 | 调试用日志
+SynthBenchmark:SynthBenchmark 模块为虚幻引擎提供了一种基于合成图像测试的性能评估工具。通过使用 SynthBenchmark，开发者可以在不同硬件平台上评估其游戏的图形性能，以便针对特定设备进行优化。对于需要对游戏性能进行评估和优化的开发者，SynthBenchmark 模块非常重要。删除可能导致性能评估工具受限。|性能剖析调试 |性能数据收集与分析
+WebBrowserTexture:WebBrowserTexture 模块为虚幻引擎提供了一种直接将 Web 内容渲染到游戏纹理上的功能。通过使用 WebBrowserTexture，开发者可以在游戏中实现 HTML5/JavaScript 的 Web 内容，并将其作为材质之一显示在游戏物体上。对于需要将 Web 内容渲染到游戏纹理的开发者，WebBrowserTexture 模块非常重要。删除可能导致 Web 内容渲染功能受限。|低阶渲染器
+WidgetCarousel:WidgetCarousel提供了一个小部件（Widget）轮播的功能。小部件轮播是一种在UI中显示多个小部件的方式，通常用于显示图片、视频或其他媒体内容。WidgetCarousel模块提供了一种简单的方法来创建和管理小部件轮播，包括添加、删除和重新排列小部件的功能。如果删除WidgetCarousel模块，您将失去在UI中创建和管理小部件轮播的能力。这可能会使UI设计和开发变得更加困难，因为您将不得不手动编写代码来实现轮播的功能。因此，WidgetCarousel模块对于Unreal Engine中的UI设计和开发来说是非常重要的。|前端 | 游戏内置GUI
+BLAKE3:BLAKE3 模块为虚幻引擎提供了一种用于加密和散列的功能。BLAKE3 是一个用于文件哈希、加密和堆栈使用等场景的快速加密实现。通过使用 BLAKE3，开发者可以为游戏实现安全的加密、哈希计算和数据验证功能。对于需要实现安全加密和验证的开发者，BLAKE3 模块非常重要。删除可能导致加密和哈希计算功能受限。| 第三方软件开发包与中间件
+Blosc:Blosc 模块为虚幻引擎提供了一个高性能的数据压缩库。Blosc 主要用于加速大型数据集在内存中的处理速度，降低存储成本和提高游戏运行效率。对于需要进行数据压缩和内存优化的开发者，Blosc 模块非常重要。删除可能导致高性能数据压缩功能受限。| 第三方软件开发包与中间件
+Catch2:Catch2 模块为虚幻引擎提供了一个单元测试框架。通过使用 Catch2，开发者可以为他们的项目和功能编写测试用例，以确保游戏代码的质量和稳定性。对于需要进行单元测试的开发者，Catch2 模块非常重要。删除可能导致单元测试功能受限。|核心系统|单元测试
+DirectShow:DirectShow 模块为虚幻引擎提供了对 Microsoft DirectShow 的支持。通过使用 DirectShow，开发者可以在游戏中实现视频流的播放和处理，以实现各种多媒体功能。对于需要在游戏中实现视频流处理的开发者，DirectShow 模块非常重要。删除可能导致视频流处理功能受限。| 第三方软件开发包与中间件
+Expat:Expat 模块为虚幻引擎提供了一个流式 XML 解析库。通过使用 Expat，开发者可以在游戏中实现对 XML 文档的解析和处理，方便地导入和导出游戏数据。对于需要进行 XML 文档处理的开发者，Expat 模块非常重要。删除可能导致 XML 解析功能受限。|核心系统|语法分析器
+FontConfig:FontConfig 模块为虚幻引擎提供了字体配置及字体匹配的功能。通过使用 FontConfig，开发者可以轻松地为游戏项目中的文本元素选择、匹配并应用合适的字体，满足游戏中的文本渲染需求。对于需要进行字体配置和处理的开发者，FontConfig 模块非常重要。删除可能导致字体配置功能受限。| 资源 |字体资源
+GoogleARCore:Google的增强现实平台，用于在移动设备上创建增强现实应用程序。| 第三方软件开发包与中间件
+GoogleGameSDK:Google Play游戏服务软件开发包，提供游戏开发所需的功能，如成就、排行榜和多人游戏。| 第三方软件开发包与中间件
+heapprofd:用于Android平台的堆剖析器，可用于分析和优化应用程序的内存使用情况。| 性能剖析调试 |性能数据收集与分析
+HLMediaLibrary:虚幻引擎的媒体库，用于处理和管理音频和视频资产。| 资源 | 媒体资源
+Intel:Intel公司的相关技术和库，可能包括与处理器和图形驱动程序相关的优化和功能。| 驱动
+libstrophe:用于XMPP（可扩展消息和存在协议）通信的C语言库。| 第三方软件开发包与中间件
+libxml2:用于解析和操作XML文档的C语言库。| 核心系统 | 语法分析器
+nvTriStrip:用于三角形带化（stripification）的NVIDIA开发的库，可用于优化图形渲染性能。| 第三方软件开发包与中间件
+OpenVDB:基于体积的数据结构库，用于高效存储、处理和渲染体积数据，如烟雾、火焰等。| 第三方软件开发包与中间件
+Protobuf:Google的Protocol Buffers，一种用于序列化结构化数据的语言无关、平台无关、可扩展的机制。| 第三方软件开发包与中间件
+zstd:Zstandard，一种快速且高效的压缩算法和库，用于数据压缩和解压缩。| 第三方软件开发包与中间件
+IKRig:反向运动学（Inverse Kinematics）的骨骼动画解算器，用于生成复杂的角色骨骼动画。| 骨骼动画 | 反向运动学
+VariantManager:用于管理和切换不同变体（Variants）的系统，使开发者可以在游戏中使用不同的资源配置和设置。| 核心系统 | 引擎配置
+ContextualAnimation:提供上下文动画（Contextual Animation）功能，允许在游戏中根据角色状态和环境条件自动播放适当的动画。| 骨骼动画 | 动画播放
+MeshLODToolset:用于创建和管理网格级别细节（LOD）的工具集，用于在不同距离或渲染质量要求下渲染模型。| 场景图/剔除优化 | 细致程度系统
+ModularGameplay:提供模块化游戏玩法的框架，使开发者能够轻松创建和组合不同的游戏功能模块。| 游戏性基础
+RemoteSession:远程会话系统，允许多个开发者在分布式环境中协同工作和共享虚幻引擎编辑器会话。| 在线多人 | 协同作业
+WebMMedia:用于处理和播放WebM格式视频的媒体库。| 视频
+AnimationDataController:动画数据控制器，用于管理和控制角色动画数据的流程和状态。| 骨骼动画 | 动画状态树与层
+AudioFormatADPCM:ADPCM（自适应差分脉冲编码调制）音频格式支持，用于压缩和解压缩音频数据。| 音频 | 音频解码
+AudioFormatBink:Bink音频格式支持，用于解码和播放Bink视频文件中的音频数据。| 音频 | 音频解码
+AudioFormatOgg:Ogg音频格式支持，用于解码和播放Ogg Vorbis音频文件。| 音频 | 音频解码
+AudioFormatOpus:Opus音频格式支持，一种开放的音频编解码器，用于压缩和解压缩音频数据。| 音频 | 音频解码
+AutomationDriver:自动化驱动程序，用于执行自动化测试和任务，以提高开发效率和质量控制。| 性能剖析调试 | 自动化测试
+CollisionAnalyzer:碰撞分析器，用于检测和分析物体之间的碰撞和碰撞响应。| 碰撞与物理
+CookedEditor:用于编辑和管理已经烘焙（cooked）过的游戏资源和数据的编辑器工具。| 资源 | 资源管理器
+CrashDebugHelper:崩溃调试助手，提供帮助分析和调试游戏崩溃和错误的工具和功能。| 性能剖析调试 | 调试用日志
+DrawPrimitiveDebugger:绘制基元调试器，用于可视化和调试绘制的图形基元，例如点、线、三角形等。| 性能剖析调试 | 性能数据收集与分析
+FileUtilities:文件实用工具，提供用于文件操作和处理的功能，如读取、写入、复制和移动文件等。| 平台独立层 | 文件系统
+GameplayDebugger:游戏玩法调试器，提供调试和可视化游戏中的玩法逻辑和状态的工具。| 性能剖析调试 | 性能数据收集与分析
+GraphColor: 用于图形着色和颜色处理的模块。 | 低阶渲染器 | 材质与着色器
+RealtimeProfiler: 实时性能分析器，用于实时监测和分析游戏的性能数据。 | 性能剖析调试 |性能数据收集与分析
+ScreenShotComparison: 用于比较屏幕截图之间差异的工具，可用于图形效果调整和质量控制。 | 性能剖析调试 | 录影与回放
+ShaderFormatOpenGL: 支持OpenGL着色器格式的模块，用于在OpenGL渲染器中编写和处理着色器代码。 | 低阶渲染器 | 材质与着色器
+SlateFontDialog: 用于在Slate用户界面系统中选择和管理字体的对话框模块。 | 前端 | 游戏内置GUI
+TextureFormatASTC: 支持ASTC（Adaptive Scalable Texture Compression）纹理格式的模块，用于高效压缩和渲染纹理图像。 | 资源 | 纹理资源
+TextureFormatETC2: 支持ETC2（Ericsson Texture Compression）纹理格式的模块，用于高效压缩和渲染纹理图像。| 资源 | 纹理资源
+TreeMap: 用于可视化和管理数据的树状图模块，可用于资源管理和优化。 | 资源 | 资源管理器
+UnsavedAssetsTracker: 用于跟踪和管理未保存的游戏资产的模块，以避免意外丢失或遗漏。 | 资源 | 资源管理器
+AnimationSettings: 动画设置模块，用于管理和配置角色动画的相关参数和选项。 | 骨骼动画
+BlueprintEditorLibrary: 提供在蓝图编辑器中使用的库函数和工具，用于编辑和创建蓝图脚本。 | 游戏性基础 | 蓝图
+ClothPainter: 用于绘制和编辑布料模拟的工具，允许艺术家在虚幻引擎中调整和美化布料效果。 | 骨骼动画 | 衣物系统
+CSVtoSVG: 将CSV（逗号分隔值）文件转换为SVG（可缩放矢量图形）文件的工具，用于数据可视化和图表生成。 | 核心系统 | 特定格式支持
+CurveAssetEditor: 曲线资产编辑器，用于编辑和调整虚幻引擎中的曲线数据资产。 | 资源 | 编辑器
+DerivedDataEditor: 衍生数据编辑器，用于查看和管理虚幻引擎生成的衍生数据，如缓存文件、编译结果等。 | 资源 | 编辑器
+DeviceProfileServices: 设备配置服务，用于管理和配置虚幻引擎支持的不同设备和配置的相关信息。 | 平台独立层 | 跨平台支持
+DistCurveEditor: 分布式曲线编辑器，用于编辑和调整分布式曲线，用于控制游戏中的各种分布效果，如粒子、灯光亮度等。 | 视觉效果
+EditorSettingsViewer: 编辑器设置查看器，用于查看和管理虚幻引擎编辑器的各种设置和配置选项。 | 资源 | 编辑器
+EnvironmentLightingViewer: 环境光照查看器，用于查看和调整游戏场景中的环境光照设置和效果。 | 低阶渲染器 | 静态光照
+LevelAssetEditor: 关卡资产编辑器，用于创建、编辑和管理虚幻引擎中的游戏关卡和场景。 | 游戏专用子系统 | 关卡系统
+LevelInstanceEditor: 关卡实例编辑器，用于创建、编辑和管理关卡实例，允许开发者对关卡进行定制和调整。 | 游戏专用子系统 | 关卡系统
+NaniteTools: Nanite工具集，用于处理和管理虚幻引擎的Nanite技术相关的功能和工具，用于实时渲染高精度的几何细节。| 场景图/剔除优化 | 细致程度系统
+OverlayEditor: 叠加层编辑器，用于创建和编辑叠加层（Overlay）效果，可用于游戏中的HUD、UI和特效等元素。 | 资源 | 编辑器
+PListEditor: PList文件编辑器，用于编辑和管理PList文件，一种属性列表文件格式，常用于配置文件和数据存储。 | 资源 | 编辑器
+PluginWarden: 插件监视器，用于管理和监控虚幻引擎中的插件，包括加载、卸载、版本控制和冲突解决等功能。 | 核心系统
+ProjectSettingsViewer: 项目设置查看器，用于查看和管理虚幻引擎项目的设置和配置选项，包括项目级别的属性和参数。 | 资源 | 编辑器
+SourceControlWindowExtender: 源代码控制窗口扩展，扩展虚幻引擎的源代码控制功能，使开发者能够更好地管理和协同工作。 | 核心系统 | 版本控制
+StringTableEditor: 字符串表编辑器，用于创建、编辑和管理字符串表，用于国际化和本地化游戏中的文本和翻译。 | 资源 | 编辑器
+ToolMenusEditor: 工具菜单编辑器，用于创建和编辑虚幻引擎编辑器中的工具菜单，自定义和扩展编辑器的功能和工具。 | 资源 | 编辑器
+UndoHistoryEditor: 撤销历史编辑器，用于管理和查看虚幻引擎编辑器中的撤销和重做历史记录，支持撤销和恢复操作。 | 资源 | 编辑器
+VirtualizationEditor: 用于创建和编辑虚拟化环境的编辑器工具，提供更高效和可扩展的开发和测试环境。| 核心系统 | 版本控制
+DerivedDataBuildWorker: 负责处理虚幻引擎的衍生数据构建过程，生成优化的数据供游戏运行使用的工作器。| 核心系统
+HeadlessChaos: 在无图形界面环境下执行物理模拟和碰撞检测的模块，提供基于物理的游戏行为。| 碰撞与物理
+TextureBuildWorker: 负责处理虚幻引擎的纹理构建过程，生成优化的纹理数据供游戏渲染使用的工作器。| 资源 | 纹理资源
+UGSCore: 提供游戏开发团队间协作和版本控制功能的Unreal Game Sync核心模块，简化项目管理和文件同步。| 核心系统 | 版本控制
+AudioCodecEngine: 处理和转码游戏中音频数据的音频编解码引擎模块，支持不同的音频格式和编码算法。| 音频 | 音频解码
+AVIWriter: 将游戏中图像序列编码为AVI格式视频文件的写入器模块，方便录制和回放游戏过程。| 视频
+BlueprintRuntime: 解释和执行蓝图脚本的蓝图运行时模块，实现游戏逻辑和行为。| 游戏性基础 | 蓝图
+CrashReportCore: 捕获和记录游戏运行时崩溃信息的崩溃报告核心模块，帮助开发者分析和解决问题。| 性能剖析调试 | 调试用日志
+LiveLinkMessageBusFramework: 在虚幻引擎中传递实时链接消息的消息总线框架模块，用于实现多人在线协作和共享数据。| 第三方软件开发包与中间件 | LiveLink
+NetworkFileSystem: 网络文件系统，提供在网络上进行文件传输和访问的功能，用于在虚幻引擎中管理和处理远程文件。 | 平台独立层 | 网络传输层
+NullDrv: 空驱动程序，是一个虚拟的驱动程序模块，用于在没有真实硬件设备的情况下进行模拟和测试。 | 驱动
+Online: 在线功能模块，提供与在线服务和平台集成的功能，包括用户认证、多人游戏、排行榜等。 | 在线多人 | 安排比赛与游戏管理
+StorageServerClient: 存储服务器客户端，用于与远程存储服务器进行通信和管理游戏的存储数据，如用户配置和存档。 | 在线多人
+StreamingPauseRendering: 流式暂停渲染，负责在游戏中实现暂停和恢复渲染的功能，用于优化资源使用和性能。 | 低阶渲染器
+ADO: ADO（ActiveX Data Objects）模块，提供对数据库的访问和操作功能，用于在虚幻引擎中处理和管理数据。 | 第三方软件开发包与中间件
+Alembic: Alembic模块，用于导入和处理Alembic文件格式，该文件格式用于在虚幻引擎中存储和交换复杂的动画和几何数据。 | 核心系统 | 特定格式支持
+CLI11: CLI11模块是一个轻量级的命令行解析库，用于解析和处理命令行参数和选项。 | 第三方软件开发包与中间件
+coremod: 核心模块，包含虚幻引擎的核心功能和系统，提供游戏运行所需的基本功能。 | 核心系统
+CryptoPP: CryptoPP模块是一个密码学库，提供各种加密算法和安全功能，用于在虚幻引擎中处理数据的加密和解密。 | 第三方软件开发包与中间件
+Distorm: Distorm是一个反汇编库，用于解析和分析二进制代码的指令序列。 | 核心系统
+etc2comp: etc2comp是一个用于压缩纹理的工具，使用ETC2压缩算法来减小纹理数据的存储空间。 | 第三方软件开发包与中间件
+Facebook: Facebook是一家社交媒体和技术公司，虚幻引擎可能与其合作或整合了一些相关功能。 | 第三方软件开发包与中间件
+fmt: fmt是一个C++的字符串格式化库，用于更方便地进行字符串格式化和输出。 | 第三方软件开发包与中间件
+GoogleOboe: GoogleOboe是一个用于音频处理和低延迟音频的库，提供高性能的音频功能和API。 | 第三方软件开发包与中间件
+http_parser: http_parser是一个解析HTTP协议的库，用于处理和解析HTTP请求和响应数据。 | 第三方软件开发包与中间件
+HWCPipe: HWCPipe是一个硬件计数器管道，用于性能剖析和调试，用于分析和优化代码的性能。 | 性能剖析调试 |性能数据收集与分析
+jemalloc: jemalloc是一个用于内存分配和管理的库，提供高效和可扩展的内存分配器。 | 第三方软件开发包与中间件
+Kiss_FFT: Kiss_FFT是一个用于快速傅里叶变换(FFT)的库，用于在信号处理和频谱分析中进行频域转换。 | 第三方软件开发包与中间件
+libav: libav是一个开源的音视频处理库，提供各种音视频编解码器和处理功能，用于处理和编辑音视频数据。 | 第三方软件开发包与中间件
+libJPG: libJPG是一个用于JPEG图像压缩和解压缩的库，提供对JPEG格式图像的编码和解码功能。 | 第三方软件开发包与中间件
+libPhonon: libPhonon是一个多媒体框架库，用于处理音频和视频的播放、录制和流式传输等功能。 | 第三方软件开发包与中间件
+libPNG: libPNG是一个用于PNG图像文件的读取和写入的库，提供对PNG格式图像的解码和编码功能。 | 第三方软件开发包与中间件
+LibreSSL: LibreSSL是一个开源的安全套接字层(SSL)和传输层安全(TLS)协议的实现，用于网络通信中的数据加密和安全性保护。 | 第三方软件开发包与中间件
+LibTiff: LibTiff是一个用于读取和写入TIFF图像文件的库，提供对TIFF格式图像的解码和编码功能。 | 第三方软件开发包与中间件
+MCPP: MCPP是一个用于C/C++预处理器的替代工具，提供更丰富和灵活的宏处理和代码预处理功能。 | 第三方软件开发包与中间件
+metis: metis是一个用于图分割和图划分的库，用于处理和优化大规模图数据的划分和分割算法。 | 第三方软件开发包与中间件
+nanoflann: nanoflann是一个用于快速近邻搜索的库，用于高效地搜索和查询最近邻的数据点。 | 第三方软件开发包与中间件
+nghttp2: nghttp2是一个实现HTTP/2协议的库，用于高效的HTTP通信和数据传输。 | 第三方软件开发包与中间件
+Ogg: Ogg是一种开放的多媒体容器格式，常用于存储音频数据。 | 第三方软件开发包与中间件
+OpenSubdiv: OpenSubdiv是一个用于细分曲面的库，用于在渲染过程中生成高质量的曲面细分结果。 | 第三方软件开发包与中间件
+OpenVR: OpenVR是一个用于虚拟现实(VR)应用程序开发的软件开发包(SDK)，提供对多种VR设备的支持和交互功能。 | 第三方软件开发包与中间件
+Perforce: Perforce是一种版本控制系统，用于协调多人开发过程中的代码管理和版本控制。 | 第三方软件开发包与中间件
+portmidi: portmidi是一个用于处理音乐和MIDI数据的库，提供对MIDI设备的输入和输出控制功能。 | 第三方软件开发包与中间件
+Re2: Re2是一个用于正则表达式匹配和处理的库，提供高性能和可扩展的正则表达式操作功能。 | 第三方软件开发包与中间件
+RenderDoc: RenderDoc是一个用于图形调试和性能优化的工具，用于分析和调试图形渲染过程中的问题和性能瓶颈。 | 性能剖析调试|性能数据收集与分析
+SoundTouchZ: SoundTouchZ是一个用于音频处理和变速变调的库，提供对音频数据的处理和效果修改功能。 | 音频 | DSP/效果
+SpeedTree: SpeedTree是一个用于创建和渲染逼真树木和植被的工具和库，用于增强游戏场景的视觉效果。| 资源 | 三维模型资源
+Tencent: Tencent是一家中国科技公司，可能与虚幻引擎相关的模块可能是指与腾讯公司合作开发或提供支持的功能或工具。具体的模块需要查看相关的文档和资料以获取详细信息。 | 第三方软件开发包与中间件
+VHACD: VHACD是一个用于凸包分解和碰撞形状生成的库，用于处理物体碰撞和物理模拟中的几何体分解和处理。 | 第三方软件开发包与中间件
+MotionWarping: MotionWarping是一种动作扭曲技术，用于在运动捕捉数据中实现平滑和自然的动作过渡效果。 | 骨骼动画
+CryptoKeys: CryptoKeys是用于加密和解密数据的密钥管理模块，用于保护敏感数据的安全性。 | 平台独立层 | 安全性
+BackChannel: BackChannel是一种通信通道，用于在多人在线游戏中进行实时数据交换和同步。 | 在线多人
+FullBodyIK: FullBodyIK是一种全身反向动力学技术，用于在游戏中实现逼真的角色动作和姿势控制。 | 骨骼动画 | 反向运动学
+Landmass: Landmass是一个用于生成和渲染地形的模块，用于创建游戏世界中的地形和地貌。 | 游戏专用子系统 | 游戏专用渲染 | 地形渲染
+PhysicsControl: PhysicsControl是一个物理控制模块，用于模拟和处理游戏中的物理效果和碰撞行为。 | 碰撞与物理
+ElectraCDM: ElectraCDM是一种内容交付管理模块，用于管理和控制数字内容的分发和许可。 | 第三方软件开发包与中间件
+MediaPlate: MediaPlate是一个用于媒体管理和处理的模块，用于在游戏中加载、播放和处理各种媒体资源。 | 资源 | 媒体资源
+OnlineSubsystemIOS: OnlineSubsystemIOS是一个iOS平台上的在线子系统模块，提供与iOS平台相关的在线功能和服务。 | 在线多人 | 平台在线子系统
+ResonanceAudio: ResonanceAudio是一种音频处理和空间音效模块，用于提供沉浸式和逼真的音频体验。 | 音频 | 三维音频模型
+LevelSnapshots: 用于记录关卡的状态的插件，在需要时可以快速地回滚到之前的状态，以帮助开发者在关卡设计和调整过程中更加高效地进行工作。它提供以下功能：快照记录和管理、快速回滚、比较和分析、自动化测试。 | 性能剖析调试 | 自动化测试
+Apple: 用于支持苹果设备的功能和特性的插件。功能包括：iOS和macOS平台上的本地应用程序开发、苹果设备的硬件功能支持、与苹果生态系统中的服务集成、苹果设备的优化和适配。 | 操作系统
+BlankModule: 提供一个C++基类用于让所有模块类继承，提供获取模块接口(IModuleInterface)和模块加载状态的方法。 | 平台独立层 | 原子数据类型
+Datasmith: 提供对从各种设计软件（如Autodesk 3ds Max和SketchUp）导入和导出数据的支持。 | 核心系统 | 文件I/O
+LowLevelTestsRunner: 用于启动Low level tests的加载工具，Low level tests用于在避免加载整个引擎/编辑器和烘焙光照、渲染等功能的情况下启动UE核心模块，编写自动化测试来验证模块功能。 | 核心系统 | 单元测试
+MeshDescriptionOperations: 提供了一系列函数和类，用于存储和操作网格的几何信息、对网格描述进行各种操作如创建、修改、合并、分割和查询等。 | 资源 | 三维模型资源
+MeshSimplifier: 通过使用网格简化算法，实现自动减少网格模型的面数、同时尽量保持模型的外观和细节的目标。另外还提供了一些参数控制简化过程比如简化比例、保留细节程度、边缘保护功能等。 | 资源 | 三维模型资源
+SlackIntegrations: 用于在UE项目中与Slack平台交互，有以下主要功能：收发消息、验证用户身份、事件通知、自定义命令。 | 第三方软件开发包与中间件
+VulkanShaderFormat: 用于处理Vulkan着色器格式的模块。它主要提供将着色器源代码编译为Vulkan着色器字节码的功能，支持跨平台的Vulkan着色器编译，还提供了一些优化和转换功能，以提高着色器的性能和效率。 | 低阶渲染器 | 材质与着色器
+Experimental: 用于实验性功能的集合。它包含了一些尚未完全稳定或正式发布的功能，开发者可以在项目中使用这些功能进行实验和测试。Experimental模块中的功能通常以插件的形式提供。 | 第三方软件开发包与中间件
+PixelInspector: 提供了在Unreal Engine中检查和比较单个像素详细信息的支持，这些信息包括像素的颜色值、深度值、法线方向、材质属性等。 | 资源 | 编辑器
+SequenceRecorderSections: 用于录制和重放游戏中的动画序列的工具，提供了一种简单的方式来记录游戏中的动作并将其转换为可重放的动画序列，主要包括录制、重放、编辑和脚本化功能。 | 游戏专用子系统 | 游戏摄像机 | 脚本/动画摄像机
+BaseTextureBuildWorker: 为纹理构建线程提供的虚拟基类，纹理构建线程用于在运行时构建和处理纹理，负责处理纹理的压缩、尺寸调整、格式转换等任务。 | 资源 | 纹理资源
+BenchmarkTool: 用于性能测试和基准测试的工具。它提供了一系列功能，可以帮助开发人员评估游戏或应用程序在不同硬件配置下的性能表现。功能包括：基准测试场景、性能指标收集、自定义测试场景、测试结果分析和跨平台支持。 | 性能剖析调试 |性能数据收集与分析
+BlankProgram: 作为在Unreal Engine中创建新程序的起点。它本身没有任何功能，但提供了一个基本的结构，可以用于构建新程序。 | 平台独立层 | 原子数据类型
+BuildPatchTool: 提供了创建和分发Unreal Engine项目补丁的支持。它允许您创建仅包含项目两个版本之间的更改的补丁，减少游戏更新的大小，并优化下载和安装过程。 | 核心系统
+ChaosUserDataPTTests: 一个用来测试ChaosUserDataPT插件的测试集。 | 性能剖析调试 |测试集
+ChaosVisualDebugger: 用于在开发过程中可视化和调试Chaos物理系统。 | 性能剖析调试 |性能数据收集与分析
+CrashReportClient: 用于收集和处理游戏或应用程序在运行过程中发生的崩溃报告。它允许开发人员收集用户的崩溃数据，并将其发送到指定的服务器进行分析和调试。主要功能和特点：崩溃报告收集、自动上传、匿名化处理、用户反馈和自定义配置等。 | 性能剖析调试 | 调试用日志
+Enterprise: Enterprise插件是一套专为企业用户设计的功能扩展，旨在提供更多高级工具和功能，以满足企业级应用的需求，主要包含了：高级灯光和渲染工具、虚拟现实（VR）和增强现实（AR）支持、数据集成和可视化、CAD数据导入和编辑、高级物理模拟和动画、蓝图和脚本扩展等功能。 | 第三方软件开发包与中间件
+EpicWebHelper: 提供了与Web相关的功能，包括Web请求处理、Web内容交互、跨域请求支持和Web内容渲染。 | 第三方软件开发包与中间件
+HeadlessChaosPerf: 一个用于评估物理引擎性能的工具，可以在没有图形界面的情况下运行物理模拟并收集性能数据。通过收集这些性能数据和不同硬件配置上的性能表现，可以评估物理引擎的性能并对其进行优化。 | 性能剖析调试 |性能数据收集与分析
+InterchangeWorker: 为UE的资源编辑器提供统一的导入导出管线以追求可扩展性和更好的性能；Interchange导入管线分为Translators、Factories、Pipeline三个步骤；已经为FBX、OBJ和glTF及模型纹理提供了支持，未来会添加其他格式的支持和连接到Visual Dataprep的功能。 |核心系统 | 文件I/O
+LiveCodingConsole: 一个用于在运行时进行实时编码和调试的工具。它提供了一个交互式控制台，允许开发人员在游戏运行时动态地执行代码、修改变量和调试游戏逻辑。功能包括实时代码执行、变量修改、调试功能等，支持多种脚本语言和插件系统。 | 核心系统
+LowLevelTests: Low level tests用于在避免加载整个引擎/编辑器和烘焙光照、渲染等功能的情况下启动UE核心模块，编写自动化测试来验证模块功能。 | 核心系统 | 单元测试
+ReplicationSystemTest: 用于测试和验证UE5的Iris复制系统。Iris是可选用的、与虚幻引擎现有复制系统兼容的复制系统，与现有复制系统相比，提供更强大的多玩家体验和更低的服务器开销。 | 在线多人 | 游戏状态复制
+ShaderCompileWorker: 主要功能是将游戏中的着色器代码使用编译器转换成可执行平台特定的GPU代码；从架构的角度来说，ShaderCompileWorker是一个独立的进程，与UE的编辑器和运行时环境通过进程间通信（IPC）进行交互，接收和发送着色器代码和编译指令；支持并行编译和缓存机制。 | 低阶渲染器 | 材质与着色器
+Shared: 一种用于在不同模块之间共享代码和资源的机制。它提供了一种将代码和资源封装为可重用的模块的方式，以便在项目中的多个地方进行共享和复用。Shared模块通常包含一些常用的功能、工具类、数据结构和资源，可以被项目中的其他模块引用和使用，提高代码的可维护性和可重用性。 | 核心系统
+SlateUGS: 用于支持游戏用户界面（UI）的创建和管理。它是基于Slate框架构建的，提供了一套丰富的UI控件和布局工具，使开发者能够轻松地创建和定制游戏的UI界面。 | 前端 | 游戏内置GUI
+SlateViewer: 一个工具模块，用于可视化和调试Slate UI系统。Slate是Unreal Engine的一种用户界面框架，用于创建高性能的、可定制的用户界面。该模块提供了一个可视化界面，可以查看和调试Slate UI系统的各个方面。 | 前端 | 游戏内置GUI
+SwitchboardListener: 一个功能模块，它启动了一个TCP socket服务器与Switchboard共享JSON消息，实现双向通信和交互。Switchboard是用于控制多个远程设备的python模块。 | 平台独立层 | 网络传输层
+SymsLibDump: 用于生成符号文件的工具。符号文件是一种将二进制文件中的函数和变量名与地址关联起来的映射文件，它在崩溃转储文件中起到了关键作用，可以将转储文件中的地址转换为可读的函数和变量名，从而更好地理解和分析崩溃的原因；类似Google的BreakPad项目中的dump_syms工具。 | 性能剖析调试 |调试用日志
+TestPAL: 用于支持自动化测试和持续集成（CI）工作流程的模块。它提供了一组工具和接口，帮助开发者创建和执行自动化测试，并生成测试报告。 | 核心系统 | 单元测试
+UnrealFrontend: 虚幻前端（UFE）是一个用来简化和加快游戏日常开发及测试任务的工具， 它可以用来准备游戏的构建版本，将游戏部署到设备上，以及游戏启动。 UFE旨在成为所有游戏开发、分析和测试任务的核心界面。 | 性能剖析调试 |性能数据收集与分析
+UnrealHeaderTool: 虚幻头文件分析工具（UHT） 是支持UObject系统的自定义解析和代码生成工具。代码编译分两个阶段进行：1.调用UHT。它将解析C++头文件中引擎相关类元数据，并生成自定义代码，以实现诸多UObject相关的功能；2.调用普通C++编译器，以便对结果进行编译。UHT可以帮助开发者快速生成反射系统和元数据，减少手动编写重复的代码的工作量，同时它还可以提高编译速度。 |核心系统 | 语法分析器
+UnrealInsights: Unreal Insights是一款集成了虚幻引擎的standalone分析系统，用于收集、分析和显示引擎发出的数据。主要功能有性能分析、事件追踪、GPU调试、内存分析、网络调试等。Unreal Insights还有两个特点：1.除充分覆盖引擎的现有系统外，还可以添加用户自身的分析数据；2.拥有远程数据录制功能，对项目执行的影响非常低。 | 性能剖析调试 | 调试用日志
+UnrealLightmass: 是用于实现光照计算和渲染的工具。它主要用于静态场景的光照计算，可以生成高质量的光照贴图和阴影效果。 | 低阶渲染器 | 静态光照
+UnrealMultiUserServer: 多用户编辑插件的服务器组件，用于处理多用户协作场景中的网络通信和数据同步。它基于事件驱动，负责管理多个客户端之间的连接和通信，处理客户端发送和接收的操作指令。通过该模块，多个用户可以同时在同一个虚拟场景中进行编辑和交互，并实时看到其他用户的操作结果。该模块主要处理虚拟场景中的物体、材质、光照等元素的编辑和交互。 | 在线多人 | 协同作业
+UnrealMultiUserSlateServer: 多用户编辑插件的用户界面服务器端组件，于处理多用户协作场景中的用户界面交互和数据同步。它与UnrealMultiUserServer类似，也是基于事件驱动，负责管理多个客户端之间的操作指令。不同的是此模块主要处理用户界面的交互和状态同步而UnrealMultiUserServer主要处理虚拟场景中的物体、材质、光照等元素的编辑和交互。  | 在线多人 | 协同作业
+UnrealObjectPtrTool: 一个能将引擎可见的原始指针属性自动转换为TObjectPtr的系统，包含如下功能：跟踪和管理Unreal对象的引用计数、支持弱引用和强引用、提供线程安全的指针访问、支持对象的序列化和反序列化。 | 平台独立层 | 原子数据类型
+UnrealPackageTool: 用于处理和管理Unreal Package（.uasset和.umap文件）的工具。它提供了一系列命令行工具，可以用于打包、解包、导出和导入Unreal Package文件。| 资源 | 编辑器
+UnrealPak: 用于将游戏项目的资源文件打包为一个或多个pak文件，提供了一个命令行界面来处理包，以及加密和签名包以进行安全性保护的能力，另外还有版本控制、增量打包、资源索引等功能。 | 资源 | 安装包
+UnrealRecoverySvc: 用于崩溃恢复和处理错误，帮助开发人员在应用程序崩溃时恢复数据和状态，并提供一些错误报告和调试信息，同时还提供异常处理功能和自定义设置。 | 性能剖析调试 | 调试用日志
+UnrealVersionSelector: 一个引擎版本管理工具，允许开发者在不同版本的UE之间切换。提供一个简单的界面来选择和管理引擎版本，以及安装和卸载引擎版本的能力。主要有版本选择、版本管理、版本兼容性检查和插件管理等功能。 | 核心系统 | 版本控制
+UnrealVirtualizationTool: 虚幻虚拟化工具（Unreal Virtualization Tool）是一种用于管理虚拟资产的工具，用于在虚幻资产虚拟化时，提交数据包的同时提交虚拟资产变更列表。虚拟资产系统用于将编辑器批量数据独立于核心资产元数据进行存储，从而降低项目的磁盘空间要求。 | 资源 | 资源管理器
+Unsync: unsync的客户端实现，unsync是一种增量二进制下载和修补工具，借鉴了zsync、rsync和casync。unsync的工作方式是计算二进制差异并只下载新的数据块从而最小化网络传输数据大小，通过低延迟的协议、数据压缩功能和地理分布式缓存服务器使得效果达到最好。 | 资源 | 资源管理器
+VirtualProduction: 是为虚拟制片和实时制片而设计的工具集合。它提供了一系列功能，可以帮助制片人在实时渲染、虚拟摄影、实时预览、虚拟现实支持和实时动画等方面实现高质量的虚拟制片。 | 游戏专用子系统 | 游戏专用渲染 | 混合现实
+ZenDashboard: 用于监视和调试游戏的性能和运行时数据，它提供了一个可视化的仪表板界面，可以实时显示游戏的各种指标和数据，帮助开发者识别和解决性能问题。 | 性能剖析调试|性能数据收集与分析
+AudioCaptureImplementations: UE中用于音频捕获的模块。它提供了一种将音频数据从不同的来源捕获到游戏中的方法，可以用于实现音频录制、语音聊天或实时音频分析等功能，并且可以根据需要自定义音频捕获设备。这为游戏中的语音聊天、音频录制和实时音频分析等功能提供了强大的支持。 | 音频 | 音频播放/管理
+AudioLink: UE中一个功能强大的音频系统，用于实现高质量的音频效果和交互体验。它提供了一系列的工具和功能，用于处理音频资源、音频效果、音频混合以及音频交互。 | 音频 | DSP/效果
+ClientPilot: ClientPilot是一个模块，可能与虚幻引擎的客户端功能有关。由于虚幻引擎的源代码是闭源的，因此无法提供详细的功能描述。如果删除此模块，可能会影响虚幻引擎的客户端相关功能。 | 核心系统
+ExternalRPCRegistry: 该模块是用于注册和管理外部远程过程调用（External RPC）的工具。外部RPC是一种用于在不同的进程或计算机之间进行通信的机制，允许不同的实例或实体之间进行函数调用和数据交换。通信可以在游戏的不同实例之间，也可以在不同游戏之间、本地计算机的不同进程之间、或网络上的不同计算机之间。同时该模块提供了一个中央注册表，用于跟踪和管理可用的外部RPC。 | 平台独立层 | 网络传输层
+FriendsAndChat: 该模块用于实现社交功能。它提供了一套跨平台的API和工具，使开发者能够轻松地添加好友列表、聊天功能和在线状态等社交功能到他们的游戏或应用程序中。 | 在线多人
+GameMenuBuilder: 该模块用于创建和管理游戏菜单。它提供了一种简单的方式来构建游戏菜单，包括主菜单、选项菜单、暂停菜单等。主要功能包括创建菜单、添加菜单项、处理菜单事件和自定义样式等。 | 前端 | 游戏内置菜单
+HardwareSurvey: 该模块是一个用于收集和分析用户硬件配置和性能数据的系统。它旨在帮助开发者了解他们的目标用户群体的硬件情况，以便更好地优化游戏性能和功能。主要功能包括数据收集、数据上传、数据分析和可视化工具。 | 性能剖析调试 |性能数据收集与分析
+Interchange: Interchange是UE中新的资源导入框架，旨在提供一种与文件格式无关的数据导入模块。该框架将资源导入管线分为Translators、Factories、Pipeline三个步骤来提供可扩展性；已经为FBX、OBJ和glTF及模型纹理提供了支持，未来会添加其他格式的支持和连接到Visual Dataprep的功能。 | 核心系统 | 文件I/O
+IPC: 进程间通信（Inter-Process Communication）模块是一种用于不同进程之间进行通信的机制。它允许不同的进程在同一台计算机上进行数据交换和共享资源。UE中主要通过共享内存（Shared Memory）和命名管道（Named Pipes）实现。通过IPC模块，开发人员可以实现一些高级功能，例如多进程协同工作、分布式计算、进程间资源共享等。 | 核心系统 | 内部通信
+Net: Net模块是用于实现网络功能的模块。它提供了一套强大的工具和功能，使开发人员能够轻松地在游戏中实现多人联机、网络同步、网络复制、网络优化和远程过程调用等功能。 | 平台独立层 | 网络传输层
+NullInstallBundleManager: 该模块是一个空实现的安装包管理模块。它不提供任何实际的安装包管理功能，仅用于占位或测试目的。它不会处理安装包的下载、安装、更新或版本控制等任务，它的存在主要是为了在某些情况下提供一个空实现的安装包管理器，以便在不需要实际安装包管理功能的情况下使用。 | 资源 | 安装包
+PacketHandlers: UE可以使用UDP Socket进行通信，在链接层以Packet为单位发送消息包。包处理句柄（PacketHandlers）用于建立客户端与服务端的通信链接并在两端对Packet进行封包和解包。 | 平台独立层 | 网络传输层
+PlatformThirdPartyHelpers: PlatformThirdPartyHelpers是一个模块，可能提供与平台第三方功能相关的辅助工具和接口。具体功能取决于特定的第三方平台，如游戏主机或移动设备。如果删除此模块，可能会影响虚幻引擎在特定平台上与第三方服务集成的能力。 | 第三方软件开发包与中间件
+Portal: Portal模块可能与虚幻引擎中的Portal（门户）功能相关。 | 核心系统
+RuntimeAssetCache: 主要功能是提供一种机制，可以在运行时动态加载和卸载游戏资源，以提高游戏的性能和内存管理。它可以缓存各种类型的资源，包括纹理、模型、声音等。核心是一个资源缓存器（AssetCache），它负责管理资源的加载和卸载。一个AssetCache对象可以设置缓存大小和其他参数，有Get/Load方法，提供一些其他功能比如资源的预加载、资源的异步加载、资源的优先级管理等。 | 核心系统 | 内存分配
+UELibrary: 该模块提供了一种简单、不依赖于平台的API来驱动UE，通过将UE的功能重新打包成一个库的方式，让其他应用程序生成和控制它们自己的UE实例。 | 核心系统
+UnrealGame: 该模块是UE的核心模块，包含了游戏的基本功能和逻辑，提供了游戏循环、场景管理、玩家输入、碰撞检测、物理模拟、动画系统、音频系统等功能。开发者可以使用UnrealGame模块来创建和管理游戏的各个方面，包括游戏对象、关卡、角色、AI、脚本等。同时，UnrealGame模块还提供了一系列的API和工具，方便开发者进行游戏开发和调试。 | 核心系统
+VirtualFileCache: 虚拟文件缓存用于提高游戏的加载速度和性能。它通过将游戏资源文件缓存在内存中，以避免频繁的硬盘访问和解压缩操作，从而加快游戏的加载速度。主要功能包括：虚拟文件系统、文件缓存、异步加载、压缩和解压缩等。 | 核心系统 | 内存分配
+AMD: AMD是一个第三方插件模块，它提供了对AMD硬件的优化支持。该模块主要用于利用AMD的硬件特性，如AMD的多核处理器和图形处理器（GPU）来提高Unreal Engine的性能和效率。 | 驱动
+ANGLE: 该模块的主要功能是提供一个中间层，使得在Windows平台上运行OpenGL ES 2.0应用程序时能够使用Direct3D 11来渲染图形，使得在Windows平台上运行使用OpenGL ES 2.0的应用程序时，无需修改应用程序代码。ANGLE的工作原理是将OpenGL ES 2.0 API调用转换为Direct3D 11 API调用。它通过在运行时拦截OpenGL ES 2.0 API调用并将其转换为Direct3D 11 API调用来实现这一点。 | 低阶渲染器 | 图形设备接口
+asio: 该模块是一个用于处理异步输入输出操作的库，基于Boost.Asio库的封装。asio模块普遍用于执行异步操作，可以用于创建服务器和客户端应用程序、处理网络通信、文件读写、定时器、协议扩展等。 | 第三方软件开发包与中间件
+AtomicQueue: 该模块是一个线程安全的队列实现，用于在多线程环境中进行数据的生产和消费操作。它提供了一种无锁的数据结构，可以高效地在多个线程之间共享数据。 | 平台独立层 | 原子数据类型
+DirectMLDefault: DirectML是微软的机器学习框架，用于在GPU上进行机器学习推理。如果删除此模块，可能会影响虚幻引擎在支持DirectML的硬件上进行机器学习相关的功能和性能优化。 | 第三方软件开发包与中间件
+FakeIt: 该库用于创建和管理虚拟对象的框架。它的目标是帮助开发人员在测试和模拟环境中创建虚拟对象，通过模拟实际对象的行为、验证虚拟对象的调用等，让开发人员更轻松地进行单元测试和集成测试。 | 核心系统 | 单元测试
+ForsythTriOO: 该开源库用于实现三角形顶点缓存优化。这个库的核心思想是根据三角形的顶点索引，将三角形重新排序，以最大程度地减少相邻三角形之间的共享顶点数量，从而通过减少三角形顶点缓存的大小来提高渲染性能和内存效率。 | 第三方软件开发包与中间件
+GooglePlay: 该模块是一个用于集成和支持Google Play服务的插件。Google Play服务是一个由Google提供的服务框架，为开发者提供了许多功能和工具，用于在Android设备上构建和发布应用程序。 | 第三方软件开发包与中间件 | 应用程序中间件
+hlslcc: 该模块用于将HLSL（High-Level Shading Language）代码转换为其他平台上的着色器代码。hlslcc可以将HLSL语言编译成中间语言Mesa IR，然后可以将其转换成GLSL、SPIR-V、Metal等着色器代码，从而实现跨平台的着色器编译和优化。 | 核心系统 | 特定格式支持
+libjpeg-turbo: 该模块提供了跨平台地对JPEG图像的编码和解码功能。通过使用SIMD指令集和其他优化技术，它可以利用多核处理器的并行计算能力，实现高性能的图像压缩和解压缩。 | 第三方软件开发包与中间件
+libSampleRate: 该模块基于Secret Rabbit Code (SRC) 的开源音频采样率转换库，提供了一种高质量的音频采样率转换算法，可以在不同的采样率之间进行转换。另外还提供了其他一些函数和类来处理音频数据，进行格式转换、混音和音量控制等操作。 | 第三方软件开发包与中间件
+llvm: LLVM模块提供了一套用于生成和优化机器码的工具链。它包括了一个前端编译器，用于将高级语言（如C++）转换为中间表示（IR），以及一系列的优化和代码生成器，用于将IR转换为目标机器码。 | 平台独立层 | 编译器
+mtlpp: 该模块是对Metal框架的C++封装。Metal是苹果公司推出的图形和计算API，用于在iOS和macOS设备上进行高性能图形渲染和计算任务。 | 第三方软件开发包与中间件
+nanosvg: 该模块是一个SVG（可缩放矢量图形）解析器。它是基于NanoSVG库的封装，用于将SVG文件解析为Unreal Engine的可视化元素，以在游戏或应用程序中使用。 | 第三方软件开发包与中间件
+NVIDIA: 该模块提供了对 NVIDIA 显卡的支持。它包括支持 NVIDIA 的 GameWorks 库的功能，提供了一些高级的图形渲染和计算功能，以提高游戏的视觉效果和性能。 | 驱动
+nvtesslib: 该模块用于支持NVIDIA的Turing GPU架构中的新功能——细分着色器。细分着色器是一种用于创建高细节模型的技术，它可以在GPU上动态生成新的几何体细分。NVTessLib通过提供一组用于控制细分着色器的函数和类，并提供对细分银子控制和细分着色器材质的控制。 | 第三方软件开发包与中间件
+Oculus: 该模块用于支持Oculus VR设备的集成，这包括Oculus Rift、Oculus Quest和Oculus Go等设备。提供了一套用于跟踪Oculus VR设备位置和姿态的API，一套用于处理Oculus VR设备输入的API以及渲染优化和音频支持 | 人体学接口设备 | 物理设备I/O
+OpenAL: 该模块一个跨平台的音频API，它允许开发者在不同的操作系统上创建、处理和播放3D音频，用于空间音频和其他高级音频功能。 | 第三方软件开发包与中间件
+openexr: 该模块是用于处理高动态范围图像（High Dynamic Range, HDR）的功能模块。OpenEXR是一种开放、高动态范围图像文件格式，它可以存储比传统图像格式更广泛的亮度和颜色范围。Unreal Engine的OpenEXR模块提供了对OpenEXR文件的读写和渲染功能，使开发人员可以在游戏中使用HDR图像。 | 核心系统 | 特定格式支持
+rpclib: 该模块是一个用于创建远程过程调用（RPC）的模块。它允许在不同的计算机上的不同进程之间进行通信，以便调用远程函数或方法。提供了通信协议、序列化反序列化、远程调用、异步调用、错误处理和安全性等功能。 | 平台独立层 | 网络传输层
+SPIRV-Reflect: 该模块用于解析和反射SPIR-V着色器字节码。SPIR-V是一种跨API的中间着色器字节码格式，可以在不同的图形API（如Vulkan和OpenGL）之间共享。  | 核心系统 | 特定格式支持
+vcpkg: vcpkg是一个跨平台开源的包管理器，由Microsoft开发和维护。支持按照第三方库、管理依赖、版本管理、更新升级库和自定义集成等功能。 | 第三方软件开发包与中间件
+AssetRegistryExport: 该插件用于导出资源注册表（Asset Registry）的数据。资源注册表是一个编辑器子系统，用于跟踪和管理项目中的所有资源。该模块提供了一种将资源注册表数据导出到外部文件的方式，导出数据包括资源的路径、类型、依赖关系、标签和其他元数据。 | 资源 | 编辑器
+AssetSearch: 该模块是用于在项目中搜索和查找资源的工具。它提供了一种快速和方便的方式来定位和管理项目中的各种资源，包括材质、纹理、模型、动画、蓝图等。 | 资源 | 资源管理器
+EditorDebugTools: 该模块实现了对编辑器debug时进行操作的交互界面。 | 核心系统 | 引擎前端
+SkeletalMeshModelingTools: 该模块用于创建和编辑骨骼网格模型（Skeletal Mesh）。它提供了一系列功能，使开发人员能够在引擎中进行高级的骨骼网格建模和编辑操作，还可以用于创建和编辑骨骼网格的动画。 | 骨骼动画| 骨骼编辑
+ChaosSolverPlugin: 该插件利用Chaos库提供的物理模拟和解算功能来实现各种物理效果和交互。 | 第三方软件开发包与中间件
+DefaultInstallBundleManager: 该模块用于管理和处理游戏或应用程序的安装包的。它提供了一套工具和接口，用于管理安装包的下载、安装和更新过程，并提供了一些辅助功能和接口，以便更好地管理和控制安装包的状态和行为。 | 资源 | 安装包
+DatasmithRuntime: 该模块用于将Datasmith文件导入和运行时渲染。它提供了一套工具和接口，用于在运行时加载和处理Datasmith文件，并将其转换为可渲染的场景。 | 核心系统 | 文件I/O
+FieldSystemPlugin: 该插件用于创建和模拟场景中的物理场。它提供了一套工具和接口，用于创建和控制各种物理场，如重力场、电磁场、涡旋场等。主要功能包括创建和模拟物理场、与物体交互、可视化、碰撞检测和自定义物理场等。 | 碰撞与物理 
+HairModelingToolset: 该插件是提供给UE5 Groom头发模拟模块使用的编辑器工具组件。 | 资源 | 三维模型资源
+LiveLinkFaceImporter: 该插件用于从Live link face这个app导入CSV类型的面部动画数据。| 第三方软件开发包与中间件 | LiveLink
+StaticMeshEditorModeling: 该插件用于静态网格的建模和编辑。它提供了创建和修改静态网格模型、纹理映射、编辑材质、光照和阴影、导入导出等功能。 | 资源 | 三维模型资源
+FastBuildController: 该插件的功能是对使用FastBuild编译UE进行管理和控制，FastBuild是一个分布式编译工具，能加快UE的编译速度。 | 第三方软件开发包与中间件
+HardwareEncoders: 该插件为UE的AVEncoder提供硬件编码器。 | 视频
+OnlineSubsystemApple: 该插件用于在苹果平台上实现在线功能的模块。它提供了一组接口和功能，使开发者能够轻松地实现与Apple平台的在线服务和功能进行交互。 | 在线多人 | 平台在线子系统
+GoogleARCoreServices: 该插件提供了与Google ARCore服务集成的功能。ARCore是Google开发的增强现实（AR）平台，它允许开发人员在支持ARCore的设备上创建高质量的AR应用程序。 | 第三方软件开发包与中间件 | 应用程序中间件
+HDRIBackdrop: 该插件用于在场景中添加高动态范围图像（HDR）背景。它可以为场景提供逼真的环境光照，并增强场景的视觉效果。它有加载HDR背景图像、生成实时环境反射、生成动态环境光照、调整背景图像、高质量渲染等功能。 | 视觉效果 | HDR
+AESGCMHandlerComponent: 该插件是用于处理AES-GCM加密和解密的组件。AES-GCM是一种对称加密算法，用于在网络通信中保护数据的机密性和完整性。 | 平台独立层 | 安全性
+AESHandlerComponent: 该插件是用于处理高级加密标准（Advanced Encryption Standard，AES）加密和解密的组件。与AES-GCM的区别在于后者是一种组合加密模式，将GCM模式结合在一起用于完整性保护。| 平台独立层 | 安全性
+AutomationDriverTests: 该插件为自动化驱动程序（Automation Driver）提供测试框架。自动化驱动程序是一个新的引擎特性，主要用于编写模拟用户行为的功能测试，但不依赖于Slate，可扩展性更强。 | 核心系统 | 单元测试
+EditorTests: 该插件用于创建和运行编辑器测试。编辑器测试是一种自动化测试，用于验证游戏编辑器的功能和稳定性。 | 核心系统 | 单元测试
+FbxAutomationTestBuilder: 该插件用于自动化测试FBX文件的导入和导出功能。它提供了一套用于创建和运行FBX自动化测试的工具和接口。 | 核心系统 | 单元测试
+FunctionalTestingEditor: 该插件为在Unreal Engine的编辑器中创建和运行功能测试提供了框架。。 | 核心系统 | 单元测试
+PythonAutomationTest: 该插件为在Unreal Engine中使用Python编写自动化测试提供了支持。它包括创建和运行测试用例的工具，并可与其他测试框架一起使用。 | 核心系统 | 单元测试
+RHITests: 该插件为Unreal Engine的渲染硬件接口（Rendering Hardware Interface，RHI）提供了自动化测试。它包含了一系列的测试用例，用于验证RHI的正确性和性能，这些测试用例涵盖了各种不同的渲染功能和特性，包括渲染管线、着色器、纹理、顶点缓冲区、渲染目标等等；该插件的主要目的是确保RHI在各种硬件和图形API上的正确性和一致性；该插件还包含了一些性能测试用例。 | 核心系统 | 单元测试
+RuntimeTests: 该插件用于编写和运行运行时测试。主要功能包括：提供了一个测试框架、支持测试套件、提供了一个测试运行器、支持断言和日志等。它可以帮助开发人员验证游戏或应用程序在运行时的各个方面的正确性，并提供详细的日志和报告，以帮助分析和解决问题。 | 核心系统 | 单元测试
+TestSamples: 该插件是用于测试游戏和应用程序的模块。它提供了一些示例测试用例、测试工具和用于编写和管理测试用例的测试框架，可以帮助开发人员测试他们的代码和功能。 | 核心系统 | 单元测试
+TraceUtilities: 该插件有一组增强Unreal Insights系统和Trace日志框架的工具。 | 性能剖析调试 | 调试用日志
+DatasmithMVR: 该插件提供了Datasmith模块对MVR格式数据的导入和导出支持。 | 核心系统 | 文件I/O
+XGEController: 该插件支持了使用XGE进行着色器编译分发。 | 低阶渲染器 | 材质与着色器
+OnlineSubsystem:该插件为处理在线子系统实现提供共享代码，它是一个在线服务的抽象层，让游戏可以连接到多种类型的在线平台，例如Steam，PlayStation Network，Xbox Live等。这种抽象层使得开发者能够无需考虑特定平台的细节，就能实现网络游戏的基础功能。| 在线多人 | 平台在线子系统
+ConcertMain:它使得编辑器可以进行协同的多用户会话，允许多个开发者同时在同一项目中进行操作，这有利于团队协作和快速迭代。| 在线多人 | 协同作业
+ConcertSyncCore:这是Concert Sync客户端和服务器插件的共享插件，支持多个用户之间的实时协同编辑。Concert Sync是Unreal Engine中的一个协同编辑框架，主要用于多人同时在同一项目中进行编辑。| 在线多人 | 协同作业
+GeometryProcessing:这是一组用于处理2D和3D几何体的数据结构和算法，例如几何体的创建、转换、分割等操作。这些工具可以在创建游戏世界时提供大量的帮助，也可以在游戏运行时进行几何体的动态处理。| 资源 | 三维模型资源
+MeshModelingToolset:这是一组基于交互工具框架实现的3D网格创建和编辑模块。它们提供了一种强大的方式来对3D网格进行修改，无论是在编辑器中进行静态的编辑，还是在运行时进行动态的变形，都能得到很好的支持。| 资源 | 三维模型资源
+ConcertSyncClient:这是一个客户端插件，当连接到Concert Server时，可以启用多用户编辑器会话。这对于需要多人同时进行项目编辑的团队非常有用，可以提高团队协作效率，减少冲突。| 在线多人 | 协同作业
+DatasmithContent:这个插件包含了Datasmith Importer的内容。Datasmith是Unreal Engine提供的一种导入工具，可以将从其他3D建模软件，如3ds Max，Revit等，导出的3D场景数据和元数据高效地转移到Unreal Engine中。| 核心系统 | 文件I/O
+ControlRig:Control Rig 是基于节点的操控系统，设计用于为操控者和动画师提供多种工具，通过对美术师友好的界面来创建灵活、动态和程序性的角色。与蓝图不同，Control Rig使用称为RigVM的自有轻量级VM提供高效的姿势计算。用户可将称为 Rig Units 的节点与Control Rig图连接在一起，创造运行时间和动画rig。| 骨骼动画
+StructUtils:提供InstancedStruct类型的实验性结构工具。这个插件提供了一组工具，用于处理结构类型的数据。这对于处理复杂的数据结构，例如在网络游戏中同步玩家的状态数据，有很大的帮助。| 核心系统
+Niagara:Niagara是Unreal Engine的一个新的粒子系统插件，为实现复杂且细致的粒子效果提供了框架。它可以用于创建各种复杂的粒子效果，如烟雾、火焰、水滴等，大大提升了游戏的视觉效果。| 视觉效果 | 粒子与贴花系统
+Runtime:Runtime插件实现了所有引擎导入器和导出器的交换框架，它提供了一种统一的方式来导入和导出各种格式的文件，这包括图像、音频、3D模型等各种类型的资源文件。| 核心系统 | 文件I/O
+Takes:这是一套为虚拟生产环境中的录制、回顾和回放设计的工具和接口。这使得开发者能够在虚拟环境中录制和回放游戏的状态，这对于测试和调试，以及创建游戏的预览和宣传片段非常有用。| 游戏专用子系统 | 游戏摄像机 | 脚本/动画摄像机
+DatasmithImporter:这是Datasmith文件的导入器，它使用Datasmith工具来帮助用户将3D场景数据和元数据从其原始应用程序（如3ds Max，Revit等）有效地转移到Unreal Engine。这使得开发者可以方便地使用其他3D建模软件来创建游戏的场景和模型，然后导入到Unreal Engine中进行游戏开发。| 核心系统 | 文件I/O
+MediaIOFramework:这是一个用于支持虚拟制作行业使用的专业媒体输入输出的媒体框架类。这个框架提供了一组API，用于处理专业级别的媒体输入和输出，包括高清视频流、音频流等。此外，它也支持与各种专业的媒体设备进行交互，例如摄像机、麦克风、混音器等。| 核心系统 | 文件I/O
+ProceduralMeshComponent:这是一个可渲染组件和用于程序生成和修改网格几何体的实用程序库。这个插件提供了一种方式来动态地生成和修改3D网格。这对于需要在运行时动态生成或修改网格的游戏，例如地形生成、建筑物破坏等，提供了很大的便利。| 低阶渲染器 | 几何图元提交
+UdpMessaging:为消息子系统添加基于UDP的传输和隧道层，以在网络计算机和设备之间发送和接收消息。 | 平台独立层 | 网络传输层
+LevelSequenceEditor:LevelSequence资产的内容编辑器，提供了一个强大的非线性动画编辑器，允许你制作游戏中的电影和动画序列。| 游戏专用子系统 | 游戏摄像机 | 脚本/动画摄像机 
+OnlineSubsystemUtils:用于交互在线服务和在线子系统实现的共享代码。 | 在线多人 | 平台在线子系统
+GeometryCache:支持提纯几何动画。它能用于将动画导入到Unreal Engine中，以实现高质量的复杂动画。| 骨骼动画
+EditorScriptingUtilities:帮助函数，用于使用Blueprint或其他脚本工具编写你自己的UE4编辑器功能。 | 游戏性基础 | 蓝图
+MeshModelingToolsetExp:基于交互工具框架实现的一组实验性3D网格创建和编辑模块。 | 资源 | 三维模型资源
+OpenXR:OpenXR是一种开放的VR/AR标准。它定义了一组API，以实现虚拟现实和增强现实应用的互操作性。| 人体学接口设备 | 物理设备I/O
+VariantManagerContent:Variant Manager企业插件的数据类和资产，可管理和切换同一场景的不同变体。| 资源 | 游戏世界/地图
+PythonScriptPlugin:Unreal编辑器的Python集成，允许开发者使用Python脚本语言来自动化编辑器中的任务和过程。 | 游戏性基础 | 脚本系统
+MovieRenderPipeline:用于创建渲染电影或其他多媒体创建的先进电影渲染流水线。| 视频
+OnlineBase:在线子系统（OSSv1）和在线服务（OSSv2）接口的共享代码，它是实现和管理网络连接、玩家匹配、领导者板等网络功能的基础。| 在线多人
+MassEntity:以数据驱动处理为中心的游戏玩法框架。MassEntity是一个系统，旨在提供高效、可扩展和灵活的实体组件系统，以满足大规模游戏开发的需求。| 游戏性基础
+OpenCV:初始化OpenCV库以在引擎中使用的插件。OpenCV（开源计算机视觉库）是一个强大的计算机视觉和机器学习软件库，它可以用于实现实时图像处理、特征检测、对象跟踪等功能。| 第三方软件开发包与中间件
+RemoteControl:一套通过网络服务器在编辑器或运行时控制虚幻引擎的工具。这使得用户可以通过HTTP或WebSocket请求远程控制虚幻引擎。这一功能允许开发者通过第三方应用和网络服务来控制Unreal。| 平台独立层 | 网络传输层
+LiveLink:[?] LiveLink允许将动画数据流入Unreal Engine。LiveLink 是一个实时链接，允许第三方应用程序将它们的数据实时传输到虚幻引擎中，如动画、相机、光照等。| 第三方软件开发包与中间件 | LiveLink
+ConcertSyncServer: 服务器插件，允许在编辑器中进行多用户会话。这通常用于游戏开发团队中的多个成员可以在同一游戏项目上协同工作。| 在线多人 | 协同作业
+NNI: [?] 跨平台框架，用于在Unreal Engine中运行深度学习和神经网络推断，支持CPU和GPU加速。这个插件可以帮助开发者在游戏或其他交互式3D环境中实现AI功能。| 游戏专用子系统|人工智能
+OnlineServices: 用于与在线服务实现交互的共享代码。这个插件包含处理多人联机游戏、社交互动等在线服务的核心代码。| 在线多人
+ComputeFramework: [?] 支持用户编写的GPU计算图形。这是一个让开发者利用GPU进行大规模并行计算的框架。| 平台独立层 | 线程库
+nDisplay: [?] 支持使用多个PC进行同步的集群渲染，可用于创建更大规模的虚拟环境，例如VR或者全息展示。| 平台独立层 | 网络传输层 | nDisplay
+StateTree: 通用的分层状态机。状态机是一种常用的AI设计模式，可以处理复杂的逻辑和决策。| 游戏专用子系统 | 玩家机制 | 状态机与动画
+CameraCalibrationCore: 支持镜头畸变和相机校准。在虚拟制作和增强现实应用中，相机校准是一个重要的步骤。| 游戏专用子系统 | 游戏摄像机
+DMXEngine: [?] 提供与数字复用器（DMX）兼容设备通信的功能和资产。DMX是一种通信协议，通常用于控制舞台照明和特效。| 平台独立层 | 网络传输层
+DMXProtocol: [?] DMX协议的实现。DMX是一种通信协议，通常用于控制舞台照明和特效。| 平台独立层 | 网络传输层
+DeformerGraph: 创建GPU网格变形图的编辑器。此插件用于编辑和创建能够在GPU上实时执行的复杂几何变形。| 低阶渲染器 | 几何图元提交
+Composure: 设计以使在Unreal Engine中进行合成更容易的插件。合成是视觉效果的关键步骤，通常包括把多个图像或图像序列合并在一起创建单个图像或场景。| 视觉效果
+OpenColorIO: 提供对OpenColorIO的支持。OpenColorIO 是一个开源项目，用于处理颜色管理在数字内容制作中的复杂性。| 第三方软件开发包与中间件 
+ConcertSharedSlate: 包含服务器和客户端UI模块共享的UI。这种共享UI可以提高协同工作的效率和一致性。| 前端 | 游戏内置GUI
+GameplayTagsEditor: GameplayTagsEditor提供了蓝图节点和编辑器UI，以便使用GameplayTags对资产和对象进行标记。这可以使得开发者在游戏开发过程中更好地组织和管理。| 游戏性基础 | 蓝图
+EOSShared: 负责初始化/关闭EOSSDK运行时库。Epic Online Services (EOS)是一种跨平台的在线服务，提供包括成就、统计、用户数据存储等在内的各种功能。| 在线多人 | 安排比赛与游戏管理
+ActorLayerUtilities:提供从蓝图与演员层互动的工具。蓝图是Unreal Engine的可视化脚本系统，用于在没有编程的情况下定义游戏逻辑。| 游戏性基础 | 蓝图
+AppleImageUtils:提供操作CIImage、CVPixelBuffer、IOSurface等的工具。这些都是Apple的图像处理框架的一部分，用于处理图片和视频数据。| 平台独立层 | 跨平台支持 | 苹果
+SQLiteCore:这是SQLite数据库的核心模块，SQLite是一种嵌入式的轻量级数据库，常用于本地存储游戏数据等。| 第三方软件开发包与中间件
+GameplayAbilities:添加了处理复杂游戏互动的GameplayEffect和GameplayAbility类。| 游戏专用子系统
+SmartObjects:支持为游戏世界填充周围生活的功能。这是人工智能（AI）的一部分，常用于生成NPC（非玩家角色）的行为。| 游戏专用子系统 | 人工智能
+ZoneGraph:一个轻量级寻路/导航系统，它使用元数据来表示特定的导航流（交通车道、人行道、木栈道等），而非专注于世界物理表示的寻路网格体。| 游戏专用子系统 | 人工智能
+MLDeformerFramework:机器学习网格变形框架。这可能是一种利用机器学习技术进行3D模型变形的方法。| 资源 | 三维模型资源
+XCodeSourceCodeAccess:允许在XCode中访问源代码。XCode是Apple开发的集成开发环境（IDE），用于开发iOS和Mac应用。| 第三方软件开发包与中间件 
+EnhancedInput:提供了上下文和动态映射的输入处理。这是对游戏输入设备（如键盘、鼠标、触摸屏、游戏手柄等）输入事件处理的一种扩展。| 人体学接口设备 | 物理设备I/O
+DataprepEditor:在Unreal Editor内部简化数据准备流水线的创建和执行的工具。这主要用于处理游戏资源数据的预处理工作。| 资源 | 资源管理器
+ProxyLODPlugin:生成Proxy LOD（Level of Detail）系统的插件。LOD是一种常见的图形优化技术，通过降低距离观察者较远的物体的的细节来减少渲染负载。| 场景图/剔除优化 | 细致程度系统
+WebSocketNetworking:WebSocket网络插件 - 注意:使用WebSocketNetDriver，必须禁用所有其他存在的NetDriverDefinitions。另外:必须禁用所有不受HTML5/Websockets支持的PackHandlerComponents（例如SteamAuthComponentModuleInterface）。WebSocket是一种网络通信协议，通常用于实现实时的网络通信。| 平台独立层 | 网络传输层
+AndroidPermission:支持Android运行时权限。在安卓平台上，某些操作（如访问摄像头或定位服务）需要用户的显式权限，这个模块用于处理这些权限请求。| 平台独立层 | 跨平台支持 | Android
+AudioSynesthesia:提供一系列的离线分析器，用于将提取的音频元数据集成到蓝图中。这使得音频数据可以在游戏逻辑中被利用，例如，为音乐游戏生成节拍，或者根据游戏环境的声音生成视觉效果。| 音频 | 音频播放/管理
+DataRegistry:添加数据注册系统，可以在运行时从多个来源获取结构化数据的通用接口。这是一种抽象的数据访问接口，可能用于处理各种类型的数据，如游戏设置、玩家数据或者游戏世界状态。| 平台独立层 | 文件系统
+HairStrands:渲染和模拟修整过的头发。用于创建和处理游戏角色的头发细节，包括头发的动态、光照和颜色等。| 视觉效果
+nDisplayModularFeatures:[?] nDisplay的模块化特性。nDisplay是Unreal Engine的一个特性，可以让开发者在多个显示设备上同步并显示一个场景。| 平台独立层 | 网络传输层 | nDisplay
+GameplayInsights:通过Unreal Insights对动画系统进行调试。Unreal Insights是用于性能监控和优化的工具。| 性能剖析调试 | 录影与回放
+OpenCVLensDistortion:使用OpenCV处理相机校准和镜头失真/无失真位移图生成的插件。OpenCV是一个开源的计算机视觉库。| 第三方软件开发包与中间件 
+MultiUserClient:允许在编辑器中进行协同的多用户会话。| 在线多人 | 协同作业
+GLTFImporter:Khronos glTF 3D模型的导入器。glTF是一种用于3D场景和模型的开放标准文件格式。| 资源 | 三维模型资源
+ModelingToolsEditorMode:包含一套用于在编辑器中创建和编辑网格的交互工具的建模工具模式。| 资源 | 三维模型资源
+GameFeatures:支持模块化的游戏特性插件。这可以使开发者能够以插件的形式添加新的游戏功能。| 游戏性基础
+GizmoEdMode:管理基于InteractiveToolFramework的全局TRS gizmos的编辑器模式。Gizmos通常指编辑器中的操作工具，例如旋转、缩放、移动等。| 资源 | 编辑器
+PlatformCrypto:如果平台提供，提供统一的加密功能API。否则，与OpenSSL进行接口。| 平台独立层 | 安全性
+TextToSpeech:一个文本转语音系统，可以用来根据输入字符串进行语音通知。| 音频 | 音频播放/管理
+VirtualProductionUtilities:为虚拟制作提供的实用类和函数。虚拟制作是利用计算机图形学和实时引擎技术制作电影和视频的过程。| 游戏性基础 | 动态游戏对象模型
+JsonBlueprintUtilities:为蓝图提供的Json功能。蓝图是Unreal Engine的一种可视化编程工具，Json则是一种常用的数据交换格式。| 游戏性基础 | 蓝图
+ElectraUtil:Electra播放器媒体播放的可复用基础组件。Electra是Unreal Engine提供的一种高效的媒体播放解决方案，能够支持各种流媒体格式。| 视频 
+MediaFrameworkUtilities:为了简化媒体框架的使用，提供的实用工具资产和演员。媒体框架是Unreal Engine的一部分，用于处理视频和音频的播放。| 视频 
+MediaPlayerEditor:用于MediaPlayer资产的内容编辑器。MediaPlayer是Unreal Engine中用于播放多媒体内容（如音频和视频）的组件。| 视频 
+PixelCapture:捕获像素缓冲区的框架，允许断开的生产/消费速率。它可以在捕获屏幕内容时，保证一定的帧率和图像质量。| 性能剖析调试 | 录影与回放
+PixelStreaming:将Unreal Engine的音频和渲染流式传输到兼容WebRTC的媒体播放器，如网络浏览器。WebRTC是一个支持网页浏览器进行实时语音对话或视频对话的API。| 视频
+WmfMedia:使用Windows Media Foundation框架实现的媒体播放器。Windows Media Foundation是Windows提供的用于处理数字媒体的编程框架。| 视频 
+OnlineFramework:用于与在线游戏服务交互的共享代码。此插件可以帮助开发者处理包括联机对战、社交功能、云存储等在线游戏的核心功能。| 在线多人 | 安排比赛与游戏管理
+AppleARKit:对Apple的ARKit增强现实系统的支持。ARKit是Apple提供的一种AR（Augmented Reality）增强现实开发工具，可帮助开发者将虚拟信息融入到真实环境。| 第三方软件开发包与中间件
+DatabaseSupport:抽象数据库支持，提供了一种机制来与数据库进行交互，以便在运行时存储和检索数据。| 核心系统 | 文件I/O
+LocationServicesBPLibrary:为蓝图提供获取移动设备位置数据的通用接口。| 游戏性基础 | 蓝图
+MassGameplay:基于MassEntity实现的大规模代理模拟。这是一个用于实现大规模AI群体的插件，比如模拟战斗场景中的大规模军队。| 游戏专用子系统 | 人工智能
+OSC:实现了OSC 1.0规范，允许用户在远程客户端或应用程序之间发送和接收OSC（Open Sound Control）消息和包。OSC是一种用于音乐和其它创作领域的网络通信协议，其设计灵活且高效，可以在不同设备和软件之间传输信息。| 平台独立层 | 网络传输层
+PropertyAccess:支持从一个对象复制属性到另一个对象的编辑器支持。这对于动画和UMG（Unreal Motion Graphics，虚幻引擎的UI创建工具）系统的正确运行是必需的。| 资源 | 编辑器
+SteamShared:Steam API的共享模块加载器。Steam API是Steam游戏平台提供的一组接口，开发者可以使用它来实现与Steam相关的功能，例如成就、好友、游戏服务等。| 在线多人 | 安排比赛与游戏管理
+WaveTable:Unreal Audio Engine内WaveTable支持的默认实现。WaveTable是一种音频合成技术，主要用于创建乐器声音。| 音频 | 音频播放/管理
+MassAI:扩展MassGameplay的AI特定功能。此插件为大规模代理模拟提供了AI特性，使得大规模的代理能进行更复杂的行为和决策。| 游戏专用子系统 | 人工智能
+PerforceSourceControl:Perforce源代码控制管理。Perforce是一个版本控制系统，用于记录和管理源代码的修改历史。该插件使Unreal Engine可以直接与Perforce服务器进行交互，实现源代码的版本控制。| 第三方软件开发包与中间件 
+PluginUtils: 用于创建和编辑插件的辅助工具。被插件浏览器使用。 | 资源 | 资源管理器
+TextureFormatOodle: Oodle纹理插件 | 资源 | 纹理资源
+AssetManagerEditor: 用于管理和审核磁盘上的资产的编辑器UI和实用工具 | 资源 | 资源管理器
+ConsoleVariablesEditor: 保存、加载和控制控制台变量（cvars）的面板 | 资源 | 编辑器
+PluginBrowser: 用户界面用于管理已安装的插件和创建新插件 | 资源 | 资源管理器
+StylusInput: 支持高级触笔和平板输入，如压感、触笔和平板按钮以及笔角度 | 人体学接口设备| 物理设备I/O
+DatasmithCADImporter: 用于处理CAD文件的工具集合 | 核心系统 | 文件I/O
+ChaosCaching: Chaos Cache asset支持记录和回放物理模拟 | 碰撞与物理
+ColorCorrectRegions: 区域/体积限定的颜色校正/着色 | 低阶渲染器 | 材质与着色器
+CommonUI: 用于游戏独立UI元素的存储库 | 前端 | 游戏内置GUI
+DataInterface: 定义功能数据流的框架 | 核心系统
+DataInterfaceGraph: 定义动画系统功能数据流的框架 | 核心系统
+GameplayBehaviors: 封装的AI代理的即时行为 | 游戏专用子系统 | 人工智能
+GeometryCollectionPlugin: 添加几何集合容器 | 平台独立层 | 集合与迭代器
+GeometryFlow: 几何数据流图 | 资源 | 三维模型资源
+MotoSynth: 一款实验性的颗粒车辆引擎。旨在探索和展示潜在的能力。不受支持 | 游戏专用子系统 | 载具系统
+PlanarCutPlugin: 添加平面切割模块 | 资源 | 三维模型资源
+AlembicImporter: 支持导入Alembic文件 | 核心系统 | 特定格式支持
+USDImporter: 添加支持将USD文件格式导入到Unreal Engine | 核心系统 | 特定格式支持
+ImgMedia: 实现EXR和其他格式的图像序列的媒体播放器 | 资源 | 媒体资源
+MediaCompositing: 用于合成媒体的演员、组件和序列扩展 | 资源 | 媒体资源
+TcpMessaging: 添加基于TCP连接的传输层，用于在网络计算机和设备之间发送和接收消息的消息子系统 | 平台独立层 | 网络传输层
+TemplateSequence: 模板序列的运行时 | 游戏专用子系统 | 游戏摄像机 | 脚本/动画摄像机
+SocketSubsystemEOS: 负责管理EOS P2P Socket连接 | 平台独立层 | 网络传输层
+VoiceChat: 语音聊天接口 | 在线多人
+ARUtilities: 用于AR系统的实用代码和内容 | 游戏专用子系统 | 游戏专用渲染 | 混合现实
+AzureSpatialAnchors: 支持Microsoft Azure Spatial Anchor云服务 | 第三方软件开发包与中间件
+AudioCapture: 提供麦克风输入捕捉接口的插件 | 音频
+AudioModulation: Unreal音频引擎中的音频调制的默认实现 | 音频
+AudioMotorSim: 用于模拟车辆音频的组合方法 | 音频 
+Metasound: 高性能音频系统，通过游戏数据和蓝图的音频参数和事件，实现对声音的采样精确控制和调制 | 音频
+DMXModularFeatures: 用于DMX的模块化功能 | 平台独立层 | 网络传输层
+RemoteControlInterception: 允许拦截远程控制命令的插件 | 平台独立层 | 网络传输层
+RivermaxCore: 基础插件，将rivermax暴露给引擎 | 第三方软件开发包与中间件
+TextureShare: 在进程之间共享纹理和数据 | 资源 | 纹理资源
+Paper2D: 添加工具和资产以帮助创建2D游戏，包括动画精灵资产、平铺集（实验性）、2D级别编辑工具等 | 资源 | 编辑器
+HTNPlanner: 实验性支持的分层任务网络（HTN）规划器 | 游戏专用子系统 | 人工智能
+MLAdapter: 用于训练和利用游戏中的机器学习代理的框架，可以通过外部进程查询游戏状态和控制角色，使用ONNX模型在引擎中运行代理 | 游戏专用子系统 | 人工智能
+AnimationModifierLibrary: 动画修改器的集合 | 骨骼动画
+AnimationWarping: 动画和姿势扭曲的框架，包括Stride、Orientation和Slope Warping以及根运动增量动画属性 | 骨骼动画
+AnimToTexture: 将骨骼网格动画转换为纹理 | 骨骼动画
+NearestNeighborModel: ML Deformer Framework的最近邻模型 | 游戏专用子系统 | 人工智能
+NeuralMorphModel: ML Deformer Framework的神经变形模型 | 游戏专用子系统 | 人工智能
+VertexDeltaModel: ML Deformer Framework的顶点增量模型 | 游戏专用子系统 | 人工智能
+RigLogic: 3Lateral RigLogic用于面部动画的插件 | 骨骼动画
+AudioGameplay: 音频游戏的核心插件 | 音频
+AudioGameplayVolume: 音频游戏音量插件 | 音频
+Bridge: Quixel Bridge的Megascans链接 | 资源 | 资源管理器
+GameplayCameras: 默认游戏摄像机类和系统 | 游戏专用子系统 | 游戏摄像机
+AnimationSharing: 使用Leader-Follower姿势功能创建共享动画系统的插件 | 骨骼动画
+MultiUserServer: 可视化多用户服务器 | 在线多人
+ConcertClientSharedSlate: 仅用于客户端UI模块的共享UI | 核心系统 | 引擎前端
+TraceSourceFiltering: 用于Unreal Insights的源数据过滤 | 性能剖析调试 | 性能数据收集与分析
+BlueprintMaterialTextureNodes: 添加仅用于蓝图编辑器的节点，用于读取纹理和渲染目标，以及创建和修改材质实例常量 | 游戏性基础 | 蓝图
+ContentBrowserAssetDataSource: 提供给内容浏览器的数据源插件，提供资产数据 | 资源 | 资源管理器
+ContentBrowserFileDataSource: 提供内容浏览器的松散文件支持的数据源插件 | 资源 | 资源管理器
+DataValidation: 运行数据验证的编辑器UI和实用工具 | 资源 | 编辑器
+FacialAnimation: 面部动画曲线和音频的批量导入工具。将面部动画曲线表（来自FBX）导入声音波形中 | 骨骼动画
+GeometryMode: 几何和BSP编辑 | 资源 | 三维模型资源
+ObjectMixer: 以电子表格格式编辑场景对象的任何属性！ | 资源 | 编辑器
+WaveformEditor: 波形编辑器工具 | 音频 | 音频播放/管理
+DatasmithFBXImporter: 添加从DeltaGen和VRED导入内容的支持 | 核心系统 | 文件I/O
+DatasmithGLTFImporter: Khronos glTF 3D模型的导入器 | 核心系统 | 文件I/O
+GLTFExporter: Khronos glTF 2.0的导出器 | 核心系统 | 文件I/O
+LidarPointCloud: 添加导入、处理和渲染LiDAR点云的支持 | 低阶渲染器 | 点云
+MDLImporter: MDL材质文件的导入器 | 核心系统 | 特定格式支持
+CurveExpression: 使用简单数学表达式的实验性曲线重映射器 | 核心系统 | 曲线与曲面库
+MotionTrajectory: 生成角色运动的预测并跟踪历史记录 | 游戏性基础 | 动态游戏对象模型
+PoseSearch: 实验性的姿势搜索API | 骨骼动画
+AppleVision: 允许针对纹理（相机数据或渲染目标）进行计算机视觉API调用 | 第三方软件开发包与中间件
+ChaosCloth: 添加Chaos Cloth模块 | 碰撞与物理
+ChaosUserDataPT: 自定义每个粒子的用户数据。在游戏线程上只写，物理线程上只读 | 碰撞与物理
+ChaosVehiclesPlugin: Chaos车辆集成 | 碰撞与物理
+Chooser: 选择器 | 资源 | 资源管理器
+CinematicPrestreaming: 添加一种在电影剪辑中记录某些类型的流数据请求的方法。可以在Sequencer时间轴上提前播放请求，以在正常游戏/渲染过程中预加载数据 | 游戏专用子系统 | 游戏摄像机 | 脚本/动画摄像机
+CommonConversation: 用于编写基于图形的对话树的实验性插件 | 前端 | 游戏内置GUI
+Dataflow: 编辑器数据流图 | 资源 | 编辑器
+DatasmithInterchange: Datasmith的交换导入器 | 核心系统 | 文件I/O
+GeometryScripting: 几何脚本提供了一个在蓝图和Python中创建和编辑网格的函数库 | 资源 | 三维模型资源
+GPULightmass: 使用DXR的静态光照构建和预览系统 | 低阶渲染器 | 静态光照
+ImagePlate: 提供与相机对齐的图像板的演员和组件类型 | 低阶渲染器
+LandscapePatch: 支持添加到网格上以影响景观的景观补丁组件 | 资源 | 三维模型资源
+Mutable: Mutable添加了用于创建可定制对象的工具和运行时 | 资源 | 资源管理器
+NaniteDisplacedMesh: 提供Nanite网格的基本预置位管道的资产和组件类型 | 场景图/剔除优化 | 细致程度系统
+OptiXDenoise: 基于NVIDIA的OptiX AI加速去噪器库的Unreal Path Tracer去噪引擎 | 低阶渲染器
+PCG: 用于UE的程序化生成框架 | 资源 | 游戏世界/地图
+RenderGrid: 用于创建渲染电影的高级流水线 | 低阶渲染器
+ScreenReader: 包含可扩展的辅助功能类和框架的插件，提供视觉辅助功能服务 | 核心系统 | 本地化服务
+Text3D: 3D文本生成器 | 资源 | 字体资源
+UVEditor: 资产编辑器，用于修改网格的UV映射 | 资源 | 纹理资源
+VirtualCamera:VirtualCamera 模块用于在虚幻引擎中提供虚拟摄像机系统。它允许用户使用物理设备（如平板电脑或运动控制器）控制虚拟摄像机。这个模块对于电影制片人和摄影师在实际拍摄前在虚拟环境中勘景和规划镜头非常重要。如果删除此模块，您将失去虚拟摄像机功能，这可能会影响项目中的电影制作工作流程。|游戏专用子系统|游戏摄像机
+VirtualHeightfieldMesh:VirtualHeightfieldMesh 模块负责使用高程数据生成和渲染地形。它为大规模地形在虚幻引擎中提供了高效的渲染和 LOD（细节层次）管理。这个模块对于开放世界游戏和需要大规模地形的项目非常重要。删除此模块将删除地形渲染功能，这将显著影响项目中任何地形的视觉质量和性能。|游戏专用子系统|游戏专用渲染|地形渲染
+LedWallCalibration:LedWallCalibration 模块旨在协助虚拟制作中 LED 墙的校准和设置。它提供了测量和对准物理 LED 面板以及调整其亮度和颜色以匹配虚拟环境的工具。这个模块对于使用 LED 墙进行实时摄像机视觉效果的虚拟制作项目非常重要。删除此模块将删除校准工具，使在虚拟制作工作流程中设置和使用 LED 墙变得更加困难。|视觉效果
+VirtualScouting:VirtualScouting 模块提供了在虚拟环境中侦查和规划镜头的工具。这个模块对于电影制片人和摄影师在实际拍摄前在虚拟环境中探索和规划镜头特别有用。它包括诸如相机书签、笔记和测量等功能。如果删除此模块，您将失去虚拟侦查功能，这可能会影响项目中的电影制作工作流程。|游戏专用子系统|游戏摄像机
+Water:Water 模块负责在虚幻引擎中模拟和渲染水面。它提供了一个逼真且可定制的水系统，包括波浪、浮力和与其他物体的互动等功能。这个模块对于需要逼真水模拟和渲染的项目至关重要。删除此模块将删除水渲染和模拟功能，这将影响项目中任何水面的视觉质量和真实感。|游戏专用子系统|游戏专用渲染|水体模拟和渲染
+WebAPI:WebAPI 模块允许您在虚幻引擎项目中轻松地与 Web 服务进行通信。它提供了用于发送 HTTP 请求和处理响应的工具和功能。如果删除此模块，您将无法在项目中使用 Web API 功能，这可能会影响与外部 Web 服务的集成和通信。| 平台独立层 | 网络传输层
+NiagaraSimCaching:NiagaraSimCaching 模块用于优化和缓存 Niagara 粒子系统的模拟数据。这可以提高项目中粒子效果的性能。如果删除此模块，您将无法使用 Niagara 模拟缓存功能，这可能会影响项目中粒子效果的性能和优化。|视觉效果|粒子与贴花系统
+Editor:Editor 模块是虚幻引擎编辑器的核心组件，提供了创建、编辑和管理项目资源的基本功能。删除此模块将极大地影响项目的开发过程，因为您将无法使用虚幻引擎编辑器的主要功能。建议不要删除此模块。|资源 | 编辑器
+AjaMedia:AjaMedia 模块提供了与 Aja 视频采集卡和设备集成的功能。它允许您在虚幻引擎项目中捕获和输出 Aja 设备的视频信号。如果删除此模块，您将无法使用与 Aja 设备相关的视频输入和输出功能，这可能会影响项目中的视频处理能力和兼容性。|视频
+AndroidCamera:AndroidCamera 模块允许您在虚幻引擎项目中访问和使用安卓设备上的相机硬件。它提供了用于捕获实时视频流和拍照的功能。如果删除此模块，您将无法在项目中使用安卓设备上的相机功能，这可能会影响在安卓平台上的增强现实（AR）和其他相机相关功能。| 平台独立层 | 跨平台支持 | Android
+AndroidMedia:使用 Android Media 库实现媒体播放器。此模块在安卓平台上播放视频和音频内容非常重要。如果删除此模块，您将无法在安卓设备上使用媒体播放功能，这可能会影响项目在安卓平台的表现和功能。| 平台独立层 | 跨平台支持 | Android
+AppleProResMedia:实现苹果 ProRes 编解码器的视频播放和导出。苹果 ProRes 是一种高质量的有损视频压缩格式。此模块对于需要使用苹果 ProRes 格式的项目非常重要。如果删除此模块，您将无法播放和导出使用 ProRes 编解码器的视频，这可能会影响项目的视频质量和兼容性。| 平台独立层 | 跨平台支持 | 苹果
+AvfMedia:使用苹果 AV Foundation 实现媒体播放器。此模块在 iOS 和 macOS 平台上播放视频和音频内容非常重要。如果删除此模块，您将无法在苹果设备上使用媒体播放功能，这可能会影响项目在苹果平台的表现和功能。| 平台独立层 | 跨平台支持 | 苹果
+AvidDNxMedia:使用 Avid DNx 编解码器实现视频导出。此模块对于需要使用 Avid DNx 格式的项目非常重要。如果删除此模块，您将无法导出使用 Avid DNx 编解码器的视频，这可能会影响项目的视频质量和兼容性。|视频
+BinkMedia:使用 Bink 实现媒体播放器。Bink 是一种常用于游戏中的有损视频压缩格式。此模块对于需要使用 Bink 格式的项目非常重要。如果删除此模块，您将无法播放和导出使用 Bink 编解码器的视频，这可能会影响项目的视频质量和性能。|视频
+BlackmagicMedia:使用 Blackmagic 采集卡实现输入和输出。此模块对于需要使用 Blackmagic 采集卡进行视频输入和输出的项目非常重要。如果删除此模块，您将无法利用 Blackmagic 采集卡进行视频捕捉和输出，这可能会影响项目的视频处理能力和兼容性。|视频
+ElectraPlayer:下一代播放能力。ElectraPlayer 是一个高性能的媒体播放器，旨在提供更高效的视频和音频播放。删除此模块可能会影响项目的媒体播放性能，特别是在需要高性能播放的场景中。|视频
+ElectraSubtitles:Electra Player 媒体播放的字幕解码器模块。此模块负责为 Electra Player 提供字幕解码和显示功能。如果删除此模块，您将无法在使用 Electra Player 的项目中显示字幕，这可能会影响项目的多语言支持和用户体验。|视频
+HAPMedia:实现 HAP 编解码器的视频播放。HAP 是一种在 GPU 上运行的高性能、高分辨率编解码器。此模块对于需要使用 HAP 格式的项目非常重要。如果删除此模块，您将无法播放和导出使用 HAP 编解码器的视频，这可能会影响项目的视频质量和性能。|视频
+HLMedia:虽然没有明确的描述，但根据名称，HLMedia 可能与 HTTP Live Streaming（HL）有关，这是一种流行的流媒体传输协议。如果这是正确的，那么删除此模块可能会影响项目中的实时流媒体播放功能。|视频
+LinearTimecode:从媒体源读取线性时间码的组件。不使用同步机制。此模块对于需要处理线性时间码的项目非常重要。如果删除此模块，您将无法从媒体源读取线性时间码，这可能会影响项目中的时间同步和媒体处理功能。|视频
+MfMedia:使用 Microsoft Media Foundation 框架实现媒体播放器。需要 Xbox One 或 Windows 7 及更高版本。此模块对于在 Windows 平台上播放视频和音频内容非常重要。如果删除此模块，您将无法在 Windows 设备上使用媒体播放功能，这可能会影响项目在 Windows 平台的表现和功能。|视频
+PixelStreamingPlayer:支持接收像素流并在游戏中显示。此模块对于需要实时像素流播放的项目非常重要，例如远程桌面应用程序或云游戏。如果删除此模块，您将无法在项目中使用像素流播放功能，这可能会影响实时流媒体处理和显示能力。|视频
+TimecodeSynchronizer:此插件已被弃用，将在未来的引擎版本中删除。请更新您的项目以使用 TimedDataMonitor 插件的功能。虽然 TimecodeSynchronizer 已被弃用，但它曾用于同步多个媒体源的时间码。删除此模块不会立即影响项目，但建议您将项目迁移到使用 TimedDataMonitor 插件，以确保未来引擎版本的兼容性。|弃用
+TimecodeProvider:TimecodeProvider 模块用于为虚幻引擎提供全局时间码。它可以从外部设备或内部系统获取时间码，并将其用于同步动画、音频和视频等。此模块对于需要精确时间同步的项目非常重要，例如虚拟制作和实时广播。如果删除此模块，您将无法在项目中使用全局时间码同步功能，这可能会影响项目中的时间同步和媒体处理能力。|平台独立层 | 高分辨率时钟
+MeshPainting:用于在网格上绘制数据的系统。此模块允许您在网格上直接绘制纹理、颜色和其他数据，以实现更高程度的定制。如果删除此模块，您将无法使用网格绘制功能，这可能会影响项目中的美术创作和资源定制能力。|低阶渲染器
+ActorSequence:用于嵌入式演员序列的运行时。此模块允许您在关卡中创建和播放与特定演员关联的序列。如果删除此模块，您将无法使用嵌入式演员序列功能，这可能会影响项目中的动画和交互设计。|骨骼动画
+CustomizableSequencerTracks:提供可在序列器中添加的可通过蓝图进行定制的轨道类型的库。此模块扩展了序列器的功能，使您能够通过蓝图创建自定义轨道类型。如果删除此模块，您将无法使用可定制的序列器轨道功能，这可能会限制项目中的动画和交互设计能力。| 游戏专用子系统 | 游戏摄像机 | 脚本/动画摄像机
+ReplayTracks:用于播放记录的游戏玩法的序列轨道。此模块允许您在序列器中创建和播放基于记录的游戏玩法的轨道。如果删除此模块，您将无法使用回放轨道功能，这可能会影响项目中的游戏回放和分析功能。|性能剖析调试 | 录影与回放
+NetcodeUnitTest:此模块提供了用于测试和验证网络代码的单元测试工具。它对于确保网络游戏的稳定性和性能至关重要。如果删除此模块，您将无法对网络代码进行单元测试，这可能会影响项目中的网络游戏质量和稳定性。|核心系统|单元测试
+OnlineSubsystemGooglePlay:访问 Google Play 平台的功能。此模块为您的项目提供了与 Google Play 服务集成的能力，如成就、排行榜和云存储。如果删除此模块，您将无法在项目中使用 Google Play 平台相关的在线功能，这可能会影响在 Android 平台上的游戏功能和用户体验。| 在线多人 | 平台在线子系统
+OnlineServicesEOSGS:仅用于 EOS 游戏服务的在线服务实现。此模块提供了与 Epic Online Services（EOS）游戏服务集成的功能，如游戏匹配、统计和奖励。如果删除此模块，您将无法在项目中使用 EOS 游戏服务相关的在线功能，这可能会影响游戏的多人游戏和社交功能。| 在线多人 | 平台在线子系统
+OnlineSubsystemEOS:用于 Epic Online Services 的在线子系统。此模块为您的项目提供了与 Epic Online Services 集成的能力，如账户管理、好友关系和跨平台功能。如果删除此模块，您将无法在项目中使用与 Epic Online Services 相关的在线功能，这可能会影响游戏的多人游戏和社交功能。| 在线多人 | 平台在线子系统
+OnlineSubsystemFacebook:访问 Facebook 平台的功能。此模块为您的项目提供了与 Facebook 服务集成的能力，如登录、分享和邀请好友。如果删除此模块，您将无法在项目中使用 Facebook 平台相关的在线功能，这可能会影响游戏的社交功能和用户体验。| 在线多人 | 平台在线子系统
+OnlineSubsystemNull:一个不实现任何实际在线功能的在线子系统。此模块通常用于测试和开发过程中，当您不需要集成任何特定在线平台功能时。删除此模块不太可能对项目产生显著影响，但可能会影响在没有其他在线子系统的情况下进行测试和开发的能力。| 在线多人 | 平台在线子系统
+OnlineSubsystemSteam:访问 Steam 平台的功能。此模块为您的项目提供了与 Steam 服务集成的能力，如成就、排行榜、云存储和多人游戏。如果删除此模块，您将无法在项目中使用 Steam 平台相关的在线功能，这可能会影响在 Steam 平台上的游戏功能和用户体验。| 在线多人 | 平台在线子系统
+EOSVoiceChat:EOS 语音服务的 IVoiceChat 集成。此模块提供了与 Epic Online Services（EOS）语音聊天服务集成的功能，允许您在项目中实现实时语音通信。如果删除此模块，您将无法在项目中使用 EOS 语音聊天功能，这可能会影响游戏的多人游戏和社交功能。| 在线多人 | 平台在线子系统
+MQTT:MQTT 代理和客户端。此模块提供了与 MQTT 代理服务器通信的功能，允许您在项目中实现物联网（IoT）和实时消息传递。如果删除此模块，您将无法在项目中使用 MQTT 通信功能，这可能会影响项目中的实时数据传输和物联网集成。|平台独立层|网络传输层
+AnalyticsBlueprintLibrary:使用分析事件提供程序的蓝图库。此模块提供了一组用于发送分析事件的蓝图函数，允许您在项目中轻松地跟踪和分析用户行为。如果删除此模块，您将无法在项目中使用分析蓝图库功能，这可能会影响项目中的数据收集和分析能力。|性能剖析调试| 性能数据收集与分析
+Flurry:Flurry 是一种用于移动应用的分析和广告平台。虽然没有明确的 Flurry 模块描述，但根据名称，它可能是用于在虚幻引擎项目中集成 Flurry 分析服务的模块。如果删除此模块，您将无法在项目中使用 Flurry 分析功能，这可能会影响项目中的数据收集和分析能力。|性能剖析调试| 性能数据收集与分析
+AndroidBackgroundService:允许您使用 AndroidX WorkManager 在安卓设备上执行后台工作。此模块为您的项目提供了在安卓平台上执行后台任务的能力，如数据同步、通知和定时任务。如果删除此模块，您将无法在项目中使用安卓后台服务功能，这可能会影响在安卓平台上的应用性能和用户体验。| 平台独立层 | 跨平台支持 | Android
+AndroidDeviceProfileSelector:用于在硬件上显示设备配置文件选择的安卓设备配置文件选择器。此模块允许您根据不同的安卓设备硬件为项目选择合适的设备配置文件。如果删除此模块，您将无法在项目中使用安卓设备配置文件选择功能，这可能会影响项目在不同安卓设备上的性能和兼容性。| 平台独立层 | 跨平台支持 | Android
+ApexDestruction:Apex 破坏的实现。此模块提供了基于 NVIDIA Apex 技术的破坏和碎片效果。如果删除此模块，您将无法在项目中使用基于 Apex 的破坏效果，这可能会影响项目中的视觉效果和物理模拟。|碰撞与物理
+AudioWidgets:一组专为与音频相关数据和系统交互而定制的小部件。此模块提供了用于显示和编辑音频数据的用户界面组件，如波形显示和音量控制。如果删除此模块，您将无法在项目中使用音频小部件功能，这可能会影响项目中的音频编辑和用户界面设计。|音频
+GameplayInteractions:GameplayInteractions 模块提供了一种在游戏中创建和管理交互式对象的方法。它允许您定义可与玩家互动的对象，如开关、门和物品。如果删除此模块，您将无法在项目中使用游戏互动功能，这可能会影响项目中的交互设计和游戏玩法。|游戏专用子系统
+GeoReferencing:用于 UE 世界的地理参考工具。此模块为您的项目提供了将虚拟世界与现实世界地理坐标系相关联的功能。如果删除此模块，您将无法在项目中使用地理参考功能，这可能会影响地理数据的处理和地理信息系统（GIS）集成。|资源|游戏世界/地图
+LocationServicesAndroidImpl:用于从移动设备获取位置数据的安卓实现的蓝图访问。此模块为您的项目提供了在安卓设备上访问和使用位置数据的功能。如果删除此模块，您将无法在项目中使用安卓平台上的定位服务功能，这可能会影响在安卓设备上的定位和导航功能。| 平台独立层 | 跨平台支持 | Android
+LocationServicesIOSImpl:用于从移动设备获取位置数据的 iOS 实现的蓝图访问。此模块为您的项目提供了在 iOS 设备上访问和使用位置数据的功能。如果删除此模块，您将无法在项目中使用 iOS 平台上的定位服务功能，这可能会影响在 iOS 设备上的定位和导航功能。| 平台独立层 | 跨平台支持 | 苹果
+MIDIDevice:允许您通过简单的 C++ 或蓝图 API 发送和接收 MIDI 事件。此模块为您的项目提供了与 MIDI 设备通信的功能，允许您创建音乐应用程序和交互式音频体验。如果删除此模块，您将无法在项目中使用 MIDI 设备功能，这可能会影响音频处理和音乐创作能力。|音频
+ModelViewViewModel:虽然没有明确的 ModelViewViewModel 模块描述，但根据名称，它可能是一个用于实现模型-视图-视图模型（MVVM）设计模式的模块。MVVM 是一种用于分离应用程序逻辑和用户界面的设计模式。如果删除此模块，您将无法在项目中使用 MVVM 设计模式，这可能会影响项目的架构和可维护性。|前端| 游戏内置GUI
+NavCorridor:实验性导航走廊功能。此模块提供了一种在虚拟环境中创建和管理导航走廊的方法，用于引导 AI 角色和玩家在场景中导航。由于这是一个实验性功能，删除此模块可能不会立即影响项目，但可能会限制您在未来尝试和使用导航走廊功能的能力。|游戏专用子系统|人工智能 | 路径搜寻
+NetworkPrediction:用于编写网络预测友好游戏系统的通用框架。此模块提供了一种在网络游戏中实现预测和同步的方法，以减少延迟并提高游戏性能。如果删除此模块，您将无法在项目中使用网络预测功能，这可能会影响多人游戏的性能和稳定性。|平台独立层|网络传输层
+OculusAudio:Oculus 音频空间化功能。此模块为您的项目提供了与 Oculus 音频空间化技术集成的能力，允许您在虚拟现实环境中创建沉浸式和定位音频体验。如果删除此模块，您将无法在项目中使用 Oculus 音频空间化功能，这可能会影响 VR 项目的音频质量和用户体验。|音频
+OculusVR:支持 Oculus 头显和控制器。此插件已被弃用，并将在未来的引擎版本中删除。请使用内置的 OpenXR 插件或市场上的 OculusXR 插件。虽然 OculusVR 插件已被弃用，但它曾用于支持 Oculus VR 设备。删除此模块不会立即影响项目，但建议您将项目迁移到使用 OpenXR 插件或 OculusXR 插件，以确保未来引擎版本的兼容性。|弃用
+OptionalMobileFeaturesBPLibrary:此模块提供了一组用于访问和使用移动设备上可选功能的蓝图函数，例如摄像头、传感器和外部硬件。如果删除此模块，您将无法在项目中使用可选移动功能蓝图库，这可能会影响在移动设备上的硬件访问和功能集成。|硬件
+ReplicationSystemTestPlugin:用于网络复制系统的单元和功能测试。此模块为您的项目提供了测试和验证网络复制系统的工具，以确保多人游戏的稳定性和性能。如果删除此模块，您将无法对网络复制系统进行单元和功能测试，这可能会影响项目中的多人游戏质量和稳定性。|核心系统|单元测试
+SignificanceManager:显著性管理器插件为游戏提供了一个可扩展的框架，允许计算对象的显著性并作出相应的行为变化。此模块可以帮助您根据对象的重要性优化游戏性能和资源分配。如果删除此模块，您将无法在项目中使用显著性管理功能，这可能会影响项目的性能优化和资源管理。|性能剖析调试| 性能数据收集与分析
+SkeletalMerging:提供用于执行运行时骨骼网格合并的蓝图功能。此模块允许您在运行时动态地合并骨骼网格，以提高渲染性能和资源管理。如果删除此模块，您将无法在项目中使用骨骼合并功能，这可能会影响项目中的性能优化和美术资源管理。| 骨骼动画 | 骨骼编辑
+SoundCueTemplates:一组声音提示模板，为常见的音频设计工作流提供快速设计。此模块提供了用于创建和编辑声音提示的预定义模板，以简化音频设计过程。如果删除此模块，您将无法在项目中使用声音提示模板功能，这可能会影响项目中的音频设计效率和质量。|音频
+SoundMod:虽然没有明确的 SoundMod 模块描述，但根据名称，它可能是一个用于处理和修改音频数据的模块。这可能包括音频效果、混响和其他音频处理功能。如果删除此模块，您将无法在项目中使用 SoundMod 功能，这可能会影响项目中的音频处理和音效设计。|音频 | DSP/效果
+Soundscape:一种动态环境声音系统。此模块为您的项目提供了创建和管理动态环境音效的功能，以实现更生动和真实的声音体验。如果删除此模块，您将无法在项目中使用声音景观功能，这可能会影响项目中的音效设计和用户体验。|音频 | 三维音频模型
+SoundUtilities:一系列用于音频的蓝图函数、对象和实用工具。此模块提供了用于处理和编辑音频数据的各种工具，以简化音频设计和实现过程。如果删除此模块，您将无法在项目中使用声音实用工具功能，这可能会影响项目中的音频设计效率和质量。|音频
+Spatialization:插件包含各种基本音频空间化解决方案。此模块为您的项目提供了创建和管理空间音效的功能，以实现更真实的 音频体验。如果删除此模块，您将无法在项目中使用空间化功能，这可能会影响项目中的音效设计和用户体验。|音频 | 三维音频模型
+SteamAudio:基于物理的声音渲染。此模块为您的项目提供了与 Steam Audio 集成的能力，允许您实现基于物理的声音渲染和空间化。如果删除此模块，您将无法在项目中使用 Steam Audio 功能，这可能会影响项目中的音效设计和用户体验。|音频 |三维音频模型
+SteamVR:此模块为您的项目提供了与 Steam VR 平台集成的能力，支持在 Steam VR 设备上运行虚拟现实内容。如果删除此模块，您将无法在项目中使用 Steam VR 功能，这可能会影响在 Steam VR 平台上的游戏功能和用户体验。| 第三方软件开发包与中间件 | OpenXR/SteamVR
+Synthesis:各种实时合成器和 DSP 源和子混效果。此模块为您的项目提供了创建和管理实时音频合成和处理的功能，以实现更复杂和动态的音效设计。如果删除此模块，您将无法在项目中使用合成功能，这可能会影响项目中的音效设计和用户体验。|音频| DSP/效果
+ScriptPlugin:脚本插件的示例。在创建自己的插件时，可以将其用作起点。此模块提供了一个脚本插件的示例，可以帮助您了解如何创建和管理自定义插件。如果删除此模块，您将无法在项目中使用此脚本插件示例，但这可能不会对项目的其他功能产生显著影响。|平台独立层 | 原子数据类型
+InterchangeTests:用于交换自动化测试的插件。此模块提供了用于测试和验证项目中数据交换和导入导出功能的工具。如果删除此模块，您将无法在项目中运行交换自动化测试，这可能会影响项目中的数据兼容性和稳定性。| 性能剖析调试 | 自动化测试
+DMXPixelMapping:用于映射 LED 数字像素条或灯具数组的工具集，无论形状或大小。此模块为您的项目提供了创建和管理 DMX 像素映射的功能，以实现更灵活和高效的灯光控制。如果删除此模块，您将无法在项目中使用 DMX 像素映射功能，这可能会影响项目中的灯光设计和控制。|视觉效果
+LiveLinkCamera:此模块提供了将外部设备的实时数据流映射到虚拟相机的功能。它允许您在虚拟环境中实现实时动画捕捉和追踪。如果删除此模块，您将无法在项目中使用实时连接相机功能，这可能会影响项目中的动画捕捉和实时追踪能力。| 第三方软件开发包与中间件 | LiveLink
+LiveLinkMasterLockit:为 Ambient MasterLockit 元数据服务器提供实时连接支持。此模块允许您将外部设备的实时数据流（如时间码、帧速率等）映射到虚拟环境中。如果删除此模块，您将无法在项目中使用实时连接 Master Lockit 功能，这可能会影响项目中的实时数据同步和动画捕捉能力。| 第三方软件开发包与中间件 | LiveLink
+LiveLinkPrestonMDR:为 Preston MDR-3 电机驱动器提供实时连接支持。此模块允许您将外部设备的实时数据流（如镜头控制、焦距等）映射到虚拟环境中。如果删除此模块，您将无法在项目中使用实时连接 Preston MDR 功能，这可能会影响项目中的实时镜头控制和动画捕捉能力。| 第三方软件开发包与中间件 | LiveLink
+RemoteControlProtocolDMX:允许 DMX 与 RemoteControl API 之间的交互。此模块为您的项目提供了通过 DMX 协议与虚拟环境中的对象进行远程控制的功能。如果删除此模块，您将无法在项目中使用 DMX 远程控制协议功能，这可能会影响项目中的灯光控制和实时追踪能力。| 平台独立层 | 网络传输层
+RemoteControlProtocolMIDI:允许 MIDI 与 RemoteControl API 之间的交互。此模块为您的项目提供了通过 MIDI 协议与虚拟环境中的对象进行远程控制的功能。如果删除此模块，您将无法在项目中使用 MIDI 远程控制协议功能，这可能会影响项目中的音频控制和实时追踪能力。|音频
+RivermaxMedia:虽然没有明确的 RivermaxMedia 模块描述，但根据名称，它可能是一个用于处理和播放 Rivermax 媒体文件的模块。这可能包括视频流、音频流和其他媒体资源。如果删除此模块，您将无法在项目中使用 Rivermax 媒体功能，这可能会影响项目中的媒体处理和播放能力。|资源 | 媒体资源
+StageMonitoring:在虚拟制作舞台上多台设备操作的上下文中启用监控的插件。此模块为您的项目提供了实时监控虚拟制作舞台上各种设备的功能，以确保协同工作和数据同步。如果删除此模块，您将无法在项目中使用舞台监控功能，这可能会影响虚拟制作的效率和稳定性。| 在线多人 | 协同作业
+TimedDataMonitor:用于监控可进行时间同步的输入的实用工具。此模块为您的项目提供了监控和同步来自不同输入源的时间数据的功能。如果删除此模块，您将无法在项目中使用定时数据监控功能，这可能会影响项目中的数据同步和实时追踪能力。| 平台独立层 | 高分辨率时钟
+HttpBlueprint:允许在蓝图中发送和接收 HTTP 请求。此模块为您的项目提供了通过蓝图发送和接收 HTTP 请求的功能，以便与外部 Web 服务进行通信。如果删除此模块，您将无法在项目中使用 HTTP 蓝图功能，这可能会影响项目中的 Web API 集成和通信。|平台独立层|网络传输层
+AISupport:一个简单的插件，确保您的项目在运行时加载 AIModule 和 NavigationSystem。此模块为您的项目提供了自动加载 AI 模块和导航系统的功能，以简化 AI 和路径规划的实现。如果删除此模块，您将需要手动管理 AI 模块和导航系统的加载，这可能会影响项目中的 AI 功能和开发效率。|游戏专用子系统|人工智能 | 路径搜寻
+EnvironmentQueryEditor:此模块提供了一个用于创建和编辑环境查询的用户界面，以便为 AI 角色制定决策和行为。环境查询是一种用于评估场景中对象和位置的 AI 工具。如果删除此模块，您将无法在项目中使用环境查询编辑器功能，这可能会影响项目中的 AI 设计和开发效率。|游戏专用子系统|人工智能
+MassCrowd:基于样条的 AI 人群系统。此模块为您的项目提供了创建和管理大量 AI 角色的功能，以实现更真实的人群模拟。如果删除此模块，您将无法在项目中使用大量人群功能，这可能会影响项目中的人群模拟和性能优化。|游戏专用子系统| 人工智能
+AnimationLocomotionLibrary:用于驱动运动动画的技术集合。此模块提供了一组用于创建和编辑运动动画的工具和技术，以简化动画设计过程。如果删除此模块，您将无法在项目中使用动画运动库功能，这可能会影响项目中的动画设计和实现。|骨骼动画
+BlendSpaceMotionAnalysis:允许在混合空间中分析运动/根运动属性。此模块为您的项目提供了分析和优化混合空间中运动动画的功能。如果删除此模块，您将无法在项目中使用混合空间运动分析功能，这可能会影响项目中的动画质量和性能。|骨骼动画
+ControlRigSpline:允许为 Control Rig 创建和使用样条。此模块为您的项目提供了使用样条曲线控制和编辑动画的功能。如果删除此模块，您将无法在项目中使用 Control Rig 样条功能，这可能会影响项目中的动画设计和实现|骨骼动画
+LiveLinkCurveDebugUI:允许查看实时连接曲线调试信息。此模块为您的项目提供了实时查看和分析实时连接曲线数据的功能。如果删除此模块，您将无法在项目中使用实时连接曲线调试界面功能，这可能会影响项目中的数据分析和调试能力。|性能剖析调试| 性能数据收集与分析
+BlueprintFileUtils:一个蓝图库，可实现诸如移动、复制、删除、查找等低级文件操作。此模块为您的项目提供了在蓝图中执行文件操作的功能。如果删除此模块，您将无法在项目中使用蓝图文件实用程序功能，这可能会影响项目中的文件管理和数据处理。|平台独立层|文件系统
+CameraShakePreviewer:在关卡编辑器中添加一个新面板，允许用户在编辑器视口中预览摄像机震动效果。此模块为您的项目提供了预览和编辑摄像机震动效果的功能。如果删除此模块，您将无法在项目中使用摄像机震动预览器功能，这可能会影响项目中的视觉效果设计和实现。|视觉效果
+LensDistortion:此插件已被弃用，将在未来的引擎版本中删除。请将项目更新为使用 CameraCalibration 插件的功能。从标准摄像机模型生成镜头失真/失真校正的 GPU 上的 UV 位移的插件。虽然 LensDistortion 插件已被弃用，但在删除或替换为 CameraCalibration 插件之前，请确保了解它们的作用和重要性。|弃用
+OodleNetwork:虽然没有明确的 OodleNetwork 模块描述，但根据名称，它可能是一个用于网络压缩和优化的模块。这可能包括数据压缩、传输和解压缩功能。如果删除此模块，您将无法在项目中使用 Oodle网络功能，这可能会影响项目中的网络性能和数据传输效率。|平台独立层|网络传输层
+BlankPlugin:一个最小插件的示例，可以用作创建自定义插件的起点。它提供了一个空白的插件结构，供开发者参考和扩展。| 平台独立层 | 原子数据类型
+CLionSourceCodeAccess:允许开发者在CLion集成开发环境中访问虚幻引擎的源代码。它简化了在CLion中编辑和调试引擎代码的流程。| 核心系统 | 引擎配置 | 开发环境支持
+CodeLiteSourceCodeAccess:允许开发者在CodeLite集成开发环境中访问虚幻引擎的源代码。它简化了在CodeLite中编辑和调试引擎代码的流程。| 核心系统 | 引擎配置 | 开发环境支持
+DisasterRecoveryClient:追踪编辑器中的更改，以便在崩溃时进行恢复。| 性能剖析调试 | 调试用日志
+ConcertSyncTest:启用多用户测试的插件。| 在线多人
+DumpGPUServices:为DumpGPU命令实现自动上传服务。| 性能剖析调试 | 调试用日志
+GitSourceControl:Git源代码管理。| 第三方软件开发包与中间件 
+KDevelopSourceCodeAccess:允许开发者在KDevelop集成开发环境中访问虚幻引擎的源代码。| 核心系统 | 引擎配置 | 开发环境支持
+NullSourceCodeAccess:只使用clang++查找时，允许访问C++项目的源代码。| 核心系统 | 引擎配置 | 开发环境支持
+OneSkyLocalizationService:OneSky本地化服务。| 核心系统 | 本地化服务
+PixWinPlugin:集成PIX for Windows图形调试器。| 性能剖析调试 | 性能数据收集与分析
+PlasticSourceControl:Plastic源代码管理与版本控制系统。| 第三方软件开发包与中间件
+PropertyAccessNode:Blueprint节点，通过属性路径允许访问属性。| 游戏性基础 | 蓝图
+RenderDocPlugin:集成RenderDoc图形调试器/性能分析工具。| 第三方软件开发包与中间件
+RiderSourceCodeAccess:允许在Rider集成开发环境中访问虚幻引擎的源代码。简化了在Rider中编辑和调试引擎代码的流程。 | 核心系统 | 引擎配置 | 开发环境支持
+SubversionSourceControl:Subversion版本控制管理系统的插件，帮助开发者更好地管理项目的版本。 | 第三方软件开发包与中间件
+TraceDataFiltering:允许开发者打开或关闭单独的或一组跟踪通道，用于监视和诊断程序的运行。 | 性能剖析调试 | 性能数据收集与分析
+UObjectPlugin:一个宣布其自己UObject类型的插件示例，可以作为创建自己插件的起点。 | 平台独立层 | 原子数据类型
+VisualStudioCodeSourceCodeAccess:允许在Visual Studio Code集成开发环境中访问虚幻引擎的源代码。简化了在Visual Studio Code中编辑和调试引擎代码的流程。 | 核心系统 | 引擎配置 | 开发环境支持
+XcodeGPUDebuggerPlugin:Xcode GPU调试器集成插件，支持在Xcode环境下进行GPU相关的调试工作。 | 性能剖析调试| 性能数据收集与分析
+AssetReferenceRestrictions:为不同的文件夹或插件中的内容应用项目特定的引用限制。 | 资源 | 资源管理器
+BlueprintHeaderView:一个工具，帮助将蓝图类转换为原生的C++代码。 | 游戏性基础 | 蓝图 
+ContentBrowserAliasDataSoure:数据源插件，允许内容浏览器项在其他目录中显示，而非它们的原始位置。 | 资源 | 资源管理器
+ContentBrowserClassDataSource:数据源插件，为内容浏览器提供类数据。 | 资源 | 资源管理器
+CurveEditorTools:为曲线编辑器提供一套默认的编辑工具。 | 核心系统 | 曲线与曲面库
+DisplayClusterLaunch:方便地启动本地nDisplay节点。 | 平台独立层 | 网络传输层 | nDisplay
+GuidedTutorials:添加支持在编辑器UI内运行引导教程的类和内容。 | 资源
+MacGraphicsSwitching:为macOS上的多个图形设备之间的切换提供支持。 | 平台独立层 | 跨平台支持 | 苹果
+MaterialAnalyzer:分析材质着色器，发现可能的内存节省方式的插件。 | 性能剖析调试 | 性能数据收集与分析
+MobileLauncherProfileWizard:移动设备打包场景的向导工具，帮助用户更方便地进行移动设备的打包。 | 平台独立层 | 跨平台支持
+LightMixer:允许在类似电子表格的格式中编辑场景灯光的任何属性。| 资源 | 编辑器
+SequencerAnimTools:为Sequencer和Control Rig提供动画工具，帮助开发者更有效地创建和控制动画序列。 | 游戏专用子系统 | 游戏摄像机 | 脚本/动画摄像机
+SpeedTreeImporter:用于导入SpeedTree运行时文件的工具，可以将SpeedTree创建的复杂树木和植物模型导入虚幻引擎。 | 资源| 资源管理器
+WorldPartitionHLODUtilities:编辑器工具类和HLOD图层资产类型，用于管理和优化大型开放世界中的对象渲染。| 场景图/剔除优化 | 细致程度系统
+AxFImporter:用于导入AxF材质文件的工具，这种文件格式常用于复杂的物理材质表示。| 资源 | 资源管理器
+DatasmithC4DImporter:支持从Cinema4D应用程序导入内容到虚幻引擎，使得在Cinema4D中创建的3D模型可以在虚幻引擎中使用。| 资源 | 资源管理器
+DatasmithIFCImporter:用于导入IFC 3D几何的工具(已废弃，建议使用Datasmith CAD Importer代替)。这样可以将建筑信息模型(BIM)软件中的数据导入到虚幻引擎中。| 资源 | 资源管理器
+AbilitySystemGameFeatureActions:游戏特性行为的能力系统，允许开发者定义和实现各种游戏角色的技能和行为。| 游戏专用子系统 | 人工智能 | 目标与决策
+ActorPalette:允许基于现有级别创建演员调色板，以便快速选择演员并将它们拖入级别编辑器。| 资源 | 编辑器
+PointCloud:渲染由AR设备生成的点云数据的高效方式，这种数据通常用于实现增强现实效果。| 低阶渲染器 | 点云
+AssetPlacementEdMode:资产放置编辑器模式，使得能够将资产快速地放置到世界中作为完整的演员或各种类型的轻量级对象，如批处理渲染实例。| 资源 | 编辑器
+AutomationUtils:用于自动化目的的工具和实用程序，可以帮助开发者进行自动化测试和构建。| 性能剖析调试 | 自动化测试
+BlueprintSnapNodes:提供一种更紧凑的布局蓝图节点的方式的原型，这样可以提高蓝图编辑器的使用效率。 | 游戏性基础 | 蓝图
+BlueprintStats:蓝图统计工具，用于收集和分析虚幻引擎中的蓝图数据，帮助开发者优化和改进蓝图的使用。|游戏性基础 |  蓝图
+ChaosClothEditor:附带Chaos Cloth运行时模块的编辑器模块，开发者可以使用它来编辑和控制虚幻引擎中的布料模拟。| 资源 | 编辑器
+ChaosEditor:提供了一套破坏工具集。| 资源 | 编辑器
+ChaosNiagara:从Chaos导入破坏数据到Niagara，以生成次级破坏效果。 | 视觉效果 | 粒子与贴花系统
+CharacterAI:添加了实现角色为基础项目的AI的相关代码和资产。| 游戏专用子系统 | 人工智能
+CodeEditor:[实验性]允许在Unreal编辑器内编辑代码。| 核心系统 | 引擎配置 | 开发环境支持
+CodeView:在编辑器内提供了游戏类和结构的代码视图，支持直接的IDE访问。| 核心系统 | 引擎配置 | 开发环境支持
+ControlFlows:提供一种工具以清晰地实现异步操作。| 核心系统 | 模块启动及终止
+DataprepGeometryOperations:在Dataprep编辑器中使用的实验性几何处理操作。| 资源 | 编辑器
+ExampleAssetEditor:使用UAssetEditor进行资产编辑的实验。| 资源 | 编辑器
+Gauntlet:为游戏中的测试创建和管理的辅助类。| 性能剖析调试 | 测试集
+GeometryCacheAbcFile:支持从Alembic文件中缓存的几何图形，无需导入。| 资源 | 资源管理器
+GizmoFramework:切换基于InteractiveToolsFramework的TRS Gizmos的使用。| 资源 | 编辑器
+Iris:Iris网络 Iris Replication试图整体替换Unreal的同步机制。| 在线多人 | 游戏状态复制
+JWT:处理JSON Web Token (JWT)数据的API。| 第三方软件开发包与中间件
+LiveLinkControlRig:允许通过Control Rig访问LiveLink数据。| 第三方软件开发包与中间件 | LiveLink
+MotorSimOutputMotoSynth:使用MotoSynth的MotorSim输出组件。| 音频 | 音效模拟
+OpenImageDenoise:Unreal Path Tracer的去噪引擎，基于Intel的OpenImageDenoise库。它用于为基于光线追踪的渲染引擎提供去噪功能。| 第三方软件开发包与中间件
+PanoramicCapture:一个插件，用于捕捉单眼或双眼(上/下)的全景图像序列。适用于创建全景视角的应用，如VR环境。| 游戏专用子系统 | 游戏摄像机
+RawInput:RawInput 插件为 Microsoft 的 XInput API（应用程序编程接口）无法正确处理的特定用户定义设备提供支持，通常是飞行杆和方向盘。 这些输入设备的按钮和轴可以自定义映射到游戏输入，包括插件本身创建的新输入。| 人体学接口设备 | 物理设备I/O
+SampleToolsEditorMode:包含一套示例工具，用于演示Interactive Tools Framework的功能。用于编辑模式下的工具操作示例。| 资源
+Shotgrid:为Unreal Editor整合ShotGrid。ShotGrid是一个用于管理创作流程和内容协作的平台。| 第三方软件开发包与中间件
+SimpleHMD:一个基本的立体HMD(Head Mounted Display，主要用于VR等显示设备)实现样例，为开发者提供一个基本的HMD实现参考。| 游戏专用子系统 | 游戏摄像机
+SkeletalReduction:一个生成用于变形网格的LOD（细节层次）的插件。| 场景图/剔除优化 | 细致程度系统
+SlateScreenReader:为Slate提供视觉辅助服务的屏幕阅读器。| 前端 | 游戏内置GUI
+UIFramework:一个从服务器控制UMG（Unreal Motion Graphics）的框架。| 前端 | 游戏内置GUI 
+WaveFunctionCollapse:用于瓦片式模型合成的波函数折叠工具。| 核心系统 | 曲线与曲面库
+WidgetEditorToolPalette:一组工具，用于增强UMG（Unreal Motion Graphics）的创建用户体验。| 资源 | 编辑器
+CascadeToNiagaraConverter:粒子系统转换工具，增加从Cascade粒子系统到Niagara粒子系统的可编程转换支持。| 视觉效果 | 粒子与贴花系统
+ExampleCustomDataInterface:这个插件包含C++示例内容，展示如何为Niagara编写自定义数据接口。| 视觉效果 | 粒子与贴花系统
+NiagaraFluids:Niagara的流体模拟工具包。这是一种高级的粒子系统工具，用于模拟各种类型的流体动力学效果。| 视觉效果 | 粒子与贴花系统
+AlembicHairImporter:从Alembic文件导入发丝。此插件支持Alembic格式的发丝数据的导入，帮助开发者更好地制作和呈现角色的头发和毛发效果。| 资源 | 资源管理器
+USDMultiUser:为USD导入插件启用多用户同步功能。该插件通过允许多用户在同一时间进行USD文件的导入和操作，提供了协同作业的能力。 | 在线多人 | 协同作业
+LightWeightInstancesEditor:该模块可以将计算昂贵的actor转换为计算便宜的light weight instances，使得可以大量放置与使用。这允许开发者在保证渲染性能的同时，提供丰富的游戏对象交互。| 资源 | 资源管理器
+AudioCaptureTimecodeProvider:从实时音频捕获设备（例如，计算机音频插孔）解码LTC信号（线性时间码）。这对于需要进行音视频同步或进行实时音频分析的应用场景非常有用。| 音频 | 音频解码
+MediaMovieStreamer:使用MediaFramework进行电影流。这是一个用于处理和控制视频流的插件，支持多种流媒体格式。| 视频
+MessagingDebugger:为消息子系统提供了一个可视化调试器。帮助开发者监控和调试引擎内部的消息传递和处理过程。| 性能剖析调试 | 调试用日志
+MoviePipelineMaskRenderPass:为电影渲染队列提供额外的渲染通道。目前包括ObjectId通道（仅编辑器）用于生成具有某些限制的对象遮罩（使用Cryptomatte规范），以及比全景捕捉插件更好的全景通道。 | 低阶渲染器
+NUTUnrealEngine:基于Netcode单元测试框架，针对虚幻引擎及某些基础虚幻引擎游戏的单元测试工具。| 核心系统 | 单元测试
+AndroidFetchBackgroundDownload:一个在应用程序后台运行时，通过Fetch API使BackgroundHTTP请求工作的Android插件。| 平台独立层 | 跨平台支持 | Android
+OnlineServicesEOS:EOS账户和游戏服务的在线服务实现。此插件提供了对EOS在线服务的访问和操作支持。 | 在线多人 | 安排比赛与游戏管理
+OnlineServicesNull:无需外部服务的在线服务实现。此插件提供了不依赖任何外部服务的在线功能支持，一般用于本地或离线的游戏模式。 | 在线多人 | 安排比赛与游戏管理
+OnlineServicesOSSAdapter:在线子系统实现的在线服务适配器。此插件为在线子系统提供适配功能，使其能更好地与不同的在线服务进行交互。 | 在线多人 | 安排比赛与游戏管理
+OnlineSubsystemAmazon:提供对Amazon平台的访问。该插件提供了与Amazon平台进行交互的功能，包括登录验证、数据交互等功能。 | 在线多人 | 平台在线子系统
+OnlineSubsystemGoogle:提供对Google平台的访问。该插件提供了与Google平台进行交互的功能，包括登录验证、数据交互等功能。 | 在线多人 | 平台在线子系统
+OnlineSubsystemOculus:提供对Oculus平台的访问。该插件提供了与Oculus平台进行交互的功能，包括登录验证、数据交互等功能。 | 在线多人 | 平台在线子系统
+OnlineSubsystemTencent: 该插件用于集成腾讯云的在线服务功能，帮助开发者在使用UE创建的游戏中实现在线多人游戏、排行榜、云存储等功能。主要包括以下功能:1.创建和管理在线多人游戏，实现玩家的匹配、加入和离开游戏；2.用户认证和授权；3.排行榜和成就系统；4.游戏数据的云存储。| 在线多人 | 平台在线子系统
+WebAuth: 该插件用于处理Web身份验证。WebAuth模块的主要用途是允许用户使用其Web身份验证凭据（如用户名和密码、OAuth令牌等）来登录游戏或应用程序。它可以与各种身份验证提供商（如Google、Facebook、Twitter等）集成，以便用户可以使用其现有的Web身份验证凭据进行登录。 | 第三方软件开发包与中间件
+PerformanceMonitor: 该插件用于监视和分析游戏性能。具体来说，该插件通过记录游戏运行时多个计时器的耗时情况帮助开发者识别和解决游戏中的性能问题。 | 性能剖析调试 | 录影与回放
+LauncherChunkInstaller: 该插件为引擎在启动器模块提供块安装方法。具体来说，该插件提供了一个GetChunkLocation方法，可以通过传入一个uint32的ChunkID后调用FPlatformFileManager模块的相关方法获取块地址。 | 第三方软件开发包与中间件
+RenderGraphInsights: 用于在Unreal Insights这一性能分析工具中对RDG（Render Dependency Graph）进行debug。RDG的核心功能是将要编译和执行的渲染命令记录到一个有向无环的图数据结构中，然后管理资源的生命周期，剔除不需要的指令，提高渲染效率。 | 性能剖析调试 | 性能数据收集与分析
+IOSTapJoy: 该模块是一个用于集成TapJoy广告平台的插件。TapJoy是一家提供移动广告和应用内购买解决方案的公司，它允许开发者通过在应用中显示广告或提供奖励来获得收入。 | 第三方软件开发包与中间件
+Adjust: 用于集成Adjust分析服务的模块。Adjust是一种移动应用分析和营销平台，它提供了各种工具和功能，帮助开发者分析和优化他们的应用的用户行为和营销活动。具体来说，Adjust提供了以下功能:用户数据收集、广告跟踪、归因分析、深度链接、数据分析和报告等。 | 第三方软件开发包与中间件
+AnalyticsMulticast: 该模块提供了一个多播的能力，即将特定的一些数据分析API调用转发到一系列分析提供商，以便一次将数据记录到多个服务中。 | 性能剖析调试 | 录影与回放
+FileLogging: 该模块提供将一系列数据分析API调用写入本地文件的功能。 | 性能剖析调试 | 录影与回放
+AndroidFileServer: 该模块为安卓项目提供了与远程服务器交互的文件管理功能。 | 资源 | 资源管理器
+AndroidMoviePlayer: 该插件用于在安卓平台上播放电影，底层基于安卓媒体库(Android Media library)实现。 | 视频
+AnimationBudgetAllocator: 该插件提供了一些可设置的参数，可以根据设定的参数预算（比如动画播放消耗的时间或动画的渲染质量）来控制动画的播放和更新，帮助开发者在游戏中有效地管理动画的性能和资源消耗，以确保游戏在不同平台和设备上都能够平稳运行。 | 骨骼动画 | 动画播放
+AppleMoviePlayer: 该插件用于在苹果(Apple)平台上播放电影，底层基于AVPlayer媒体库(AVPlayer library)实现。 | 视频
+AppleARKitFaceSupport: 该插件用于支持苹果的ARKit人脸识别功能。 | 第三方软件开发包与中间件
+AzureSpatialAnchorsForARCore: 该插件用于在ARCore平台上使用Azure Spatial Anchors服务。Azure Spatial Anchors是微软提供的一项云服务，用于在现实世界中创建和定位锚点，以便在不同设备和场景之间共享AR体验。它可以帮助开发人员构建具有持久性的AR应用程序，使用户能够在不同时间和位置之间保持一致的AR内容。 | 第三方软件开发包与中间件 
+AzureSpatialAnchorsForARKit: 该插件用于在ARKit平台上使用Azure Spatial Anchors服务。Azure Spatial Anchors是微软提供的一项云服务，用于在现实世界中创建和定位锚点，以便在不同设备和场景之间共享AR体验。它可以帮助开发人员构建具有持久性的AR应用程序，使用户能够在不同时间和位置之间保持一致的AR内容。 | 第三方软件开发包与中间件
+ArchVisCharacter: 该插件是UE中角色(Character Actor)的子类，角色用于表示可以移动、执行动作和与环境交互的游戏对象。ArchVis是建筑可视化的缩写，这是UE最近拓展的一个功能区域。该插件实现的这个character类提供了一些适合第一人称风格移动的基本移动API，并使用相关的UArchVisCharacterMovementComponent来实现自定义PhysWalking行为。该角色可能会适合用于构建建筑可视化场景，但在其他场景中也可使用它。 | 游戏性基础 | 动态游戏对象模型
+AssetTags: 该插件用于管理和标记资源。它允许开发人员为资源添加自定义标签，以便更好地组织和管理项目中的资源。 | 资源 | 资源管理器
+CableComponent: 缆绳组件插件用于创建和模拟电缆或绳索的物理行为。它可以用于模拟吊索、电线、绳索等物体的动态效果。 | 碰撞与物理
+ChunkDownloader: 该插件是一个通用的补丁解决方案，旨在帮助游戏交付大量小型文件。它从远程服务下载资产，并将其在内存中挂载供游戏使用，以便你可以轻松提供更新和资产。 | 资源 | 资源管理器
+CustomMeshComponent: 该插件允许开发者通过C++或蓝图创建自定义的网格组件，用于在游戏中显示自定义的3D模型或网格。开发者可以通过继承CustomMeshComponent类来创建自己的自定义网格组件，并根据需要实现各种功能。 | 资源 | 三维模型资源
+ADOSupport: 该插件提供了使用ADO (ActiveX Data Objects)方式连接数据库的支持。ADO是由微软发布的一种统一的数据库访问编程模型。 | 第三方软件开发包与中间件
+RemoteDatabaseSupport: 该插件提供了与远程数据库通信和交互的功能，底层使用了socket进行通信。 | 第三方软件开发包与中间件 
+SQLiteSupport: 该插件提供了对SQLite数据库的支持。SQLite是一种轻量级的嵌入式数据库引擎，它是一个开源的、零配置的、高性能的、自包含的、事务性的SQL数据库引擎。 | 第三方软件开发包与中间件 
+ExampleDeviceProfileSelector: 该插件只有一个GetRuntimeDeviceProfileName方法，用于获取并显示在运行时选择的指定设备配置文件(Selected Device Profile)，指定设备配置文件中可以针对不同设备设置对应的纹理池尺寸等多种属性。 | 平台独立层 | 跨平台支持
+Firebase: 该插件基于Firebase提供远程推送功能。Firebase是依托于谷歌云（GCP）的云端PaaS平台，提供了一系列工具和服务帮助开发者构建高质量的应用程序。 | 第三方软件开发包与中间件 
+GameplayBehaviorSmartObjects: 该插件用于提供智能对象的行为和互动功能。智能对象是指游戏中具有一定智能和行为的虚拟实体，这些对象自带了交互所需的所有信息，它们可以根据游戏规则和玩家的操作做出相应的反应和行为。本模块为开发者提供了一种简单且可扩展的方式来创建和管理智能对象的行为。 | 游戏专用子系统 | 人工智能
+GameplayStateTree: StateTree是一种通用分层状态机，组合了行为树中的选择器与状态机中的状态和过渡。使用本插件，开发者可以轻松地定义游戏中的各种状态和状态转换，以及处理状态之间的逻辑关系。它还提供了一些内置的状态转换条件和动作，比如时间延迟、输入事件等，方便开发者实现各种复杂的状态转换逻辑。 | 游戏专用子系统 | 人工智能
+GoogleCloudMessaging: 该插件基于Google Cloud Messaging (GCM) 提供远程推送功能。GCM是一种由Google提供的云端消息传递服务，用于在Android设备和服务器之间传递消息。 | 第三方软件开发包与中间件
+GooglePAD: 该插件使用GooglePAD（Google Play Asset Delivery），用于在Android设备上优化游戏资源的交付和下载过程。GooglePAD是Google Play商店的一种新的应用程序包交付方式，提供了更快速、更高效的资源下载和更新方式。 | 第三方软件开发包与中间件 
+HPMotionController: 该插件是用于处理虚拟现实(VR)和增强现实(AR)中手柄控制器的模块，具体来说，它用于在OpenXR和SteamVR中的HP Reverb G2运动控制器的控制器映射。 | 第三方软件开发包与中间件 | OpenXR/SteamVR
+HTTPChunkInstaller: 与ChunkDownloader类似是一个补丁解决方案，该插件将资源文件分成多个小块（chunks），并使用HTTP协议从远程服务器上下载这些小块。这种分块下载的方式可以提高下载速度和效率，并且可以在下载过程中进行断点续传，即使网络连接中断或下载过程中出现问题，也可以从中断的地方继续下载。 | 资源 | 资源管理器
+InputDebugging: 该插件是用于调试和可视化输入系统的工具。它有以下功能:输入事件捕获、输入模拟、输入记录和回放、输入状态监控等。 | 性能剖析调试 | 录影与回放
+IOSDeviceProfileSelector: 该插件类似ExampleDeviceProfileSelector，用于支持iOS平台下的指定设备配置文件，比如可用于设定指定iOS设备的游戏分辨率。 | 平台独立层 | 跨平台支持 | 苹果
+IOSReplayKit: Support for local recording and broadcasting using ReplayKit该插件基于苹果公司的ReplayKit，用于支持iOS平台上的屏幕录制和回放功能。 | 性能剖析调试 | 录影与回放
+LinuxDeviceProfileSelector: 该插件类似ExampleDeviceProfileSelector，用于支持Linux下的指定设备配置文件。它的作用是根据当前运行的Linux设备的硬件和配置信息，选择最适合的设备配置文件。 | 平台独立层 | 跨平台支持 | Linux
+LiveLinkOvernDisplay: 该插件为LiveLink在nDisplay系统下提供同步功能。nDisplay系统可以在多个显示屏上同时渲染互动式内容，Live Link是虚幻引擎内摄取实时数据的框架，该插件将通过LiveLink传输过来的实时数据在nDisplay系统下同步。 | 第三方软件开发包与中间件 | LiveLink
+DummyMeshReconstructor: 该插件模拟了一个随机的虚拟网格重建过程。具体的来说，它实现了UE中MRMesh模块的MeshReconstructorBase的接口，根据已有的输入网格模型输出一个随机的重建模型，以演示实现模型重建的过程。MRMesh模块用于在Mixed Reality（混合现实）应用程序中实现动态网格渲染。 | 资源 | 三维模型资源
+MicrosoftSpatialAudio: 该插件使用Microsoft的Spatial Sound API服务实现了3D音频，以提供更逼真的音频体验。Spatial Audio是一种音频处理技术，可以在游戏、虚拟现实和增强现实等应用中模拟真实世界中的声音传播效果。 | 音频 | 三维音频模型
+MixedRealityCaptureFramework: 该插件提供了一个框架，以便开发人员可以将混合现实捕捉集成到他们的虚拟现实项目中。包括以下功能:混合现实摄像头支持、视觉对齐、混合现实输入支持和混合现实渲染等。 | 游戏专用子系统 | 游戏专用渲染 | 混合现实
+MobileFSR: 该模块是针对移动平台进行了优化的FSR 1.0版本。AMD的 FidelityFX Super Resolution（FSR） 使用时间放大（Temporal Upscaling）功能从低分辨率输入生成高分辨率图像。应用程序不会直接以原生分辨率渲染，而是以更低的分辨率渲染，然后使用FSR将初始渲染结果的分辨率修改为原生分辨率，因此可以在性能受限的硬件上使用原本具有高昂成本的渲染过程。| 低阶渲染器
+MobilePatchingUtils: 该插件为蓝图工具提供了在移动平台上进行游戏补丁管理的功能。 | 资源 | 资源管理器
+NetworkPredictionExtras: 该插件提供了一些帮助开发者开始使用UE5的网络预测(Network Prediction)功能的工具类，提供了一些样例(samples)和测试地图(test maps)，该插件并非网络预测插件的必要类、不能直接用在产品中。UE5的网络预测（Network Prediction）功能是一种用于减少网络延迟和提高游戏体验的技术。它通过在客户端上进行预测性的操作来弥补网络延迟，并在服务器确认后进行修正。网络预测的基本原理是在客户端上预测玩家的操作结果，并在等待服务器确认之前立即应用这些操作结果。这样可以使玩家在网络延迟期间仍然能够流畅地进行游戏操作，减少了因网络延迟而产生的卡顿和不流畅的感觉。UE5的网络预测功能提供了一些内置的预测性操作，如移动、跳跃、射击等，还允许开发者自定义预测性操作。 | 在线多人 | 游戏状态复制
+NetworkPredictionInsights: 该插件提供在Unreal Insights中针对Network Prediction进行调试的功能。UE5的网络预测（Network Prediction）功能是一种用于减少网络延迟和提高游戏体验的技术。 | 性能剖析调试 | 性能数据收集与分析
+GeForceNOWWrapper: 该插件为开发者提供与NVIDIA GeForce NOW云游戏服务集成的功能。NVIDIA GeForce NOW是一种云游戏服务，允许用户通过云端服务器流式传输和运行各种游戏。GeForceNOWWrapper模块允许开发者将他们的Unreal Engine游戏与GeForce NOW服务集成，以便用户可以通过GeForce NOW平台来访问和玩游戏。具体来说，GeForceNOWWrapper模块提供以下功能:游戏集成、云端渲染、游戏流式传输。 | 第三方软件开发包与中间件 
+Reflex: 该插件用于启用NVIDIA Reflex低延迟模式。NVIDIA Reflex是由NVIDIA开发的一项技术，它通过与NVIDIA的显卡和驱动程序的紧密集成，优化了游戏的渲染和输入处理流程，从而减少了输入到显示的延迟。 | 第三方软件开发包与中间件 
+OpenXREyeTracker: 该插件提供了对OpenXR的XR_EXT_eye_gaze_interaction扩展插件的支持，它提供了眼球注视交互的功能。通过这个插件，开发者可以获取用户的眼球注视信息，以及与眼球注视相关的交互事件，从而实现更加直观、自然的用户交互体验。该插件主要包括以下几个主要功能:眼球注视方向、注视焦点、注视事件。 | 第三方软件开发包与中间件 | OpenXR/SteamVR
+OpenXRHandTracking: 该插件提供了对OpenXR的XR_EXT_hand_tracking扩展插件的支持，它提供了手部追踪的功能。通过提供一组标准化的手部姿势和手势识别功能，使开发者能够更轻松地实现手部交互。开发者可以使用该插件来获取手部的位置、方向、手指的弯曲程度等信息，并根据这些信息来实现手势识别和手部姿势控制。 | 第三方软件开发包与中间件 | OpenXR/SteamVR
+OpenXRMsftHandInteraction: 该插件提供了对OpenXR的XR_MSFT_hand_interaction扩展插件的支持，XR_MSFT_hand_interaction是OpenXR的一个插件，由Microsoft开发，它提供了对手部交互的支持，使开发者能够在虚拟现实和增强现实应用程序中使用手部姿势和手势来进行交互，使得手部追踪可以充当动作控制器使用。该插件主要包括以下几个主要功能:手部姿势和手势识别、手部输入映射、手部反馈和多手部支持等。 | 第三方软件开发包与中间件 | OpenXR/SteamVR
+OSCModulationMixing: 该插件为蓝图工具提供了通过OSC（开放音频控制）协议控制调制混音的混音分析功能。OSC（Open Sound Control）是一种用于音频、音乐和多媒体应用的网络通信协议，可以在本地网络或互联网上进行通信，基于UDP传输数据。 | 音频 | OSC
+DTLSHandlerComponent: 该插件提供了处理DTLS的包处理组件。DTLS（Datagram Transport Layer Security）是一种基于UDP的安全传输协议，它在传输层提供加密和身份验证的功能。 | 平台独立层 | 安全性
+PreLoadScreenMoviePlayer: 该插件实现了一个预加载屏幕电影播放器。屏幕电影播放器是用于在游戏启动时播放开场电影或加载画面的工具。 | 视频 
+RenderTrace: 该插件提供了一个获取特定采样像素上物理材质的功能，采用的是投射射线(ray cast)的方法。 | 低阶渲染器
+ReplicationGraph: Replication Graph插件是一个用于多人游戏的网络复制系统，它的设计可以很好地适应大量玩家和复制Actor。Replication Graph的原理如下:Replication Graph包含一系列Replication Graph节点，它们负责按需创建要复制到每个客户端的Actor列表。由于此系统是由持久对象构建的，而不是仅仅由复制的Actor自己处理函数调用，因此数据可以跨多个帧存储并在客户端连接之间共享。这种持久、共享的数据减少了Replication Graph系统为每个客户端生成复制列表所需的时间。 | 在线多人 | 游戏状态复制
+SoundFields: 该插件提供了多种基础声场解决方案，声场(soundfield)是真实或虚拟空间区域的音频呈现形式。在现实世界和虚拟音频中，最具挑战性的问题之一在于如何以最佳方式采集和呈现声场。 | 音频 | 三维音频模型
+SteamController: 该插件是用于支持Steam控制器的功能的一个模块。Steam控制器是由Valve开发的一种专门为PC游戏设计的游戏手柄。SteamController模块允许开发者在使用Unreal Engine创建的游戏中，对Steam控制器的输入进行处理和响应。| 人体学接口设备| 物理设备I/O
+SteamSockets: Steam Sockets是一款利用Steam新网络协议层SteamSockets Netdriver的网络插件。此插件利用Steam通信网络提供更高的安全性和可靠性，并内置DDoS保护、端到端加密和NAT遍历。Steam Sockets还为监听服务器提供 ping计算 功能，匹配系统可利用此功能将用户匹配到性能更佳的服务器。与仅在用户连接到服务器后才能提供ping计算的SteamNetworking相比，这是一个重大的改进。 | 第三方软件开发包与中间件
+SunPosition: 该插件可以通过地球上的经纬度位置、日期和时间，计算太阳的位置。 | 核心系统 | 数学库
+WarpUtils: 该插件用于创建和可视化PFM/MPCDI文件。在UE中，nDisplay模块是用于多屏幕显示的解决方案。PFM（Portable Float Map）是一种用于存储浮点像素值的图像格式。在nDisplay中，PFM文件用于存储虚拟场景的深度信息。深度信息对于实现精确的渲染和视差效果非常重要。MPCDI（Multiple Projector Common Data Interchange）是一种用于描述多投影仪设置的文件格式。在nDisplay中，MPCDI文件用于描述物理投影仪的位置、方向、分辨率等信息。这些信息可以帮助nDisplay正确地渲染场景并将其分配到正确的物理屏幕上。 | 资源 | 资源管理器
+WebBrowserNativeProxy: 该插件用于将在UE中创建的Web浏览器绑定到UObjects上和维护Web浏览器对象的代理。 | 第三方软件开发包与中间件
+WebBrowserWidget: 该插件用于将Web浏览器的功能集成到游戏中，以便开发者可以通过游戏界面直接加载和显示网页内容。 | 第三方软件开发包与中间件 
+WebMMoviePlayer: 该插件是一个用于播放WebM格式视频的工具。 | 视频
+WinDualShock: 该插件用于在Windows系统中支持PS4 DualShock控制器。DualShock手柄是索尼PlayStation游戏机系列的标配手柄，它具有触摸板、六轴传感器、震动反馈等功能。| 人体学接口设备| 物理设备I/O
+WindowsDeviceProfileSelector: 该插件类似ExampleDeviceProfileSelector，用于支持Windows下的指定设备配置文件。它的作用是根据当前运行的Linux设备的硬件和配置信息，选择最适合的设备配置文件。 | 平台独立层 | 跨平台支持 | Windows
+WindowsMoviePlayer: 该插件是在Windows系统下的电影播放器，使用Media Foundation实现。Media Foundation是一种多媒体框架，由微软开发并集成在Windows操作系统中。它提供了一系列的API和组件，用于处理和渲染音频、视频和图像等多媒体数据。Media Foundation的目标是提供一个统一的、高性能的多媒体平台，以支持各种多媒体应用程序的开发。 | 视频
+XRVisualization: 该插件用于在AR/VR场景中可视化头显(XR HMD)和控制器。XR HMD是一种扩展现实（XR）头戴式显示器（HMD），它结合了虚拟现实（VR）和增强现实（AR）技术。XR HMD通常由一个头戴式设备和一对显示屏组成，它可以将虚拟内容叠加到现实世界中，或者完全替代现实世界以创造沉浸式的虚拟体验。 | 游戏专用子系统 | 游戏专用渲染 | 混合现实
+SlateInsights: 该插件允许通过Unreal Insights调试Slate。Slate是Unreal Engine的一种用户界面框架。 | 性能剖析调试 | 性能数据收集与分析
+SlateScripting: 该插件允许开发者通过脚本创建和定制Slate UI。 | 前端 | 游戏内置GUI
+CameraCalibration: 该插件用于支持镜头畸变和相机校准功能。相机校准是指通过对相机进行一系列的参数调整和标定，以获得准确的相机内参和外参，从而使得虚拟世界与现实世界的对齐更加精确。该插件支持自动检测标定板图案。用户只需将标定板放在相机视野中，并点击插件界面上的检测按钮，插件将自动检测标定板的角点，并用于后续的相机校准计算。| 游戏专用子系统 | 游戏摄像机
+CompositePlane: 该插件实现了一个用来投影纹理和视频的电影摄像机角色。 | 游戏专用子系统 | 游戏摄像机
+DataCharts: 从描述上来看，该插件支持基于数据生成柱状/饼状/线段图表，但它的代码里没有内容。 | 前端| 游戏内置GUI
+DMXDisplayCluster: 该插件的作用是在DMX和DisplayCluster之间进行集成，以便在nDisplay集群渲染中使用DMX。DMX是一种用于控制和管理灯光、灯光效果和其他可视化效果的通信协议。它允许用户通过发送和接收DMX信号来控制灯光设备，以实现各种灯光效果。DisplayCluster是一个用于构建多显示器和多投影仪互动系统的开源软件框架。它提供了用于配置、管理和同步多个显示设备的功能，以创建高质量的虚拟现实、增强现实和多媒体应用程序。DMXDisplayCluster插件允许将DMX和DisplayCluster集成在一起，以便在Unreal Engine中创建更加复杂和逼真的多显示器和多投影仪互动系统。通过该插件，用户可以通过DMX协议来控制DisplayCluster中的灯光设备和其他可视化效果，从而实现更加沉浸式和交互式的虚拟现实和增强现实应用程序。 | 第三方软件开发包与中间件 
+DMXFixtures: 该插件是DMX灯具，DMX灯具是实际负责基于实时接收的数据或使用预先录制的DMX轨道接收和执行命令的设备，自定义负责从DMX数据接收和执行命令。 | 第三方软件开发包与中间件
+EpicStageApp: 该APP用于从移动设备远程控制虚幻引擎。 | 第三方软件开发包与中间件
+LiveLinkFreeD: 该插件为Live Link实现了对FreeD数据协议的支持，该协议常用于使用来自变换位置、旋转和镜头的8轴数据来追踪摄像机。 | 第三方软件开发包与中间件 | LiveLink
+LiveLinkLens: 该插件的作用是添加一个新的LiveLink LensRole和LensController，以支持预校准镜头数据的流式传输。 | 第三方软件开发包与中间件 | LiveLink
+LiveLinkVRPN: 该插件用于为Live Link支持所有通过VRPN服务器公开的设备（且该服务器支持OpenVR），添加来自VR外围设备的跟踪和输入数据。VRPN提供了用于VR外围设备的抽象层，以便于它们全都拥有相同的数据报告。鉴于VRPN的性质，你可以具有多个映射到同一设备的 Live Link主题（Live Link Subjects）。 | 第三方软件开发包与中间件 | LiveLink
+LiveLinkXR: 该插件用于在XR设备上使用LiveLink。实时链接（Live Link） 旨在提供一个通用接口，以将来自外部源的动画数据流送至 虚幻引擎 (UE)并进行处理。它被设计成可以通过 虚幻插件（Unreal Plugins） 进行扩展，允许第三方开发新的特性，并有可能无需更改引擎和维持这些更改。 | 第三方软件开发包与中间件 | LiveLink
+MultiUserTakes: 该插件用于启用Take Recorder的多用户同步。Take Recorder是Unreal Engine中的一个工具，用于记录和捕捉动画和场景操作。它允许用户在编辑器中记录和重放动画序列，并且可以与其他工具（如Matinee和Sequencer）进行集成。 | 游戏专用子系统 | 游戏摄像机
+RemoteControlProtocolOSC: 该插件的作用是允许OSC（Open Sound Control）和RemoteControl API之间进行交互。OSC是一种用于在实时音频、视频和其他多媒体应用程序之间传输数据的协议。它基于UDP协议，可以在网络上进行高效的实时数据传输。OSC协议使用简单的地址和消息格式，可以方便地传输各种类型的数据，如数字、字符串、布尔值等。RemoteControl API是Unreal Engine中的一个功能，它允许用户通过网络远程控制和管理Unreal Engine实例。用户可以使用远程控制API发送指令、获取状态和数据，以及与Unreal Engine实例进行交互。RemoteControlProtocolOSC插件的作用是将OSC协议和RemoteControl API集成在一起。它允许用户通过OSC消息与Unreal Engine实例进行交互。用户可以使用OSC消息发送指令、获取状态和数据，并与Unreal Engine实例进行实时通信。 | 音频 | OSC
+RemoteControlWebInterface: 该插件提供了一个远程控制Web应用程序，允许用户通过浏览器来远程控制引擎。此Web应用程序具有内置的UI编辑器，可以用来自定义其界面，而不需要额外的代码来创建它或对其进行格式化。该插件需要安装NodeJS。 | 第三方软件开发包与中间件
+SequencerPlaylists: Sequencer是Unreal Engine中的一个强大的非线性动画编辑工具，它允许用户创建复杂的动画序列和场景，并可以与游戏逻辑进行交互。SequencerPlaylists插件为用户提供了一个集中管理和组织动画序列的方式。通过创建播放列表，用户可以将多个动画序列组合在一起，以创建更复杂的动画效果。用户可以按照自己的需求，将不同的动画序列按顺序排列，或者在特定条件下触发不同的动画序列。 | 游戏专用子系统 | 游戏摄像机 | 脚本/动画摄像机
+Switchboard: Switchboard 是Python应用程序，用于控制多个远程设备，依赖伙伴应用程序SwitchboardListener来与这些远程设备通信。SwitchboardListener 是虚幻引擎的C++应用程序，在每个设备上运行TCP套接字服务器来与Switchboard共享JSON消息。Switchboard的功能包括:在多用户会话中，在设备上远程启动虚幻引擎；在多个设备上启动nDisplay；使用嵌入的镜头试拍录制器功能按钮进行录制；将所有设备同步到特定的变更列表，并根据源编译你的项目和虚幻引擎；连接到以下设备并进行控制:KiPro、Live Link Face、Shogun和SoundDevices；添加你自己的设备插件，并扩展Switchboard和SwitchboardListener的自定义功能按钮。 | 第三方软件开发包与中间件
